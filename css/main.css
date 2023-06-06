@@ -173,8 +173,17 @@ nav {
 }
 .main__other_project_img_text_in_circle{
     position: absolute;
-    left: -403px;
-    top: 300px
+    left: -375px;
+    top: 298px;
+
+/*    transform: rotate(185deg);*/
+    transition: 0.5s;
+
+}
+.main__other_project_img_head{
+    position: absolute;
+    left: 0;
+    bottom: 0;
 
 }
 .main__other_project_text {
@@ -189,4 +198,16 @@ nav {
     right: 24px;
     bottom: 48px;
     width: 270px;
+}
+.rotating {
+  animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
