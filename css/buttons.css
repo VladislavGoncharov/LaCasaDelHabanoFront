@@ -1,0 +1,41 @@
+
+a {
+   text-decoration: none;
+}
+
+button {
+    font-size: 16px;
+}
+
+.flat-button {
+    background: var(--mc-dark-grey);
+    color: var(--mc-white);
+    border: solid 1px var(--mc-white);
+    border-radius: 25px;
+    width: 100%;
+    height: 50px;
+}
+.flat-button-bg-light {
+    background: var(--mc-white-01);
+}
+
+
+.round-button {
+    background: var(--mc-white-01);
+    color: var(--mc-white);
+    border: solid 1px var(--mc-white);
+    border-radius: 50%;
+    width: 126px;
+    height: 126px;
+
+    transition: linear 0.2s;
+}
+
+.round-button:hover {
+    background: var(--mc-white-06);
+}
+
+.round-button-big {
+    width: 200px;
+    height: 200px;
+}

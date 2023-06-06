@@ -1,0 +1,8 @@
+$base-font-size: 16px; // Базовый размер шрифта в пикселях
+
+@for $i from 1 through 100 {
+  .fs-#{$i} {
+    font-size: #{$i}px;
+//    font-size: #{$i / $base-font-size}em;
+  }
+}

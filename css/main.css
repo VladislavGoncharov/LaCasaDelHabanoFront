@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&family=Lato:wght@100;300;400;700&display=swap');
+@import "font.css";
+@import "margin-padding.css";
+@import "buttons.css";
+@import "custom-bs.css";
+
+/*root style*/
+:root{
+
+    --mc-black: #0F0E0D;
+    --mc-white: #FFFFFF;
+    --mc-white-005: rgba(241, 232, 225, 0.05);
+    --mc-white-01: rgba(241, 232, 225, 0.1);
+    --mc-white-06: rgba(241, 232, 225, 0.6);
+    --mc-dark-grey: #262422;
+    --mc-vinous-img: #6a3837;
+    --mc-vinous: #613433;
+    --fs-100: 6.25em;
+    --fs-64: 4em;
+    --fs-40: 2.5em;
+    --fs-32: 2em;
+    --fs-28: 1.75em;
+    --fs-24: 1.5em;
+    --fs-20: 1.25em;
+    --fs-18: 1.125em;
+    --fs-16: 1em;
+    --fs-15: 0.938em;
+    --fs-14: 0.875em;
+    --fs-13: 0.813em;
+    --fs-12: 0.75em;
+    --fs-10: 0.625em;
+    --fs-9: 0.563em;
+    --fs-8: 0.5em;
+    --fs-7: 0.438em;
+    --fs-6: 0.375em;
+    --ff-cormorant: 'Cormorant', serif;
+    --ff-lato: 'Lato', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    /*    font-family: 'Cormorant', serif;*/
+}
+
+
+body {
+    background: var(--mc-vinous);
+    color: var(--mc-white);
+    font-size: 16px;
+    font-family: var(--ff-lato);
+/*    font-style: normal;*/
+    font-weight: 400;
+    padding-top: 24px;
+
+    height: 5000px;
+    overflow-x: hidden;
+}
+
+nav {
+/*    border-top: solid 1px var(--mc-white);*/
+    height: 62px;
+    align-items: center;
+}
+
+.main__bg_vinous_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 700px;
+    background: var(--mc-vinous-img);
+    z-index: -1
+}
+
+.main__img_div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.main__img_absolute{
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%);
+
+    width: 548px;
+    height: 600px;
+    border: solid 5px var(--mc-white);
+    overflow: hidden;
+}
+
+.main__img_absolute img{
+    transform: translate(-428px,-3px);
+}
+
+.main__bg_black_div{
+    position: absolute;
+    left: 0;
+    top: 653px;
+    height: 2105px;
+    width: 100%;
+
+    background: var(--mc-black);
+    z-index: 1;
+
+    padding-top: 56px;
+}
+
+.main__bg_black_card_div{
+    display: flow-root;
+
+    background: var(--mc-dark-grey);
+
+    height: 489px;
+}
+
+.main__bg_black_card_img_div{
+    height: 195px;
+}
+
+.main__bg_black_card_img_div img{
+    height: 0;
+    width: 100%;
+    border-top: solid 0px var(--mc-white);
+    border-bottom: solid 0px var(--mc-white);
+}
+
+.main__our_mug_div{
+    position: absolute;
+    left: 0;
+    top: 3010px;
+    width: 100%;
+    max-width: 1920px;
+}
+
+.main__our_mug_div img {
+    object-fit: contain;
+    z-index: -1;
+    position: absolute;
+}
+
+.main__our_mug_card_left_div {
+    background: var(--mc-vinous);
+    margin-top: 176px;
+    height: 511px;
+    padding: 48px 24px;
+
+}
+.main__our_mug_card_right_div {
+    background-image: url(../img/main__our_mug_little.jpg);
+    margin-top: 467px;
+    height: 220px;
+    width: 453px;
+    padding: 47px 24px;
+
+}
+
+.main__other_project_div {
+    background: var(--mc-white-005);
+    height: 707px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main__other_project_img_o_cuba {
+    position: absolute;
+    left: 24px;
+    top: 48px;
+}
+.main__other_project_img_text_in_circle{
+    position: absolute;
+    left: -403px;
+    top: 300px
+
+}
+.main__other_project_text {
+    position: absolute;
+    top: 155px;
+    left: 477px;
+    width: 453px;
+    text-align: justify;
+}
+.main__other_project_button{
+    position: absolute;
+    right: 24px;
+    bottom: 48px;
+    width: 270px;
+}

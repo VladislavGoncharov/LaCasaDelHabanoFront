@@ -1,0 +1,225 @@
+.fs-100 {
+    font-size: var(--fs-100);
+}
+
+.fs-64 {
+    font-size: var(--fs-64);
+}
+
+.fs-40 {
+    font-size: var(--fs-40);
+}
+.fs-32 {
+    font-size: var(--fs-32);
+}
+
+.fs-28 {
+    font-size: var(--fs-28);
+}
+.fs-24 {
+    font-size: var(--fs-24);
+}
+
+.fs-20 {
+    font-size: var(--fs-20);
+}
+
+.fs-18 {
+    font-size: var(--fs-18);
+}
+
+.fs-16 {
+    font-size: var(--fs-16);
+}
+
+.fs-15 {
+    font-size: var(--fs-15);
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+.fw-700 {
+    font-weight: 700;
+}
+
+.fc-black {
+    color: var(--mc-black);
+}
+.fc-white {
+    color: var(--mc-white);
+}
+.fc-white-2 {
+    color: var(--mc-white-2);
+}
+
+.fc-vinous {
+    color: var(--mc-vinous);
+}
+
+.flh-121 {
+    line-height: 121px;
+}
+
+.flh-77 {
+    line-height: 77px;
+}
+
+.flh-48 {
+    line-height: 48px;
+}
+.flh-34 {
+    line-height: 34px;
+}
+
+.flh-32 {
+    line-height: 32px;
+}
+
+.flh-29 {
+    line-height: 29px;
+}
+.flh-24 {
+    line-height: 24px;
+}
+
+.ff-cormorant {
+    font-family: var(--ff-cormorant)
+}
+.fls-3{
+    letter-spacing: 0.8px;
+}
+@media screen and (min-width: 1400px) {
+
+}
+
+
+/*на экраны больших планшетов-----------------------------*/
+
+@media screen and (max-width: 1199px) {
+    .fs-lg-40 {
+        font-size: var(--fs-40);
+    }
+    .fs-lg-32 {
+        font-size: var(--fs-32);
+    }
+    .fs-lg-24 {
+        font-size: var(--fs-24);
+    }
+    .fs-lg-20 {
+        font-size: var(--fs-20);
+    }
+    .fs-lg-18 {
+        font-size: var(--fs-18);
+    }
+    .fs-lg-16 {
+        font-size: var(--fs-16);
+    }
+
+}
+
+
+/*на экраны планшетов-----------------*/
+
+@media screen and (max-width: 991px) {
+    .fs-md-40 {
+        font-size: var(--fs-40);
+    }
+    .fs-md-32 {
+        font-size: var(--fs-32);
+    }
+    .fs-md-24 {
+        font-size: var(--fs-24);
+    }
+    .fs-md-20 {
+        font-size: var(--fs-20);
+    }
+    .fs-md-18 {
+        font-size: var(--fs-18);
+    }
+    .fs-md-16 {
+        font-size: var(--fs-16);
+    }
+    .font-lh-md-30 {
+        line-height: 30px;
+    }
+}
+
+
+
+/*на экраны телефонов*/
+
+@media screen and (max-width: 767px) {
+    .fs-sm-24 {
+        font-size: var(--fs-24);
+    }
+    .fs-sm-20 {
+        font-size: var(--fs-20);
+    }
+    .fs-sm-18 {
+        font-size: var(--fs-18);
+    }
+    .fs-sm-16 {
+        font-size: var(--fs-16);
+    }
+    .fs-sm-14 {
+        font-size: var(--fs-14);
+    }
+    .fs-sm-13 {
+        font-size: var(--fs-13);
+    }
+    .fs-sm-10 {
+        font-size: var(--fs-10);
+    }
+    .flh-sm-24 {
+        line-height: 24px;
+    }
+    .flh-sm-17 {
+        line-height: 17px;
+    }
+
+}
+
+
+
+/*на очень маленькие экраны телефонов*/
+
+@media screen and (max-width: 575px) {
+    .fs-xs-24 {
+        font-size: var(--fs-24);
+    }
+    .fs-xs-20 {
+        font-size: var(--fs-20);
+    }
+    .fs-xs-18 {
+        font-size: var(--fs-18);
+    }
+    .fs-xs-16 {
+        font-size: var(--fs-16);
+    }
+    .fs-xs-14 {
+        font-size: var(--fs-14);
+    }
+    .fs-xs-13 {
+        font-size: var(--fs-13);
+    }
+    .fs-xs-10 {
+        font-size: var(--fs-10);
+    }
+    .fs-xs-9 {
+        font-size: var(--fs-9);
+    }
+    .fs-xs-8 {
+        font-size: var(--fs-8);
+    }
+    .fs-xs-7 {
+        font-size: var(--fs-7);
+    }
+    .fs-xs-6 {
+        font-size: var(--fs-6);
+    }
+}

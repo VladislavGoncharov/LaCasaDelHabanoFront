@@ -1,0 +1,54 @@
+.mt-3192px {
+    margin-top: 3192px
+}
+.mt-2202px {
+    margin-top: 2202px
+}
+.mt-1006px {
+    margin-top: 1006px
+}
+.mt-400px {
+    margin-top: 400px
+}
+.mt-240px {
+    margin-top: 240px
+}
+.mt-96px {
+    margin-top: 96px
+}
+
+.border-top {
+    border-top: solid 1px var(--mc-white);
+}
+
+@media screen and (min-width: 1400px) {
+
+}
+
+
+/*на экраны больших планшетов-----------------------------*/
+
+@media screen and (max-width: 1199px) {
+
+}
+
+
+/*на экраны планшетов-----------------*/
+
+@media screen and (max-width: 991px) {
+}
+
+
+
+/*на экраны телефонов*/
+
+@media screen and (max-width: 767px) {
+
+}
+
+
+
+/*на очень маленькие экраны телефонов*/
+
+@media screen and (max-width: 575px) {
+}
