@@ -1,6 +1,5 @@
-
 a {
-   text-decoration: none;
+    text-decoration: none;
 }
 
 button {
@@ -15,10 +14,10 @@ button {
     width: 100%;
     height: 50px;
 }
+
 .flat-button-bg-light {
     background: var(--mc-white-01);
 }
-
 
 .round-button {
     background: var(--mc-white-01);
@@ -27,7 +26,6 @@ button {
     border-radius: 50%;
     width: 126px;
     height: 126px;
-
     transition: linear 0.2s;
 }
 
@@ -38,4 +36,64 @@ button {
 .round-button-big {
     width: 200px;
     height: 200px;
+}
+
+.flat-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 100px;
+    width: 100%;
+    color: var(--mc-white);
+    z-index: 2;
+    transition: 1s ease-in-out;
+}
+/*
+.flat-link span{
+    position: absolute;
+    color: var(--mc-vinous);
+    color: transparent;
+    color: red;
+    transform: scaleY(0);
+    transition: 1s;
+    z-index: 2
+}
+*/
+/*
+.flat-link:hover span{
+    font-size: 64px;
+    transform: scaleY(1);
+}
+*/
+
+.flat-link:before,
+.flat-link:after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    transition: 1s ease-in-out;
+    z-index: -1;
+}
+
+.flat-link:hover {
+/*    transform: scaleY(0);*/
+/*    font-size: 0*/
+    color: var(--mc-vinous);
+
+}
+
+.flat-link:hover:before {
+/*    height: 1px;*/
+    background-color: var(--mc-white);
+    transform: scaleY(100)
+}
+
+.flat-link:hover:after {
+/*    height: 1px;*/
+    background-color: var(--mc-white);
+    transform: scaleY(100)
 }

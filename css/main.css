@@ -199,8 +199,20 @@ nav {
     bottom: 48px;
     width: 270px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 .rotating {
-  animation: rotation 5s infinite linear;
+  animation: rotation 15s infinite linear;
 }
 
 @keyframes rotation {
