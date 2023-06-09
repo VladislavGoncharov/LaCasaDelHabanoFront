@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
     <!--    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>-->
     <title>La Casa Del Habano</title>
@@ -18,28 +17,38 @@
         <div class="col-12">
             <div class="border-top"></div>
         </div>
-        <div class="col-1 text-start">EN</div>
-        <div class="col-1 text-end">РЕЗЕРВ</div>
-        <div class="col-1 text-end">КАТАЛОГ</div>
+        <div class="col-1 text-start"><a class="link-main" href="#">EN</a></div>
+        <div class="col-1 text-end"><a class="link-main" href="#">РЕЗЕРВ</a></div>
+        <div class="col-1 text-end"><a class="link-main" href="#">КАТАЛОГ</a></div>
         <div class="offset-2 col-2 text-center"><img src="img/navbar__logo.svg" alt="navbar__logo"></div>
-        <div class="offset-2 col-1 text-start">ПОИСК</div>
-        <div class="col-1 text-start">КОРЗИНА</div>
-        <div class="col-1 text-end">МЕНЮ</div>
+        <div class="offset-2 col-1 text-start"><a class="link-main" href="#">ПОИСК</a></div>
+        <div class="col-1 text-start"><a class="link-main" href="#">КОРЗИНА</a></div>
+        <div class="col-1 text-end"><a class="link-main" href="#">МЕНЮ</a></div>
     </nav>
     <div class="row mt-4">
         <div class="col-12 main__img_div">
             <div class="main__img_absolute"> <img src="img/main__img_color.jpg" alt="main__img_little"> </div> <img src="img/main__img_colorless.png" alt="main__img_big"> </div>
     </div>
     <div class="main__bg_black_div">
-        <div class="container">
+        <div class="container position-relative">
+           <div class="position-absolute brand_1"><img src="img/main__brand_1.svg" alt="brand_1"></div>
+           <div class="position-absolute brand_2"><img src="img/main__brand_2.svg" alt="brand_2"></div>
+           <div class="position-absolute brand_3"><img src="img/main__brand_3.svg" alt="brand_3"></div>
+           <div class="position-absolute brand_4"><img src="img/main__brand_4.svg" alt="brand_4"></div>
+           <div class="position-absolute brand_5"><img src="img/main__brand_5.svg" alt="brand_5"></div>
+           <div class="position-absolute brand_6"><img src="img/main__brand_6.svg" alt="brand_6"></div>
+           <div class="position-absolute brand_7"><img src="img/main__brand_7.svg" alt="brand_7"></div>
+           <div class="position-absolute scroll_logo"><img src="img/main__long_logo.svg" alt="scroll_logo"></div>
             <div class="row">
-                <div class="offset-2 col-8 text-center fs-100 fw-500 flh-121 ff-cormorant">ДОМ КУБИНСКИХ СИГАР</div>
+<!--                <div class="offset-2 col-8 text-center fs-100 fw-500 flh-121 ff-cormorant">ДОМ КУБИНСКИХ СИГАР</div>-->
+                <div class="offset-3 col-6 d-flex justify-content-center align-items-center">
+                <img src="img/main__text_house_of_cuban_cigars_2.svg" alt=""></div>
             </div>
             <div class="row mt-2">
                 <div class="offset-4 col-4 text-center fs-20 flh-29">СИГАРНЫЕ МАГАЗИНЫ И ДЕГУСТАЦИОННЫЕ
                     <br> ЗОНЫ В ЦЕНТРЕ САНКТ-ПЕТЕРБУРГА</div>
             </div>
-            <div class="row mt-240px">
+            <div class="row mt-235px">
                 <div class="offset-3 col-6 text-center fs-64 flh-67 fw-300 ff-cormorant">ДОМ КУБИНСКИХ СИГАР</div>
             </div>
             <div class="row">
@@ -168,30 +177,22 @@
             </div>
         </div>
     </div>
-    <div class="row mt-1006px">
+    <div class="row mt-950px">
         <div class="offset-4 col-4 text-center fs-64 fw-300 flh-77 ff-cormorant"> ДРУГИЕ ПРОЕКТЫ </div>
     </div>
     <div class="row mt-5">
         <div class="col-9">
             <div class="main__other_project_div">
-                <div class="main__other_project_img_o_cuba">
-                    <img src="img/main__o_cuba.svg" alt="o_cuba">
-                </div>
-                <div class="main__other_project_img_text_in_circle">
-                    <img id="img_text" src="img/main__text_in_circle.svg" alt="o_cuba">
-                </div>
-                <div class="main__other_project_img_head">
-                    <img src="img/main__head_o_cuba.svg" alt="head_o_cuba">
-                </div>
+                <div class="main__other_project_img_o_cuba"> <img src="img/main__o_cuba.svg" alt="o_cuba"> </div>
+                <div class="main__other_project_img_text_in_circle"> <img id="img_text" src="img/main__text_in_circle.svg" alt="o_cuba"> </div>
+                <div class="main__other_project_img_head"> <img src="img/main__head_o_cuba.svg" alt="head_o_cuba"> </div>
                 <div class="main__other_project_text">
-
                     <div class="fs-28 flh-34 ff-cormorant fls-3">РЕСТОРАН КУБИНСКОЙ ЖИЗНИ</div>
                     <div class="mt-5 fs-20 flh-29">Наш ресторан на улице Рубинштейна порадует Вас разнообразием кубинской кухни, теплотой и душевностью улиц Тринидада и самобытной музыкой уроженцев Острова Свободы.</div>
                 </div>
                 <div class="main__other_project_button">
                     <button class="flat-button flat-button-bg-light text-center fs-20 flh-24">ПЕРЕЙТИ НА САЙТ</button>
                 </div>
-
             </div>
         </div>
         <div class="col-3">
@@ -203,34 +204,90 @@
             </div>
         </div>
     </div>
-    <div class="row mt-240px">
-       <div class="position-relative offset-3 col-6">
-            <a href="#" class="d-flex justify-content-center align-items-center fs-64 ff-cormorant fw-300 flh-77 flat-link">О НАС
-<!--            <span>О НАС</span>-->
-            </a>
-       </div>
-       <div class="position-relative offset-3 col-6">
-            <a href="#" class="d-flex justify-content-center align-items-center fs-64 ff-cormorant fw-300 flh-77 flat-link">КАТАЛОГ
-<!--            <span>КАТАЛОГ</span>-->
-            </a>
-       </div>
-       <div class="position-relative offset-3 col-6">
-            <a href="#" class="d-flex justify-content-center align-items-center fs-64 ff-cormorant fw-300 flh-77 flat-link">НОВОСТИ
-<!--            <span>НОВОСТИ</span>-->
-            </a>
-       </div>
-       <div class="position-relative offset-3 col-6">
-            <a href="#" class="d-flex justify-content-center align-items-center fs-64 ff-cormorant fw-300 flh-77 flat-link">КОНТАКТЫ
-<!--            <span>КОНТАКТЫ</span>-->
-            </a>
-       </div>
-
+    <div class="row mt-235px">
+        <div class="offset-3 col-6"> <a href="#" class="d-flex justify-content-center align-items-center fs-64 ff-cormorant fw-300 flh-77 flat-link">О НАС
+            </a> </div>
+        <div class="offset-3 col-6"> <a href="#" class="d-flex justify-content-center align-items-center fs-64 ff-cormorant fw-300 flh-77 flat-link">КАТАЛОГ
+            </a> </div>
+        <div class="offset-3 col-6"> <a href="#" class="d-flex justify-content-center align-items-center fs-64 ff-cormorant fw-300 flh-77 flat-link">НОВОСТИ
+            </a> </div>
+        <div class="offset-3 col-6"> <a href="#" class="d-flex justify-content-center align-items-center fs-64 ff-cormorant fw-300 flh-77 flat-link">КОНТАКТЫ
+            </a> </div>
     </div>
-    <div class="row mt-1006px">
-        <a href="#" class="flat-link col-12 text-center fs-40">О НАС</a>
+    <div class="row mt-235px">
+        <div class="offset-3 col-6 d-flex justify-content-center align-items-center"><img src="img/main__logo_footer.svg" alt="logo_footer"></div>
+        <div class="offset-3 col-6 mt-5 d-flex justify-content-center align-items-center"><img src="img/main__text_house_of_cuban_cigars.svg" alt="text_house_of_cuban_cigars"></div>
     </div>
+    <div class="row mt-96px">
+        <div class="offset-4 col-4 d-flex justify-content-center align-items-center fs-64 ff-cormorant fw-300 flh-77">ОБРАТНАЯ СВЯЗЬ</div>
+    </div>
+    <div class="mt-96px">
+        <form class="row position-relative fs-20 flh-29 fw-300" action="#">
+            <div class="offset-3 col-3">
+                <input class="input-main" type="text" placeholder="ИМЯ*"> </div>
+            <div class="col-3">
+                <input class="input-main" type="text" placeholder="ТЕЛЕФОН ИЛИ E-MAIL*"> </div>
+            <div class="offset-3 col-6 mt-196px-for-form position-relative">
+                <textarea class="textarea-main" placeholder="СООБЩЕНИЕ"></textarea>
+            </div>
+            <div class="offset-3 col-6 mt-5 position-relative">
+                <button class="flat-button flat-button-bg-light" type="submit">ОТПРАВИТЬ</button>
+            </div>
+            <a class="button-up d-flex justify-content-center align-items-center" href="#">
+                <svg width="16" height="65" viewBox="0 0 16 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.29289 0.292892C7.68342 -0.0976334 8.31658 -0.0976334 8.70711 0.292892L15.0711 6.65685C15.4616 7.04738 15.4616 7.68054 15.0711 8.07107C14.6805 8.46159 14.0474 8.46159 13.6569 8.07107L8 2.41422L2.34315 8.07107C1.95262 8.46159 1.31946 8.46159 0.928932 8.07107C0.538408 7.68054 0.538408 7.04738 0.928932 6.65685L7.29289 0.292892ZM9 1V64.5H7V1H9Z" fill="white" /> </svg>
+            </a>
+        </form>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="col-12">
+                <div class="border-top"></div>
+            </div>
+            <div class="col-3 mt-4">
+                <div class="fs-20 flh-29"> <a class="link-main" href="mailto:LCDH@CIGARPLACE.RU">LCDH@CIGARPLACE.RU</a></div>
+                <div class="fs-20 flh-29 mt-3"> <a class="link-main" href="mailto:LCDH@CIGARPLACE.RU">В КОНТАКТЕ</a></div>
+                <div class="fs-20 flh-29 mt-3"> <a class="link-main" href="mailto:LCDH@CIGARPLACE.RU">ТЕЛЕГРАМ</a></div>
+                <div class="fs-20 flh-29 mt-3"> <a class="link-main" href="mailto:LCDH@CIGARPLACE.RU">ИНСТАГРАМ</a></div>
+                <div class="fs-20 flh-29 mt-3"> <a class="link-main" href="mailto:LCDH@CIGARPLACE.RU">ФЕЙСБУК</a></div>
+            </div>
+            <div class="col-3 mt-4">
+                <div class="fs-20 flh-29">LCDH KUZNECHNY:</div>
+                <div class="mt-3 border-top"></div>
+                <div class="fs-20 flh-29 mt-4">г. Санкт-Петербург,Кузнечный переулок, 14А</div>
+                <div class="mt-3 d-flex justify-content-between">
+                    <div class="fs-20 flh-29 fw-300">Городской</div>
+                    <div class="fs-20 flh-29">+7 (812) 572 32 90</div>
+                </div>
+                <div class="mt-1 d-flex justify-content-between">
+                    <div class="fs-20 flh-29 fw-300">Сотовый</div>
+                    <div class="fs-20 flh-29">+7 (981) 893 90 53</div>
+                </div>
+            </div>
+            <div class="col-3 mt-4">
+                <div class="fs-20 flh-29">LCDH BOLSHOY P.SIDE:</div>
+                <div class="mt-3 border-top"></div>
+                <div class="fs-20 flh-29 mt-4">г. Санкт-Петербург,Большой пр. П.С., 37</div>
+                <div class="mt-3 d-flex justify-content-between">
+                    <div class="fs-20 flh-29 fw-300">Городской</div>
+                    <div class="fs-20 flh-29">+7 (812) 332 45 97</div>
+                </div>
+                <div class="mt-1 d-flex justify-content-between">
+                    <div class="fs-20 flh-29 fw-300">Сотовый</div>
+                    <div class="fs-20 flh-29">+7 (981) 045 99 45</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="offset-3 col-3 fs-20 flh-29">© LA CASA DEL HABANO ST-PETERSBURG 2023</div>
+            <div class="col-3 fs-20 flh-29 fw-300">Политика конфиденциальности</div>
+            <div class="offset-1 col-2 d-flex justify-content-between">
+                <div class="fs-20 flh-29 fw-300">Made by:</div>
+                <div class="fs-20 flh-29">DUO CREATIVE</div>
+            </div>
+        </div>
+    </footer>
     <script src="js/main-page-js.js"></script>
-
 </body>
 
 </html>

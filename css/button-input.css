@@ -1,0 +1,156 @@
+a {
+    text-decoration: none;
+    color: var(--mc-white);
+}
+
+a:hover {
+    color: var(--mc-white);
+}
+
+.ddd {
+    transition: linear 1s;
+}
+
+button {
+    font-size: 16px;
+}
+
+input,
+textarea {
+    background: transparent;
+    color: var(--mc-white);
+    text-transform: uppercase;
+    width: 100%;
+    height: 42px;
+    border: none;
+    resize: none;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: var(--mc-white);
+}
+
+.flat-button {
+    background: var(--mc-dark-grey);
+    color: var(--mc-white);
+    border: solid 1px var(--mc-white);
+    border-radius: 25px;
+    width: 100%;
+    height: 50px;
+}
+
+.flat-button-bg-light {
+    background: var(--mc-white-01);
+}
+
+.round-button {
+    background: var(--mc-white-01);
+    color: var(--mc-white);
+    border: solid 1px var(--mc-white);
+    border-radius: 50%;
+    width: 126px;
+    height: 126px;
+    transition: linear 0.2s;
+}
+
+.round-button:hover {
+    background: var(--mc-white-06);
+}
+
+.round-button-big {
+    width: 200px;
+    height: 200px;
+}
+
+.flat-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 100px;
+    width: 100%;
+    color: var(--mc-white);
+    z-index: 2;
+    transition: 0.35s ease-in-out;
+}
+
+.flat-link:before,
+.flat-link:after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    transition: 0.35s ease-in-out;
+    z-index: -1;
+}
+
+.flat-link:hover {
+    color: var(--mc-vinous);
+}
+
+.flat-link:hover:before,
+.flat-link:hover:after {
+    background-color: var(--mc-white);
+    transform: scaleY(100)
+}
+
+.input-main {
+    border-bottom: solid 1px var(--mc-white);
+    padding-bottom: 15px;
+}
+
+.textarea-main {
+    position: relative;
+    border-bottom: solid 1px var(--mc-white);
+}
+
+.link-main {
+    border-bottom: solid 1px transparent;
+    transition: linear 0.35s;
+}
+
+.link-main:hover {
+    border-bottom: solid 1px var(--mc-white);
+}
+
+.button-up {
+    position: absolute;
+    right: 90px;
+    bottom: 0;
+    width: 70px;
+    transition: 0.5s linear;
+}
+
+.button-up::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: -34px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #ff7334;
+    transition: 0.5s ease-out;
+    z-index: -1;
+    transform: scale(0);
+}
+
+.button-up:hover {
+    position: absolute;
+    right: 90px;
+    bottom: 0;
+    width: 70px;
+    transform: translateY(-20px)
+}
+
+.button-up:hover:after {
+    transform: scale(1);
+}

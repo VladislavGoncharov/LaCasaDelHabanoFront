@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&family=Lato:wght@100;300;400;700&display=swap');
 @import "font.css";
 @import "margin-padding.css";
-@import "buttons.css";
+@import "button-input.css";
 @import "custom-bs.css";
 
 /*root style*/
@@ -15,6 +15,7 @@
     --mc-dark-grey: #262422;
     --mc-vinous-img: #6a3837;
     --mc-vinous: #613433;
+    --mc-vinous-02: #774F4D;;
     --fs-100: 6.25em;
     --fs-64: 4em;
     --fs-40: 2.5em;
@@ -57,9 +58,13 @@ body {
 }
 
 nav {
-/*    border-top: solid 1px var(--mc-white);*/
     height: 62px;
     align-items: center;
+}
+
+footer {
+    margin-top: 132px;
+    padding-bottom: 76px
 }
 
 .main__bg_vinous_img{
@@ -99,14 +104,49 @@ nav {
 .main__bg_black_div{
     position: absolute;
     left: 0;
-    top: 653px;
-    height: 2105px;
+    top: 677px;
+    height: 2036px;
     width: 100%;
 
     background: var(--mc-black);
     z-index: 1;
 
     padding-top: 56px;
+}
+
+[class*=brand_] {
+    z-index: -1;
+}
+.brand_1{
+    top:325px;
+    left:800px;
+}
+.brand_2{
+    top:291px;
+    left:-107px;
+}
+.brand_3{
+    top:291px;
+    left:1713px;
+}
+.brand_4{
+    top:557px;
+    left:1450px;
+}
+.brand_5{
+    top:557px;
+    left:202px;
+}
+.brand_6{
+    top:757px;
+    left:-67px;
+}
+.brand_7{
+    top:757px;
+    left:1778px;
+}
+.scroll_logo{
+    top:1020px;
 }
 
 .main__bg_black_card_div{
