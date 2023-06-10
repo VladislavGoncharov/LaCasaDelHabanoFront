@@ -5,17 +5,19 @@
 @import "custom-bs.css";
 
 /*root style*/
-:root{
 
+:root {
     --mc-black: #0F0E0D;
     --mc-white: #FFFFFF;
     --mc-white-005: rgba(241, 232, 225, 0.05);
     --mc-white-01: rgba(241, 232, 225, 0.1);
     --mc-white-06: rgba(241, 232, 225, 0.6);
-    --mc-dark-grey: #262422;
+    /*    --mc-dark-grey: #262422;*/
+    --mc-dark-grey: #1D1C1C;
     --mc-vinous-img: #6a3837;
     --mc-vinous: #613433;
-    --mc-vinous-02: #774F4D;;
+    --mc-vinous-02: #774F4D;
+    --mc-peach: #E1694E;
     --fs-100: 6.25em;
     --fs-64: 4em;
     --fs-40: 2.5em;
@@ -43,17 +45,13 @@
     /*    font-family: 'Cormorant', serif;*/
 }
 
-
 body {
     background: var(--mc-vinous);
     color: var(--mc-white);
     font-size: 16px;
     font-family: var(--ff-lato);
-/*    font-style: normal;*/
     font-weight: 400;
     padding-top: 24px;
-
-    height: 5000px;
     overflow-x: hidden;
 }
 
@@ -67,7 +65,7 @@ footer {
     padding-bottom: 76px
 }
 
-.main__bg_vinous_img{
+.main__bg_vinous_img {
     position: absolute;
     left: 0;
     top: 0;
@@ -85,92 +83,139 @@ footer {
     height: 600px;
 }
 
-.main__img_absolute{
+.main__img_absolute {
     position: absolute;
     z-index: 2;
     left: 50%;
     transform: translate(-50%);
-
     width: 548px;
     height: 600px;
     border: solid 5px var(--mc-white);
     overflow: hidden;
 }
 
-.main__img_absolute img{
-    transform: translate(-428px,-3px);
+.main__img_absolute img {
+    transform: translate(-428px, -3px);
 }
 
-.main__bg_black_div{
+.main__bg_black_div {
     position: absolute;
     left: 0;
     top: 677px;
     height: 2036px;
     width: 100%;
-
     background: var(--mc-black);
     z-index: 1;
-
     padding-top: 56px;
 }
 
 [class*=brand_] {
     z-index: -1;
 }
-.brand_1{
-    top:325px;
-    left:800px;
-}
-.brand_2{
-    top:291px;
-    left:-107px;
-}
-.brand_3{
-    top:291px;
-    left:1713px;
-}
-.brand_4{
-    top:557px;
-    left:1450px;
-}
-.brand_5{
-    top:557px;
-    left:202px;
-}
-.brand_6{
-    top:757px;
-    left:-67px;
-}
-.brand_7{
-    top:757px;
-    left:1778px;
-}
-.scroll_logo{
-    top:1020px;
+
+.brand_1 {
+    top: 325px;
+    left: 800px;
 }
 
-.main__bg_black_card_div{
+.brand_2 {
+    top: 291px;
+    left: -107px;
+}
+
+.brand_3 {
+    top: 291px;
+    left: 1713px;
+}
+
+.brand_4 {
+    top: 557px;
+    left: 1450px;
+}
+
+.brand_5 {
+    top: 557px;
+    left: 202px;
+}
+
+.brand_6 {
+    top: 757px;
+    left: -67px;
+}
+
+.brand_7 {
+    top: 757px;
+    left: 1778px;
+}
+
+.scroll_logo {
+    top: 1014px;
+}
+
+.main__bg_black_card_div {
     display: flow-root;
-
     background: var(--mc-dark-grey);
-
     height: 489px;
+    position: relative;
+    overflow: hidden;
+    transition: 1s
 }
 
-.main__bg_black_card_img_div{
+.main__bg_black_card_div:after {
+    content: "";
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: var(--mc-vinous);
+    transition: height 1s;
+}
+
+.main__bg_black_card_div:hover:after {
+    height: 100%;
+    top: 0;
+}
+
+.main__bg_black_card_img_div {
     height: 195px;
 }
 
-.main__bg_black_card_img_div img{
-    height: 0;
+.main__bg_black_card_img_div img {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    border-top: solid 0px var(--mc-white);
-    border-bottom: solid 0px var(--mc-white);
+    height: auto;
+    border-top: solid 5px var(--mc-white);
+    border-bottom: solid 5px var(--mc-white);
+    box-sizing: content-box;
+/*
+    transition: 1s ease;
+    transition-delay: 0.5s;
+*/
 }
 
-.main__our_mug_div{
+.main__bg_black_card_img_div:before {
     position: absolute;
-    left: 0;
+    top: 50px;
+    width: 100%;
+    height: 50px;
+    background: red;
+    z-index: 5;
+}
+.main__bg_black_card_img_div:hover:before {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    background: red;
+    z-index: 5;
+}
+
+
+.main__our_mug_div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     top: 3010px;
     width: 100%;
     max-width: 1920px;
@@ -187,15 +232,14 @@ footer {
     margin-top: 176px;
     height: 511px;
     padding: 48px 24px;
-
 }
+
 .main__our_mug_card_right_div {
     background-image: url(../img/main__our_mug_little.jpg);
     margin-top: 467px;
     height: 220px;
     width: 453px;
     padding: 47px 24px;
-
 }
 
 .main__other_project_div {
@@ -211,21 +255,21 @@ footer {
     left: 24px;
     top: 48px;
 }
-.main__other_project_img_text_in_circle{
+
+.main__other_project_img_text_in_circle {
     position: absolute;
     left: -375px;
     top: 298px;
-
-/*    transform: rotate(185deg);*/
+    /*    transform: rotate(185deg);*/
     transition: 0.5s;
-
 }
-.main__other_project_img_head{
+
+.main__other_project_img_head {
     position: absolute;
     left: 0;
     bottom: 0;
-
 }
+
 .main__other_project_text {
     position: absolute;
     top: 155px;
@@ -233,33 +277,23 @@ footer {
     width: 453px;
     text-align: justify;
 }
-.main__other_project_button{
+
+.main__other_project_button {
     position: absolute;
     right: 24px;
     bottom: 48px;
     width: 270px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .rotating {
-  animation: rotation 15s infinite linear;
+    animation: rotation 15s infinite linear;
 }
 
 @keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

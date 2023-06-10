@@ -79,8 +79,7 @@ textarea::-webkit-input-placeholder {
     transition: 0.35s ease-in-out;
 }
 
-.flat-link:before,
-.flat-link:after {
+.flat-link:before {
     content: "";
     position: absolute;
     top: 50px;
@@ -96,12 +95,11 @@ textarea::-webkit-input-placeholder {
     color: var(--mc-vinous);
 }
 
-.flat-link:hover:before,
-.flat-link:hover:after {
-    background-color: var(--mc-white);
-    transform: scaleY(100)
-}
 
+.flat-link:hover:before {
+    background-color: var(--mc-white);
+    transform: scaleY(100);
+}
 .input-main {
     border-bottom: solid 1px var(--mc-white);
     padding-bottom: 15px;
@@ -129,7 +127,7 @@ textarea::-webkit-input-placeholder {
     transition: 0.5s linear;
 }
 
-.button-up::after {
+.button-up:before {
     content: "";
     position: absolute;
     top: -30px;
@@ -137,7 +135,7 @@ textarea::-webkit-input-placeholder {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    background-color: #ff7334;
+    background-color: var(--mc-peach);
     transition: 0.5s ease-out;
     z-index: -1;
     transform: scale(0);
@@ -151,6 +149,41 @@ textarea::-webkit-input-placeholder {
     transform: translateY(-20px)
 }
 
-.button-up:hover:after {
+.button-up:hover:before {
     transform: scale(1);
+}
+
+
+
+.underline-one {
+    color: #00bfff;
+    /* Цвет обычной ссылки */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    /* Убираем подчеркивание */
+}
+
+.underline-one:after {
+    content: "";
+    width: 0;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    height: 2px;
+    background: var(--mc-vinous);
+    transition: width 0.5s;
+}
+
+.underline-one:hover:after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    background: var(--mc-vinous);
+    transition: width 0.5s;
 }

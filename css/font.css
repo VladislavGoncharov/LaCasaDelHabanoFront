@@ -9,6 +9,7 @@
 .fs-40 {
     font-size: var(--fs-40);
 }
+
 .fs-32 {
     font-size: var(--fs-32);
 }
@@ -16,6 +17,7 @@
 .fs-28 {
     font-size: var(--fs-28);
 }
+
 .fs-24 {
     font-size: var(--fs-24);
 }
@@ -38,11 +40,13 @@
 
 .fw-300 {
     font-weight: 300;
+    !im
 }
 
 .fw-500 {
     font-weight: 500;
 }
+
 .fw-700 {
     font-weight: 700;
 }
@@ -50,9 +54,11 @@
 .fc-black {
     color: var(--mc-black);
 }
+
 .fc-white {
     color: var(--mc-white);
 }
+
 .fc-white-2 {
     color: var(--mc-white-2);
 }
@@ -72,6 +78,7 @@
 .flh-48 {
     line-height: 48px;
 }
+
 .flh-34 {
     line-height: 34px;
 }
@@ -83,6 +90,7 @@
 .flh-29 {
     line-height: 29px;
 }
+
 .flh-24 {
     line-height: 24px;
 }
@@ -90,12 +98,16 @@
 .ff-cormorant {
     font-family: var(--ff-cormorant)
 }
-.fls-3{
+
+.fls-3 {
     letter-spacing: 0.8px;
 }
-@media screen and (min-width: 1400px) {
 
+.z-index-1 {
+    z-index: 1;
 }
+
+@media screen and (min-width: 1400px) {}
 
 
 /*на экраны больших планшетов-----------------------------*/
@@ -119,7 +131,6 @@
     .fs-lg-16 {
         font-size: var(--fs-16);
     }
-
 }
 
 
@@ -148,7 +159,6 @@
         line-height: 30px;
     }
 }
-
 
 
 /*на экраны телефонов*/
@@ -181,9 +191,7 @@
     .flh-sm-17 {
         line-height: 17px;
     }
-
 }
-
 
 
 /*на очень маленькие экраны телефонов*/
