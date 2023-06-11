@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&family=Lato:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500&family=Lato&family=Raleway:wght@200;400;700&display=swap');
 @import "font.css";
 @import "margin-padding.css";
 @import "button-input.css";
@@ -38,6 +38,7 @@
     --fs-6: 0.375em;
     --ff-cormorant: 'Cormorant', serif;
     --ff-lato: 'Lato', sans-serif;
+    --ff-raleway: 'Raleway', sans-serif;
 }
 
 * {
@@ -49,7 +50,7 @@ body {
     background: var(--mc-vinous);
     color: var(--mc-white);
     font-size: 16px;
-    font-family: var(--ff-lato);
+    font-family: var(--ff-raleway);
     font-weight: 400;
     padding-top: 24px;
     overflow-x: hidden;
@@ -177,38 +178,29 @@ footer {
 }
 
 .main__bg_black_card_img_div {
-    height: 195px;
+    height: 0;
+    overflow: hidden;
+    border-top: solid 5px transparent;
+    border-bottom: solid 5px transparent;
+    transition-delay: 0.2s;
+    transition-duration: 1s;
+}
+.main__bg_black_card_div:hover .main__bg_black_card_img_div{
+    height: 205px;
+    border-top: solid 5px var(--mc-white);
+    border-bottom: solid 5px var(--mc-white);
+}
+.main__bg_black_card_div:hover .main__bg_black_card_img_div img{
+    top: 0;
 }
 
 .main__bg_black_card_img_div img {
     position: absolute;
-    bottom: 0;
+    top: -205px;
     width: 100%;
     height: auto;
-    border-top: solid 5px var(--mc-white);
-    border-bottom: solid 5px var(--mc-white);
-    box-sizing: content-box;
-/*
-    transition: 1s ease;
-    transition-delay: 0.5s;
-*/
-}
-
-.main__bg_black_card_img_div:before {
-    position: absolute;
-    top: 50px;
-    width: 100%;
-    height: 50px;
-    background: red;
-    z-index: 5;
-}
-.main__bg_black_card_img_div:hover:before {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 150px;
-    background: red;
-    z-index: 5;
+    transition-delay: 0.2s;
+    transition-duration: 1s;
 }
 
 
@@ -258,8 +250,8 @@ footer {
 
 .main__other_project_img_text_in_circle {
     position: absolute;
-    left: -375px;
-    top: 298px;
+    left: -426px;
+    bottom: -426px;
     /*    transform: rotate(185deg);*/
     transition: 0.5s;
 }

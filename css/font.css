@@ -22,6 +22,10 @@
     font-size: var(--fs-24);
 }
 
+.fs-28 {
+    font-size: var(--fs-28);
+}
+
 .fs-20 {
     font-size: var(--fs-20);
 }
@@ -38,9 +42,11 @@
     font-size: var(--fs-15);
 }
 
+.fw-200 {
+    font-weight: 200;
+}
 .fw-300 {
     font-weight: 300;
-    !im
 }
 
 .fw-500 {
@@ -67,36 +73,30 @@
     color: var(--mc-vinous);
 }
 
-.flh-121 {
-    line-height: 121px;
-}
-
-.flh-77 {
-    line-height: 77px;
-}
-
-.flh-48 {
-    line-height: 48px;
+.flh-58 {
+    line-height: 58px;
 }
 
 .flh-34 {
     line-height: 34px;
 }
 
-.flh-32 {
-    line-height: 32px;
-}
-
 .flh-29 {
     line-height: 29px;
 }
 
-.flh-24 {
-    line-height: 24px;
+.flh-26 {
+    line-height: 26px;
+}
+.flh-21 {
+    line-height: 21px;
 }
 
 .ff-cormorant {
     font-family: var(--ff-cormorant)
+}
+.ff-lato {
+    font-family: var(--ff-lato)
 }
 
 .fls-3 {
