@@ -4,6 +4,12 @@
 .mt-2202px {
     margin-top: 2202px
 }
+.mt-1270px {
+    margin-top: 1270px
+}
+.mt-1200px {
+    margin-top: 1200px
+}
 .mt-950px {
     margin-top: 950px
 }
@@ -16,16 +22,34 @@
 .mt-168px {
     margin-top: 168px
 }
+.mt-156px {
+    margin-top: 156px
+}
+.mt-110px {
+    margin-top: 110px
+}
 .mt-96px {
     margin-top: 96px
+}
+.mt-75px {
+    margin-top: 75px
+}
+.ms-96px {
+    margin-left: 96px
 }
 
 .mt-196px-for-form {
     margin-top: 196px
 }
 
-.border-top {
-    border-top: solid 1px var(--mc-white);
+.pe-60px {
+    padding-right: 60px;
+}
+.pe-35px {
+    padding-right: 35px;
+}
+.ps-12px {
+    padding-right: 12px;
 }
 
 @media screen and (min-width: 1400px) {

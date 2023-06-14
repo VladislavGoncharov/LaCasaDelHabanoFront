@@ -7,11 +7,11 @@ a:hover {
     color: var(--mc-white);
 }
 
-.ddd {
-    transition: linear 1s;
-}
 
 button {
+    background: transparent;
+    color: var(--mc-white);
+    border: none;
     font-size: 16px;
 }
 
@@ -63,9 +63,18 @@ textarea::-webkit-input-placeholder {
     background: var(--mc-white-06);
 }
 
+.round-button-middle {
+    width: 135px;
+    height: 135px;
+}
 .round-button-big {
     width: 200px;
     height: 200px;
+}
+.round-button-footer {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
 }
 
 .flat-link {
@@ -101,11 +110,12 @@ textarea::-webkit-input-placeholder {
     transform: scaleY(100);
 }
 .input-main {
+    height: 34px;
     border-bottom: solid 1px var(--mc-white);
-    padding-bottom: 15px;
 }
 
 .textarea-main {
+    height: 34px;
     position: relative;
     border-bottom: solid 1px var(--mc-white);
 }
@@ -119,10 +129,12 @@ textarea::-webkit-input-placeholder {
     border-bottom: solid 1px var(--mc-white);
 }
 
+/*
 .button-up {
     position: absolute;
-    right: 90px;
+    left: 0;
     bottom: 0;
+    height: 100px;
     width: 70px;
     transition: 0.5s linear;
 }
@@ -152,7 +164,26 @@ textarea::-webkit-input-placeholder {
 .button-up:hover:before {
     transform: scale(1);
 }
+*/
 
+.link-on-kuznechny, .link-on-petrogradskoy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 208px;
+    border-top: solid 1px var(--mc-white);
+}
+.link-on-petrogradskoy {
+    border-bottom: solid 1px var(--mc-white);
+}
+.link-on-kuznechny .middle-text {
+    flex-grow: 1;
+    padding-left: 161px
+}
+.link-on-petrogradskoy .middle-text {
+    flex-grow: 1;
+    padding-left: 66px
+}
 
 
 .underline-one {

@@ -2,11 +2,14 @@
 @import "font.css";
 @import "margin-padding.css";
 @import "button-input.css";
+@import "other-styles.css";
 @import "custom-bs.css";
 
 /*root style*/
 
 :root {
+    font-size: 16px;
+
     --mc-black: #0F0E0D;
     --mc-white: #FFFFFF;
     --mc-white-005: rgba(241, 232, 225, 0.05);
@@ -18,24 +21,25 @@
     --mc-vinous: #613433;
     --mc-vinous-02: #774F4D;
     --mc-peach: #E1694E;
-    --fs-100: 6.25em;
-    --fs-64: 4em;
-    --fs-40: 2.5em;
-    --fs-32: 2em;
-    --fs-28: 1.75em;
-    --fs-24: 1.5em;
-    --fs-20: 1.25em;
-    --fs-18: 1.125em;
-    --fs-16: 1em;
-    --fs-15: 0.938em;
-    --fs-14: 0.875em;
-    --fs-13: 0.813em;
-    --fs-12: 0.75em;
-    --fs-10: 0.625em;
-    --fs-9: 0.563em;
-    --fs-8: 0.5em;
-    --fs-7: 0.438em;
-    --fs-6: 0.375em;
+    --fs-100: 6.25rem;
+    --fs-64: 4rem;
+    --fs-48: 3rem;
+    --fs-40: 2.5rem;
+    --fs-32: 2rem;
+    --fs-28: 1.75rem;
+    --fs-24: 1.5rem;
+    --fs-20: 1.25rem;
+    --fs-18: 1.125rem;
+    --fs-16: 1rem;
+    --fs-15: 0.938rem;
+    --fs-14: 0.875rem;
+    --fs-13: 0.813rem;
+    --fs-12: 0.75rem;
+    --fs-10: 0.625rem;
+    --fs-9: 0.563rem;
+    --fs-8: 0.5rem;
+    --fs-7: 0.438rem;
+    --fs-6: 0.375rem;
     --ff-cormorant: 'Cormorant', serif;
     --ff-lato: 'Lato', sans-serif;
     --ff-raleway: 'Raleway', sans-serif;
@@ -43,16 +47,21 @@
 
 * {
     box-sizing: border-box;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
     /*    font-family: 'Cormorant', serif;*/
 }
-
+html {
+    padding: 0 6px;
+}
 body {
     background: var(--mc-vinous);
     color: var(--mc-white);
     font-size: 16px;
     font-family: var(--ff-raleway);
     font-weight: 400;
-    padding-top: 24px;
+    padding: 24px 6px 0 6px;
     overflow-x: hidden;
 }
 
@@ -110,47 +119,66 @@ footer {
     padding-top: 56px;
 }
 
-[class*=brand_] {
+#container_for_img_brands {
+    position: absolute;
+    top: -56px;
+    left: 0;
+    height: 100%;
+    width: 110%;
     z-index: -1;
+
+}
+
+[class*=brand_] {
+    filter: brightness(200%);
 }
 
 .brand_1 {
-    top: 325px;
-    left: 800px;
+    top: 380px !important;
+    left: 800px !important;
 }
 
 .brand_2 {
-    top: 291px;
-    left: -107px;
+    top: 347px !important;
+    left: -107px !important;
 }
 
 .brand_3 {
-    top: 291px;
-    left: 1713px;
+    top: 347px !important;
+    left: 1713px !important;
+/*    transform: translate()*/
 }
 
 .brand_4 {
-    top: 557px;
-    left: 1450px;
+    top: 616px !important;
+    left: 1450px !important;
 }
 
 .brand_5 {
-    top: 557px;
-    left: 202px;
+    top: 616px !important;
+    left: 202px !important;
 }
 
 .brand_6 {
-    top: 757px;
-    left: -67px;
+    top: 813px !important;
+    left: -67px !important;
 }
 
 .brand_7 {
-    top: 757px;
-    left: 1778px;
+    top: 813px !important;
+    left: 1778px !important;
 }
 
 .scroll_logo {
+    position: absolute;
+    left: 50%;
+    background-image: url('/img/main__long_logo.svg');
+/*    background-size: cover;*/
+    background-repeat: repeat-x;
+    height: 175px;
+    width: 6144px;
     top: 1014px;
+    transform: translateX(-50%)
 }
 
 .main__bg_black_card_div {
@@ -277,15 +305,45 @@ footer {
     width: 270px;
 }
 
-.rotating {
-    animation: rotation 15s infinite linear;
+.about_us__foreground_picture {
+    background-image: url('/img/about_us__picture_cigars.jpg');
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
 
-@keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.about_us__bg_vinous, .about_us__bg_vinous_2 {
+    position: absolute;
+    left: 0;
+    top: -25px;
+    width: 100%;
+    height: 1995px;
+    background: var(--mc-vinous);
+    z-index: -1;
+}
+.about_us__bg_vinous_2 {;
+    top: 2950px;
+    height: 3400px;
+}
+.payment_and_delivery__bg_vinous, .payment_and_delivery__bg_vinous_2 {
+    position: absolute;
+    left: 0;
+    top: -25px;
+    width: 100%;
+    height: 1500px;
+    background: var(--mc-vinous);
+    z-index: -1;
+}
+.payment_and_delivery__bg_vinous_2 {;
+    top: 2450px;
+    height: 3400px;
+}
+
+.payment_and_delivery__foreground_picture {
+    background-image: url('/img/payment_and_delivery__cigars.jpg');
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }

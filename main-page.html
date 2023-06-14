@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <!--    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>-->
     <title>La Casa Del Habano</title>
 </head>
@@ -31,17 +32,19 @@
     </div>
     <div class="main__bg_black_div">
         <div class="container position-relative">
-           <div class="position-absolute brand_1"><img src="img/main__brand_1.svg" alt="brand_1"></div>
-           <div class="position-absolute brand_2"><img src="img/main__brand_2.svg" alt="brand_2"></div>
-           <div class="position-absolute brand_3"><img src="img/main__brand_3.svg" alt="brand_3"></div>
-           <div class="position-absolute brand_4"><img src="img/main__brand_4.svg" alt="brand_4"></div>
-           <div class="position-absolute brand_5"><img src="img/main__brand_5.svg" alt="brand_5"></div>
-           <div class="position-absolute brand_6"><img src="img/main__brand_6.svg" alt="brand_6"></div>
-           <div class="position-absolute brand_7"><img src="img/main__brand_7.svg" alt="brand_7"></div>
-           <div class="position-absolute scroll_logo"><img src="img/main__long_logo.svg" alt="scroll_logo"></div>
+            <div id="container_for_img_brands" class="z-index--1">
+                <div class="position-absolute brand_1" data-depth="0.8"><img src="img/main__brand_1.svg" alt="brand_1"></div>
+                <div class="position-absolute brand_2" data-depth="0.2"><img src="img/main__brand_2.svg" alt="brand_2"></div>
+                <div class="position-absolute brand_3" data-depth="0.2"><img src="img/main__brand_3.svg" alt="brand_3"></div>
+                <div class="position-absolute brand_4" data-depth="0.5"><img src="img/main__brand_4.svg" alt="brand_4"></div>
+                <div class="position-absolute brand_5" data-depth="0.5"><img src="img/main__brand_5.svg" alt="brand_5"></div>
+                <div class="position-absolute brand_6" data-depth="0.2"><img src="img/main__brand_6.svg" alt="brand_6"></div>
+                <div class="position-absolute brand_7" data-depth="0.2"><img src="img/main__brand_7.svg" alt="brand_7"></div>
+            </div>
+            <div class="scroll_logo">
+                <!--            <img src="img/main__long_logo.svg" alt="scroll_logo">--></div>
             <div class="row">
-                <div class="offset-3 col-6 d-flex justify-content-center align-items-center">
-                <img src="img/main__text_house_of_cuban_cigars_2.svg" alt=""></div>
+                <div class="offset-3 col-6 d-flex justify-content-center align-items-center"> <img src="img/main__text_house_of_cuban_cigars_2.svg" alt=""></div>
             </div>
             <div class="row mt-2 fs-18 flh-26">
                 <div class="offset-4 col-4 text-center">СИГАРНЫЕ МАГАЗИНЫ И ДЕГУСТАЦИОННЫЕ
@@ -139,14 +142,14 @@
                 <div class="col-3">
                     <div class="main__our_mug_card_left_div">
                         <div>LA CASA DEL HABANO НА КУЗНЕЧНОМ</div>
-                        <div class="border-top"></div>
+                        <div class="mt-2 border-top"></div>
                         <div class="mt-5">Санкт - Петербург</div>
                         <div class="mt-1">Кузнечный пер., д.14А</div>
                         <div class="mt-4 d-flex justify-content-between">
                             <div class="fw-200">Городской</div>
                             <div class="ff-lato">+7 (812) 572 32 90</div>
                         </div>
-                        <div class="mt-1 d-flex justify-content-between">
+                        <div class="mt-3 d-flex justify-content-between">
                             <div class="fw-200">Сотовый</div>
                             <div class="ff-lato">+7 (981) 893 90 53</div>
                         </div>
@@ -218,7 +221,7 @@
     <div class="row mt-96px fs-48 fw-500 flh-58 ff-cormorant">
         <div class="offset-4 col-4 d-flex justify-content-center align-items-center">ОБРАТНАЯ СВЯЗЬ</div>
     </div>
-    <div class="mt-96px">
+    <div class="mt-5">
         <form class="row position-relative" action="#">
             <div class="offset-3 col-3 fs-18 flh-26 fw-200">
                 <input class="input-main" type="text" placeholder="ИМЯ*"> </div>
@@ -230,58 +233,62 @@
             <div class="offset-3 col-6 mt-5 position-relative">
                 <button class="flat-button flat-button-bg-light" type="submit">ОТПРАВИТЬ</button>
             </div>
-            <a class="button-up d-flex justify-content-center align-items-center" href="#">
-                <svg width="16" height="65" viewBox="0 0 16 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.29289 0.292892C7.68342 -0.0976334 8.31658 -0.0976334 8.70711 0.292892L15.0711 6.65685C15.4616 7.04738 15.4616 7.68054 15.0711 8.07107C14.6805 8.46159 14.0474 8.46159 13.6569 8.07107L8 2.41422L2.34315 8.07107C1.95262 8.46159 1.31946 8.46159 0.928932 8.07107C0.538408 7.68054 0.538408 7.04738 0.928932 6.65685L7.29289 0.292892ZM9 1V64.5H7V1H9Z" fill="white" /> </svg>
-            </a>
         </form>
     </div>
     <footer>
-        <div class="row">
-            <div class="col-12">
+        <div class="row h5">
+            <div class="col-12 mb-5">
                 <div class="border-top"></div>
             </div>
-            <div class="col-3 mt-4">
-                <div class="fs-20 flh-29"> <a class="link-main" href="mailto:LCDH@CIGARPLACE.RU">LCDH@CIGARPLACE.RU</a></div>
-                <div class="fs-20 flh-29 mt-3"> <a class="link-main" href="mailto:LCDH@CIGARPLACE.RU">В КОНТАКТЕ</a></div>
-                <div class="fs-20 flh-29 mt-3"> <a class="link-main" href="mailto:LCDH@CIGARPLACE.RU">ТЕЛЕГРАМ</a></div>
-                <div class="fs-20 flh-29 mt-3"> <a class="link-main" href="mailto:LCDH@CIGARPLACE.RU">ИНСТАГРАМ</a></div>
-                <div class="fs-20 flh-29 mt-3"> <a class="link-main" href="mailto:LCDH@CIGARPLACE.RU">ФЕЙСБУК</a></div>
+            <div class="col-2"> <img src="img/footer__logo.svg" alt="footer__logo"> </div>
+            <div class="offset-1 col-3">
+                <div><a href="#">О НАС</a></div>
+                <div class="mt-3"><a href="#">КАТАЛОГ</a></div>
+                <div class="mt-3"><a href="#">НОВОСТИ</a></div>
+                <div class="mt-3"><a href="#">КОНТАКТЫ</a></div>
             </div>
-            <div class="col-3 mt-4">
-                <div class="fs-20 flh-29">LCDH KUZNECHNY:</div>
-                <div class="mt-3 border-top"></div>
-                <div class="fs-20 flh-29 mt-4">г. Санкт-Петербург,Кузнечный переулок, 14А</div>
+            <div class="col-3 mb-5">
+                <div>LCDH KUZNECHNY:</div>
+                <div class="mt-2 border-top"></div>
+                <div class="mt-4">г. Санкт-Петербург,Кузнечный переулок, 14А</div>
                 <div class="mt-3 d-flex justify-content-between">
-                    <div class="fs-20 flh-29 fw-300">Городской</div>
-                    <div class="fs-20 flh-29">+7 (812) 572 32 90</div>
+                    <div class="fw-200">Городской</div>
+                    <div class="h5-num">+7 (812) 572 32 90</div>
                 </div>
-                <div class="mt-1 d-flex justify-content-between">
-                    <div class="fs-20 flh-29 fw-300">Сотовый</div>
-                    <div class="fs-20 flh-29">+7 (981) 893 90 53</div>
+                <div class="mt-3 d-flex justify-content-between">
+                    <div class="fw-200">Сотовый</div>
+                    <div class="h5-num">+7 (981) 893 90 53</div>
+                </div>
+                <div class="mt-5">LCDH BOLSHOY P.SIDE:</div>
+                <div class="mt-2 border-top"></div>
+                <div class="mt-4">г. Санкт-Петербург,Большой пр. П.С., 37</div>
+                <div class="mt-3 d-flex justify-content-between">
+                    <div class="fw-200">Городской</div>
+                    <div class="h5-num">+7 (812) 332 45 97</div>
+                </div>
+                <div class="mt-3 d-flex justify-content-between">
+                    <div class="fw-200">Сотовый</div>
+                    <div class="h5-num">+7 (981) 045 99 45</div>
                 </div>
             </div>
-            <div class="col-3 mt-4">
-                <div class="fs-20 flh-29">LCDH BOLSHOY P.SIDE:</div>
-                <div class="mt-3 border-top"></div>
-                <div class="fs-20 flh-29 mt-4">г. Санкт-Петербург,Большой пр. П.С., 37</div>
-                <div class="mt-3 d-flex justify-content-between">
-                    <div class="fs-20 flh-29 fw-300">Городской</div>
-                    <div class="fs-20 flh-29">+7 (812) 332 45 97</div>
-                </div>
-                <div class="mt-1 d-flex justify-content-between">
-                    <div class="fs-20 flh-29 fw-300">Сотовый</div>
-                    <div class="fs-20 flh-29">+7 (981) 045 99 45</div>
+            <div class="offset-3 col-3 mt-4"><a class="me-2" href="#">TLG</a>/<a class="ms-2 me-2" href="#">VK</a>/<a class="ms-2 me-2" href="#">INST</a>/<a class="ms-2 me-2" href="#">FB</a></div>
+            <div class="col-3 mt-4"><a class="link-main" href="mailto:LCDH@CIGARPLACE.RU">LCDH@CIGARPLACE.RU</a></div>
+            <div class="col-3 pt-4">
+                <div class="position-relative">
+                    <div>
+                        <a class="round-button round-button-big round-button-footer d-flex justify-content-center align-items-center" href="#">
+                            <svg width="16" height="65" viewBox="0 0 16 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.29289 0.292892C7.68342 -0.0976334 8.31658 -0.0976334 8.70711 0.292892L15.0711 6.65685C15.4616 7.04738 15.4616 7.68054 15.0711 8.07107C14.6805 8.46159 14.0474 8.46159 13.6569 8.07107L8 2.41422L2.34315 8.07107C1.95262 8.46159 1.31946 8.46159 0.928932 8.07107C0.538408 7.68054 0.538408 7.04738 0.928932 6.65685L7.29289 0.292892ZM9 1V64.5H7V1H9Z" fill="white" /> </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
-            <div class="offset-3 col-3 fs-20 flh-29">© LA CASA DEL HABANO ST-PETERSBURG 2023</div>
-            <div class="col-3 fs-20 flh-29 fw-300">Политика конфиденциальности</div>
-            <div class="offset-1 col-2 d-flex justify-content-between">
-                <div class="fs-20 flh-29 fw-300">Made by:</div>
-                <div class="fs-20 flh-29">DUO CREATIVE</div>
-            </div>
+        <div class="row mt-168px">
+            <div class="col-2 d-flex justify-content-between">
+                <div class="fw-200">Made by:</div> <a href="www.duo-creative.ru">DUO CREATIVE</a> </div>
+            <div class="offset-1 col-3 h4 fls-01">© LA CASA DEL HABANO ST-PETERSBURG 2023</div>
+            <div class="col-3 h4 fw-200">Политика конфиденциальности</div>
         </div>
     </footer>
     <script src="js/main-page-js.js"></script>

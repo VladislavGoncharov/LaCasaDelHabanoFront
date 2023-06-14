@@ -1,0 +1,33 @@
+
+.width-375px {
+    max-width: 375px;
+}
+.width-453px {
+    max-width: 453px;
+}
+.border-top {
+    border-top: solid 1px var(--mc-white);
+}
+.rotate-45 {
+    -ms-transform: rotate(-45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+}
+.transition-05 {
+    transition: 0.5s;
+}
+
+.rotating {
+    animation: rotation 15s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
