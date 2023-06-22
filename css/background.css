@@ -1,0 +1,55 @@
+.bg_white {
+    background: var(--mc-white);
+    color: var(--mc-black);
+}
+.bg_white * {
+    color: var(--mc-black);
+}
+
+.bg_transparent {
+    height: 100vh;
+    background: transparent;
+}
+
+.about_us__foreground_picture {
+    background-image: url('/img/about_us__picture_cigars.jpg');
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.about_us__bg_vinous, .about_us__bg_vinous_2 {
+    position: absolute;
+    left: 0;
+    top: -25px;
+    width: 100%;
+    height: 1994px;
+    background: var(--mc-vinous);
+    z-index: -1;
+}
+.about_us__bg_vinous_2 {
+    top: calc(1969px + 100vh);
+    height: 3500px;
+}
+.payment_and_delivery__bg_vinous, .payment_and_delivery__bg_vinous_2 {
+    position: absolute;
+    left: 0;
+    top: -25px;
+    width: 100%;
+    height: 1572px;
+    background: var(--mc-vinous);
+    z-index: -1;
+}
+.payment_and_delivery__bg_vinous_2 {
+    top: calc(1547px + 100vh);
+    height: 3400px;
+}
+
+.payment_and_delivery__foreground_picture {
+    background-image: url('/img/payment_and_delivery__cigars.jpg');
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}

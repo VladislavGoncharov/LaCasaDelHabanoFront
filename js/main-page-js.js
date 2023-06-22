@@ -16,8 +16,8 @@ let parallax = new Parallax(scene, {
     , frictionY: 0.1
 });
 let prevScrollTop = 0;
-$(window).scroll(function () {
-    let elementScroll = $('.scroll_logo');
+function startLongLogo () {
+    let elementScroll = $('.long_logo');
     let transformValue = elementScroll.css('transform');
     let translateX = 0;
     let transformValues = transformValue.match(/-?[\d.]+/g);
@@ -28,4 +28,4 @@ $(window).scroll(function () {
         transform: 'translateX(' + offsetX + 'px)'
     });
     prevScrollTop = $(this).scrollTop();
-});
+}

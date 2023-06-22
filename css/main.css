@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500&family=Lato&family=Raleway:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500&family=Lato&family=Raleway:wght@200;300;400;700&display=swap');
 @import "font.css";
 @import "margin-padding.css";
 @import "button-input.css";
 @import "other-styles.css";
+@import "background.css";
 @import "custom-bs.css";
 
 /*root style*/
@@ -17,8 +18,7 @@
     --mc-white-06: rgba(241, 232, 225, 0.6);
     /*    --mc-dark-grey: #262422;*/
     --mc-dark-grey: #1D1C1C;
-    --mc-vinous-img: #6a3837;
-    --mc-vinous: #613433;
+    --mc-vinous: #6a3837;
     --mc-vinous-02: #774F4D;
     --mc-peach: #E1694E;
     --fs-100: 6.25rem;
@@ -63,9 +63,13 @@ body {
     font-weight: 400;
     padding: 24px 6px 0 6px;
     overflow-x: hidden;
+/*  perspective: 3px;*/
+/*  transform-style: preserve-3d;*/
 }
 
 nav {
+    background: var(--mc-vinous-img);
+    z-index: 15;
     height: 62px;
     align-items: center;
 }
@@ -81,7 +85,7 @@ footer {
     top: 0;
     width: 100%;
     height: 700px;
-    background: var(--mc-vinous-img);
+    background: var(--mc-vinous);
     z-index: -1
 }
 
@@ -169,18 +173,24 @@ footer {
     left: 1778px !important;
 }
 
-.scroll_logo {
+.long_logo {
     position: absolute;
-    left: 50%;
     background-image: url('/img/main__long_logo.svg');
-/*    background-size: cover;*/
     background-repeat: repeat-x;
     height: 175px;
-    width: 6144px;
+    width: 200vw;
     top: 1014px;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    animation: move-right 15s infinite linear;
 }
-
+ @keyframes move-right {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 101%;
+    }
+  }
 .main__bg_black_card_div {
     display: flow-root;
     background: var(--mc-dark-grey);
@@ -305,45 +315,35 @@ footer {
     width: 270px;
 }
 
-.about_us__foreground_picture {
-    background-image: url('/img/about_us__picture_cigars.jpg');
-    background-position:center center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
+.contact__div {
+    border-bottom: solid 1px var(--mc-white);
+    border-top: solid 1px var(--mc-white);
 }
 
-.about_us__bg_vinous, .about_us__bg_vinous_2 {
-    position: absolute;
-    left: 0;
-    top: -25px;
-    width: 100%;
-    height: 1995px;
-    background: var(--mc-vinous);
-    z-index: -1;
+.contact__inner_div_left {
+    height: 594px;
+    border-right: solid 1px var(--mc-white);
 }
-.about_us__bg_vinous_2 {;
-    top: 2950px;
-    height: 3400px;
+.contact__inner_div_right {
+    height: 594px;
+    border-left: solid 1px var(--mc-white);
 }
-.payment_and_delivery__bg_vinous, .payment_and_delivery__bg_vinous_2 {
-    position: absolute;
-    left: 0;
-    top: -25px;
-    width: 100%;
-    height: 1500px;
-    background: var(--mc-vinous);
-    z-index: -1;
-}
-.payment_and_delivery__bg_vinous_2 {;
-    top: 2450px;
-    height: 3400px;
-}
+.contact__inner_div_left div, .contact__inner_div_right div {
+    width: 429px;
+    height: 455px;
 
-.payment_and_delivery__foreground_picture {
-    background-image: url('/img/payment_and_delivery__cigars.jpg');
-    background-position:center center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
+}
+.catalog__card {
+    height: 560px;
+    width: 100%;
+}
+.catalog__card_img_div {
+    border: solid 1px var(--mc-black);
+    height: 453px;
+}
+.catalog__card_img {
+
+}
+.catalog__card_name {
+    height: 58px;
 }
