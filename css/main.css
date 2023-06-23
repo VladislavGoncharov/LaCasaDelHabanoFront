@@ -335,14 +335,19 @@ footer {
 }
 .catalog__card {
     height: 560px;
-    width: 100%;
 }
 .catalog__card_img_div {
     border: solid 1px var(--mc-black);
     height: 453px;
+    width: 453px;
 }
 .catalog__card_img {
-
+    height: 451px;
+    width: 451px;
+}
+.catalog__card_padding_text {
+    padding-left: 1px;
+    padding-right: 3px;
 }
 .catalog__card_name {
     height: 58px;
