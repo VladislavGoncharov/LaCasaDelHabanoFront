@@ -1,7 +1,55 @@
-html {
-  scroll-behavior: smooth !important;
+/* Скрытие скроллбара во всех браузерах */
+::-webkit-scrollbar {
+  display: none; /* Для веб-кит браузеров (Chrome, Safari, Opera) */
+}
+/* Дополнительные стили, чтобы скрытый скроллбар не занимал место */
+body {
+  scrollbar-width: none; /* Для Firefox */
+  -ms-overflow-style: none; /* Для Internet Explorer и Edge */
 }
 
+.basket__scroll_div {
+    margin-top: 72px;
+    height: 570px;
+}
+.plus_minus_basket {
+    width: 29px;
+    height: 29px;
+
+}
+.grid-col-2 {
+    display: grid;
+    grid-template-columns:50% 50%;
+    height: 294px;
+}
+.grid-col-2 > img{
+    width: 294px;
+    height: 294px;
+}
+.top--25px {
+    top: -25px;
+}
+.top-2500px {
+    top: 2720px;
+}
+.h-4000px{
+  height: 4000px;
+}
+.h-2036px{
+  height: 2036px;
+}
+.h-680px{
+  height: 680px;
+}
+.h-100px{
+  height: 100px;
+}
+.h-37px {
+    height: 37px;
+}
+.z-index-2 {
+    z-index: 2;
+}
 .z-index-1 {
     z-index: 1;
 }
@@ -22,11 +70,17 @@ html {
 .border-top {
     border-top: solid 1px var(--mc-white);
 }
+.border-top-grey {
+    border-top: solid 1px var(--mc-grey);
+}
 .border-top-black {
     border-top: solid 1px var(--mc-black);
 }
 .border-right-black {
     border-right: solid 1px var(--mc-black);
+}
+.border-bottom {
+    border-bottom: solid 1px var(--mc-white);
 }
 .rotate-45 {
     -ms-transform: rotate(-45deg);

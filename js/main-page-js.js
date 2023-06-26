@@ -1,6 +1,12 @@
 $(document).ready(function () {
     let element = $('#img_text');
     element.addClass('rotating');
+    $('.basket__scroll_div').overlayScrollbars({
+        className: 'os-theme-dark'
+        , scrollbars: {
+            clickScrolling: true
+        , }
+    })
 });
 ////паралакс брендов от движения мыши
 let scene = document.getElementById('container_for_img_brands');
@@ -16,7 +22,8 @@ let parallax = new Parallax(scene, {
     , frictionY: 0.1
 });
 let prevScrollTop = 0;
-function startLongLogo () {
+
+function startLongLogo() {
     let elementScroll = $('.long_logo');
     let transformValue = elementScroll.css('transform');
     let translateX = 0;
@@ -29,3 +36,27 @@ function startLongLogo () {
     });
     prevScrollTop = $(this).scrollTop();
 }
+
+$('.main__img_div').on("mousemove", function(event) {
+  let img_absolute = $('.main__img_div').find('.main__img_absolute');
+    let img_mousemove = $('.main__img_div').find('#img_mousemove');
+    let x = Math.round(event.pageX - $('.main__img_div').offset().left);
+    let y = Math.round(event.pageY - $('.main__img_div').offset().top);
+
+    let x_img_mousemove = x * (-1) - 1;
+    let y_img_mousemove = y * (-1) + 200;
+
+   gsap.to(img_absolute, {
+    left: x- 200,
+    top: y- 200,
+    duration: 1,
+    ease: "power1.out"
+  });
+   gsap.to(img_mousemove, {
+    left: x_img_mousemove,
+    top: y_img_mousemove,
+    duration: 1,
+    ease: "power1.out"
+  });
+});
+

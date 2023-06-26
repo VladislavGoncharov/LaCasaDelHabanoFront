@@ -7,7 +7,6 @@ a:hover {
     color: var(--mc-white);
 }
 
-
 button {
     background: transparent;
     color: var(--mc-white);
@@ -67,14 +66,17 @@ textarea::-webkit-input-placeholder {
     width: 135px;
     height: 135px;
 }
+
 .round-button-big {
     width: 200px;
     height: 200px;
 }
+
 .round-button-very-big {
     width: 294px;
     height: 294px;
 }
+
 .round-button-footer {
     position: absolute;
     bottom: -20px;
@@ -108,11 +110,11 @@ textarea::-webkit-input-placeholder {
     color: var(--mc-vinous);
 }
 
-
 .flat-link:hover:before {
     background-color: var(--mc-white);
     transform: scaleY(100);
 }
+
 .input-main {
     height: 34px;
     border-bottom: solid 1px var(--mc-white);
@@ -125,13 +127,14 @@ textarea::-webkit-input-placeholder {
 }
 
 .link-main {
-    border-bottom: solid 1px transparent;
+/*    border-bottom: solid 1px transparent;*/
     transition: linear 0.35s;
 }
 
 .link-main:hover {
-    border-bottom: solid 1px var(--mc-white);
+/*    border-bottom: solid 1px var(--mc-white);*/
 }
+
 
 /*
 .button-up {
@@ -170,49 +173,36 @@ textarea::-webkit-input-placeholder {
 }
 */
 
-.link-on-kuznechny, .link-on-petrogradskoy {
+.link-on-kuznechny,
+.link-on-petrogradskoy {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 208px;
     border-top: solid 1px var(--mc-white);
 }
+
 .link-on-petrogradskoy {
     border-bottom: solid 1px var(--mc-white);
 }
 
-
 .underline-one {
-    color: #00bfff;
-    /* Цвет обычной ссылки */
     position: relative;
-    cursor: pointer;
-    text-decoration: none;
-    /* Убираем подчеркивание */
 }
-
 .underline-one:after {
     content: "";
-    width: 0;
-    display: block;
     position: absolute;
     right: 0;
-    bottom: -3px;
-    height: 2px;
-    background: var(--mc-vinous);
-    transition: width 0.5s;
+    bottom: -1px;
+    width: 0;
+    height: 1px;
+    background-color: var(--mc-white);
+    transition: 0.5s;
 }
 
 .underline-one:hover:after {
-    content: "";
     width: 100%;
-    display: block;
-    position: absolute;
     left: 0;
-    bottom: -3px;
-    height: 2px;
-    background: var(--mc-vinous);
-    transition: width 0.5s;
 }
 
 .filter-link {
@@ -222,19 +212,22 @@ textarea::-webkit-input-placeholder {
     justify-content: center;
     align-items: center;
 }
+
 .filter-link:hover {
     color: var(--mc-black);
     background: #f8f8f8;
+}
 
-}
 .filter-link-focus {
-    background:  var(--mc-black);
+    background: var(--mc-black);
     color: var(--mc-white);
 }
+
 .filter-link-focus:hover {
-    background:  var(--mc-black);
+    background: var(--mc-black);
     color: var(--mc-white);
 }
+
 .checkbox-filter {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -245,11 +238,49 @@ textarea::-webkit-input-placeholder {
     width: 24px;
     height: 24px;
     border: solid 1px var(--mc-black);
-
 }
+
 .checkbox-filter:checked {
     content: url(/img/checkbox.svg);
 }
+
+.radio-main input[type="radio"] {
+    position: absolute;
+    appearance: none;
+}
+.radio-main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+}
+.radio-main-checkmark {
+    width: 26px;
+    height: 26px;
+    border: solid 1px var(--mc-white);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-main-checkmark div{
+    width: 16px;
+    height: 16px;
+    background: var(--mc-black);
+    border-radius: 100%;
+}
+.radio-main input[type="radio"]:checked ~ .radio-main-checkmark div{
+    background: var(--mc-white);
+}
+
+.menu-link-img {
+    transition: 0.5s;
+    opacity: 0;
+}
+.menu-link:hover .menu-link-img {
+    opacity: 1;
+}
+
 /* input range styles*/
 
 .noUi-connect {
@@ -257,6 +288,7 @@ textarea::-webkit-input-placeholder {
     background: var(--mc-black) !important;
     height: 1px !important;
 }
+
 .noUi-touch-area {
     margin-top: 2px;
     background: var(--mc-black);
@@ -264,13 +296,18 @@ textarea::-webkit-input-placeholder {
     width: 10px !important;
     height: 10px !important;
 }
-.noUi-target, .noUi-handle, .noUi-handle:before, .noUi-handle:after {
+
+.noUi-target,
+.noUi-handle,
+.noUi-handle:before,
+.noUi-handle:after {
     border: none !important;
     box-shadow: none !important;
     content: none !important;
     background: none !important;
     z-index: 0 !important;
 }
+
 .noUi-horizontal .noUi-handle {
     right: -26px!important;
 }

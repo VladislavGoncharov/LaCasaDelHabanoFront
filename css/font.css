@@ -121,6 +121,12 @@
 .fc-vinous {
     color: var(--mc-vinous);
 }
+.fc-peach {
+    color: var(--mc-peach);
+}
+.fc-grey {
+    color: var(--mc-grey);
+}
 
 .flh-58 {
     line-height: 58px;

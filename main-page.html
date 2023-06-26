@@ -4,33 +4,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap-5.1.3-dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/button-input.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/margin-padding.css">
+    <link rel="stylesheet" href="css/other-styles.css">
+    <link rel="stylesheet" href="js/noUiSlider-15.7.1/nouislider.min.css">
+    <link rel="stylesheet" href="js/OverlayScrollbars/OverlayScrollbars.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <!--    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
     <title>La Casa Del Habano</title>
 </head>
 
 <body class="container">
-    <div class="main__bg_vinous_img"></div>
-    <nav class="row h5 flh-21">
-        <div class="col-12">
+    <div class="position-absolute top-0 start-0 w-100 h-680px">
+        <div class="bg_nav_vinous"></div>
+    </div>
+    <div class="position-absolute top-2500px start-0 w-100 h-4000px">
+        <div class="bg_nav_vinous"></div>
+    </div>
+    <nav class="row h5 position-sticky top-0">
+        <div class="col-5">
             <div class="border-top"></div>
         </div>
-        <div class="col-1 text-start"><a class="link-main" href="#">EN</a></div>
-        <div class="col-1 text-end"><a class="link-main" href="#">РЕЗЕРВ</a></div>
-        <div class="col-1 text-end"><a class="link-main" href="#">КАТАЛОГ</a></div>
-        <div class="offset-2 col-2 text-center"><img src="img/navbar__logo.svg" alt="navbar__logo"></div>
-        <div class="offset-2 col-1 text-start"><a class="link-main" href="#">ПОИСК</a></div>
-        <div class="col-1 text-start"><a class="link-main" href="#">КОРЗИНА</a></div>
-        <div class="col-1 text-end"><a class="link-main" href="#">МЕНЮ</a></div>
+        <div class="col-2"> <img src="img/navbar__logo.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x h-37px"> </div>
+        <div class="col-5">
+            <div class="border-top"></div>
+        </div>
+        <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one underline-one" href="#" >EN</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('reserve',event)">РЕЗЕРВ</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('catalog',event)">КАТАЛОГ</a></div>
+        <div class="offset-6 col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#"  onclick="openPopUp('search',event)">ПОИСК</a></div>
+        <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('basket',event)">КОРЗИНА</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('menu',event)">МЕНЮ</a></div>
     </nav>
-    <div class="row mt-4">
-        <div class="col-12 main__img_div">
-            <div class="main__img_absolute"> <img src="img/main__img_color.jpg" alt="main__img_little"> </div> <img src="img/main__img_colorless.png" alt="main__img_big"> </div>
+    <div id="search" class="bg_black_pop_up_windows_on_the_right_darkening" style="display: none">
+        <div class="bg_black_pop_up_windows_on_the_right_dark">
+            <div class="d-flex justify-content-between h5 text-uppercase">
+                <div class="fc-peach">поиск</div>
+                <div><a class="link-main underline-one" href="#" onclick="openPopUp('search',event)">закрыть</a></div>
+            </div>
+            <div class="mt-96px"><input class="input-main text-uppercase fw-300" type="text" placeholder="введите название бренда или витолы*"></div>
+            <div class="basket__scroll_div position-relative">
+            <div class="grid-col-2 mt-4 pe-3"><img src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1">
+                <div class="position-relative ms-2">
+                    <div class="h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                    <div class="position-absolute bottom-0 w-100">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <div class="h3-num">7 900 р.</div>
+                            <div class="d-flex justify-content-center">
+                                <a class="me-3" href=""><img class="plus_minus_basket" src="img/minus-in-basket.svg" alt="minus-in-basket"></a>
+                                <div class="h3-num ps-2 pe-2 me-3">0</div>
+                                <a href=""><img class="plus_minus_basket" src="img/plus-in-basket.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-col-2 mt-4 pe-3"><img src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1">
+                <div class="position-relative ms-2">
+                    <div class="h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                    <div class="position-absolute bottom-0 w-100">
+
+                        <div class="d-flex justify-content-between align-items-end">
+                            <div class="h3-num">7 900 р.</div>
+                            <div class="d-flex justify-content-center">
+                                <a class="me-3" href=""><img class="plus_minus_basket" src="img/minus-in-basket.svg" alt="minus-in-basket"></a>
+                                <div class="h3-num ps-2 pe-2 me-3">0</div>
+                                <a href=""><img class="plus_minus_basket" src="img/plus-in-basket.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-col-2 mt-4 pe-3"><img src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1">
+                <div class="position-relative ms-2">
+                    <div class="h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                    <div class="position-absolute bottom-0 w-100">
+
+                        <div class="d-flex justify-content-between align-items-end">
+                            <div class="h3-num">7 900 р.</div>
+                            <div class="d-flex justify-content-center">
+                                <a class="me-3" href=""><img class="plus_minus_basket" src="img/minus-in-basket.svg" alt="minus-in-basket"></a>
+                                <div class="h3-num ps-2 pe-2 me-3">0</div>
+                                <a href=""><img class="plus_minus_basket" src="img/plus-in-basket.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            </div>
+        </div>
+    <div id="basket" class="bg_black_pop_up_windows_on_the_right_darkening" style="display: none">
+        <div class="bg_black_pop_up_windows_on_the_right_dark">
+            <div class="d-flex justify-content-between h5 text-uppercase">
+                <div class="fc-peach">корзина</div>
+                <div><a class="link-main underline-one" href="#" onclick="openPopUp('basket',event)">закрыть</a></div>
+            </div>
+            <div class="basket__scroll_div position-relative">
+            <div class="grid-col-2 mt-4 pe-3"><img src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1">
+                <div class="position-relative ms-2">
+                    <div class="h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                    <div class="position-absolute bottom-0 w-100">
+                        <div class="mb-4 pb-2"><a class="h5 fc-grey" href="">Удалить</a></div>
+                        <div class="d-flex justify-content-between align-items-end">
+                            <div class="h3-num">7 900 р.</div>
+                            <div class="d-flex justify-content-center">
+                                <a class="me-3" href=""><img class="plus_minus_basket" src="img/minus-in-basket.svg" alt="minus-in-basket"></a>
+                                <div class="h3-num ps-2 pe-2 me-3">1</div>
+                                <a href=""><img class="plus_minus_basket" src="img/plus-in-basket.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-col-2 mt-4 pe-3"><img src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1">
+                <div class="position-relative ms-2">
+                    <div class="h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                    <div class="position-absolute bottom-0 w-100">
+                        <div class="mb-4 pb-2"><a class="h5 fc-grey" href="">Удалить</a></div>
+                        <div class="d-flex justify-content-between align-items-end">
+                            <div class="h3-num">7 900 р.</div>
+                            <div class="d-flex justify-content-center">
+                                <a class="me-3" href=""><img class="plus_minus_basket" src="img/minus-in-basket.svg" alt="minus-in-basket"></a>
+                                <div class="h3-num ps-2 pe-2 me-3">1</div>
+                                <a href=""><img class="plus_minus_basket" src="img/plus-in-basket.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-col-2 mt-4 pe-3"><img src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1">
+                <div class="position-relative ms-2">
+                    <div class="h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                    <div class="position-absolute bottom-0 w-100">
+                        <div class="mb-4 pb-2"><a class="h5 fc-grey" href="">Удалить</a></div>
+                        <div class="d-flex justify-content-between align-items-end">
+                            <div class="h3-num">7 900 р.</div>
+                            <div class="d-flex justify-content-center">
+                                <a class="me-3" href=""><img class="plus_minus_basket" src="img/minus-in-basket.svg" alt="minus-in-basket"></a>
+                                <div class="h3-num ps-2 pe-2 me-3">1</div>
+                                <a href=""><img class="plus_minus_basket" src="img/plus-in-basket.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            <div class="mt-5">
+            <div class="border-top"></div>
+            <div class="mt-2 d-flex justify-content-between align-items-center">
+                <div class="h3 text-uppercase">итого</div>
+                <div class="h3-num text-uppercase">7 900 р.</div>
+            </div>
+            <div class="mt-5"><button class="flat-button text-center">Оформить</button></div>
+            </div>
+        </div>
+    </div>
+    <div id="reserve" class="bg_black_pop_up_windows" style="display: none">
+        <nav class="row h5 text-uppercase position-sticky top-0">
+            <div class="col-5">
+                <div class="border-top"></div>
+            </div>
+            <div class="col-2"> <img src="img/navbar__logo.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x h-37px"> </div>
+            <div class="col-5">
+                <div class="border-top"></div>
+            </div>
+            <div class="col-1 d-flex justify-content-start align-items-end fc-peach">резерв</div>
+            <div class="offset-10 col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('reserve',event)">закрыть</a></div>
+        </nav>
+        <div class="row mt-96px">
+            <div class="offset-4 col-4 h5 text-center ps-5 pe-5">
+                <div class="ps-4 pe-4">Вы можете забронировать для себя место в нашей дегустационной зоне. Для этого заполните форму ниже. Мы свяжемся с вами в ближайшее время.</div>
+            </div>
+        </div>
+        <form class="row mt-75px h5 fw-300 text-uppercase" action="#">
+            <div class="offset-3 col-3">
+                <label class="radio-main">
+                    <input id="radio_kuz" type="radio" name="select-mug" checked>
+                    <div class="radio-main-checkmark me-4">
+                        <div></div>
+                    </div>
+                    <div>кузнечный переулок д.14</div>
+                </label>
+            </div>
+            <div class="col-3">
+                <label class="radio-main">
+                    <input id="radio_kuz" type="radio" name="select-mug">
+                    <div class="radio-main-checkmark me-4">
+                        <div></div>
+                    </div>
+                    <div>большой проспект п.с. д.37</div>
+                </label>
+            </div>
+            <div class="offset-3 col-3 mt-5">
+                <input class="input-main" type="text" placeholder="ИМЯ*"> </div>
+            <div class="col-3">
+                <input class="input-main mt-5" type="text" placeholder="ТЕЛЕФОН ИЛИ E-MAIL*"> </div>
+            <div class="offset-3 col-3 mt-5">
+                <input class="input-main" type="text" placeholder="дата*"> </div>
+            <div class="col-3">
+                <input class="input-main mt-5" type="text" placeholder="количество гостей*"> </div>
+            <div class="offset-3 col-6 mt-5">
+                <textarea class="textarea-main" placeholder="СООБЩЕНИЕ"></textarea>
+            </div>
+            <div class="offset-3 col-6 mt-5 position-relative">
+                <button class="flat-button flat-button-bg-light" type="submit">Отправить</button>
+            </div>
+        </form>
+        <div class="mb-4 position-absolute bottom-0 row w-100 h5 fw-300 gy-1 pe-3">
+            <div class="col-3 text-uppercase">резерв по телефону</div>
+            <div class="col-3 text-uppercase d-flex justify-content-between">
+                <div>Кузнечный:</div><img src="img/dotted_line.svg" alt="dotted_line">
+                <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (812) 572 32 90">+7 (812) 572 32 90</a></div>
+            </div>
+            <div class="col-3 text-uppercase d-flex justify-content-between">
+                <div>петроградская:</div><img src="img/dotted_line_2.svg" alt="dotted_line">
+                <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (812) 332 45 97">+7 (812) 332 45 97</a></div>
+            </div>
+            <div class="col-3 d-flex justify-content-end">
+                <div> <a class="me-2 link-main underline-one link-main underline-one" href="#">TLG</a>/<a class="ms-2 me-2 link-main underline-one" href="#">VK</a>/<a class="ms-2 me-2 link-main underline-one" href="#">INST</a>/<a class="ms-2 link-main underline-one" href="#">FB</a> </div>
+            </div>
+            <div class="col-12 mt-2">
+                <div class="border-top-grey"></div>
+            </div>
+        </div>
+    </div>
+    <div id="catalog" class="bg_black_pop_up_windows" style="display: none">
+        <nav class="row h5 text-uppercase position-sticky top-0 ">
+            <div class="col-5">
+                <div class="border-top"></div>
+            </div>
+            <div class="col-2"> <img src="img/navbar__logo.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x h-37px"> </div>
+            <div class="col-5">
+                <div class="border-top"></div>
+            </div>
+            <div class="col-1 d-flex justify-content-start align-items-end fc-peach">каталог</div>
+            <div class="offset-10 col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('catalog',event)">закрыть</a></div>
+        </nav>
+        <div class="row mt-96px">
+            <div class="offset-3 col-3 h5">
+                <div class="pe-5">В нашем магазине самый болшой в России ассортимент кубинских сигар: лимитированные и специальные выпуски, винтажные серии, эксклюзивные витолы.</div>
+            </div>
+            <div class="col-3 h5 pe-5">
+                <div class="pe-5"><div class="pe-2">Кроме того мы предлагаем вам познакомиться с сигариллами, аксессуарами и превосходным кубинским кофе.</div></div>
+            </div>
+            <div class="col-12 mt-96px">
+                <a class="row h-100px g-0 border-top" href="">
+                    <div class="col-3 h5-num d-flex justify-content-start align-items-center">01</div>
+                    <div class="col-5 h5 text-uppercase d-flex justify-content-start align-items-center ps-1">
+                        <div class="ps-1">сигары</div>
+                    </div>
+                    <div class="col-4 h5-num text-uppercase d-flex justify-content-end align-items-center">(211)</div>
+                </a>
+                <a class="row h-100px g-0 border-top" href="">
+                    <div class="col-3 h5-num d-flex justify-content-start align-items-center">02</div>
+                    <div class="col-5 h5 text-uppercase d-flex justify-content-start align-items-center ps-1">
+                        <div class="ps-1">сигариллы</div>
+                    </div>
+                    <div class="col-4 h5-num text-uppercase d-flex justify-content-end align-items-center">(31)</div>
+                </a>
+                <a class="row h-100px g-0 border-top" href="">
+                    <div class="col-3 h5-num d-flex justify-content-start align-items-center">03</div>
+                    <div class="col-5 h5 text-uppercase d-flex justify-content-start align-items-center ps-1">
+                        <div class="ps-1">кофе</div>
+                    </div>
+                    <div class="col-4 h5-num text-uppercase d-flex justify-content-end align-items-center">(12)</div>
+                </a>
+                <a class="row h-100px g-0 border-top border-bottom" href="">
+                    <div class="col-3 h5-num d-flex justify-content-start align-items-center">04</div>
+                    <div class="col-5 h5 text-uppercase d-flex justify-content-start align-items-center ps-1">
+                        <div class="ps-1">аксессуары</div>
+                    </div>
+                    <div class="col-4 h5-num text-uppercase d-flex justify-content-end align-items-center">(86)</div>
+                </a>
+            </div>
+        </div>
+        <div class="mb-4 position-absolute bottom-0 row w-100 h5 fw-300 gy-1 pe-3">
+            <div class="col-3 text-uppercase">нужна консультация?</div>
+            <div class="col-3 text-uppercase d-flex justify-content-between">
+                <div>Кузнечный:</div><img src="img/dotted_line.svg" alt="dotted_line">
+                <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (812) 572 32 90">+7 (812) 572 32 90</a></div>
+            </div>
+            <div class="col-3 text-uppercase d-flex justify-content-between">
+                <div>петроградская:</div><img src="img/dotted_line_2.svg" alt="dotted_line">
+                <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (812) 332 45 97">+7 (812) 332 45 97</a></div>
+            </div>
+            <div class="col-3 d-flex justify-content-end">
+                <div> <a class="me-2 link-main underline-one link-main underline-one" href="#">TLG</a>/<a class="ms-2 me-2 link-main underline-one link-main underline-one" href="#">VK</a>/<a class="ms-2 me-2 link-main underline-one link-main underline-one" href="#">INST</a>/<a class="ms-2 link-main underline-one link-main underline-one" href="#">FB</a> </div>
+            </div>
+            <div class="col-12 mt-2">
+                <div class="border-top-grey"></div>
+            </div>
+        </div>
+    </div>
+    <div id="menu" class="bg_black_pop_up_windows bottom-0" style="display: none">
+        <nav class="row h5 text-uppercase position-sticky top-0 ">
+            <div class="col-5">
+                <div class="border-top"></div>
+            </div>
+            <div class="col-2"> <img src="img/navbar__logo.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x h-37px"> </div>
+            <div class="col-5">
+                <div class="border-top"></div>
+            </div>
+            <div class="col-1 d-flex justify-content-start align-items-end fc-peach">меню</div>
+            <div class="offset-10 col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('menu',event)">закрыть</a></div>
+        </nav>
+        <div class="row">
+            <div class="offset-2 col-4 mt-130px h2 text-uppercase">
+                <div class="d-flex justify-content-start align-items-center ps-5 menu-link"><img class="me-4 ps-5 menu-link-img" src="img/sheet.svg" alt="sheet"> <a href="" class="menu-link">сигары</a></div>
+                <div class="mt-3 d-flex justify-content-start align-items-center ps-5 menu-link"><img class="me-4 ps-5 menu-link-img" src="img/sheet.svg" alt="sheet"> <a href="" class="menu-link">сигариллы</a></div>
+                <div class="mt-3 d-flex justify-content-start align-items-center ps-5 menu-link"><img class="me-4 ps-5 menu-link-img" src="img/sheet.svg" alt="sheet"> <a href="" class="menu-link">кофе</a></div>
+                <div class="mt-3 d-flex justify-content-start align-items-center ps-5 menu-link"><img class="me-4 ps-5 menu-link-img" src="img/sheet.svg" alt="sheet"> <a href="" class="menu-link">аксессуары</a></div>
+                <div class="mt-5 d-flex justify-content-start align-items-center ps-5 menu-link"><img class="me-4 ps-5 menu-link-img" src="img/sheet.svg" alt="sheet"> <a href="" class="menu-link">о нас</a></div>
+                <div class="mt-3 d-flex justify-content-start align-items-center ps-5 menu-link"><img class="me-4 ps-5 menu-link-img" src="img/sheet.svg" alt="sheet"> <a href="" class="menu-link">новости</a></div>
+                <div class="mt-3 d-flex justify-content-start align-items-center ps-5 menu-link"><img class="me-4 ps-5 menu-link-img" src="img/sheet.svg" alt="sheet"> <a href="" class="menu-link">контакты</a></div>
+            </div>
+            <div class="col-4 position-relative h5 text-uppercase">
+                <div class="position-absolute bottom-0">
+                    <div class="menu-link"> <img class="me-4 menu-link-img" src="img/sheet.svg" alt="sheet"> <a href="">Оплата и доставка</a> </div>
+                    <div class="mt-3 menu-link"> <img class="me-4 menu-link-img" src="img/sheet.svg" alt="sheet"> <a href="">Оптовым покупателям</a> </div>
+                    <div class="mt-3 menu-link"> <img class="me-4 menu-link-img" src="img/sheet.svg" alt="sheet"> <a href="">Политика конфиденциальности</a> </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-4 position-absolute bottom-0 row h5 gy-1 pe-3">
+            <div class="col-2 text-uppercase">lcdh bolshoy p.side:</div>
+            <div class="col-4">
+                <div class="ps-5"> <img class="ps-5" src="img/sheet.svg" alt="sheet" style="opacity: 0"><span class="ps-4">г. Санкт-Петербург,Большой пр. П.С., 37</span></div>
+            </div>
+            <div class="col-4 h5-num"> <img class="me-4 pe-1" src="img/sheet.svg" alt="sheet" style="opacity: 0"><a class="link-main underline-one" href="tel:+7 (812) 572 32 90">+7 (812) 572 32 90</a></div>
+            <div class="col-2 d-flex justify-content-end">
+                <div> <a class="me-2 link-main underline-one" href="#">TLG</a>/<a class="ms-2 me-2 link-main underline-one" href="#">VK</a>/<a class="ms-2 me-2 link-main underline-one" href="#">INST</a>/<a class="ms-2 link-main underline-one" href="#">FB</a> </div>
+            </div>
+            <div class="col-2 text-uppercase">lcdh kuznechny:</div>
+            <div class="col-4">
+                <div class="ps-5"> <img class="ps-5" src="img/sheet.svg" alt="sheet" style="opacity: 0"><span class="ps-4">г. Санкт-Петербург, Кузнечный пер., 14А</span></div>
+            </div>
+            <div class="col-4 h5-num"> <img class="me-4 pe-1" src="img/sheet.svg" alt="sheet" style="opacity: 0"><a class="link-main underline-one" href="tel:+7 (812) 332 45 97">+7 (812) 332 45 97</a></div>
+            <div class="col-2 text-uppercase d-flex justify-content-end"><a href="email:lcdh@cigarplace.ru">lcdh@cigarplace.ru</a></div>
+            <div class="col-12 mt-2">
+                <div class="border-top-grey"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="offset-3 col-6 main__img_div">
+            <div class="main__img_absolute"><img id="img_mousemove" src="img/main__img_color.jpg" alt=""></div>
+    </div>
     </div>
     <div class="main__bg_black_div">
+        <div class="position-absolute start-0 w-100 h-2036px top--25px">
+            <div class="bg_nav_black"></div>
+        </div>
         <div class="container position-relative">
             <div id="container_for_img_brands" class="z-index--1">
                 <div class="position-absolute brand_1" data-depth="0.8"><img src="img/main__brand_1.svg" alt="brand_1"></div>
@@ -242,37 +576,37 @@
             </div>
             <div class="col-2"> <img src="img/footer__logo.svg" alt="footer__logo" class="w-100"> </div>
             <div class="offset-1 col-3">
-                <div><a href="#">О НАС</a></div>
-                <div class="mt-3"><a href="#">КАТАЛОГ</a></div>
-                <div class="mt-3"><a href="#">НОВОСТИ</a></div>
-                <div class="mt-3"><a href="#">КОНТАКТЫ</a></div>
+                <div><a class="link-main underline-one" href="#">О НАС</a></div>
+                <div class="mt-3"><a class="link-main underline-one" href="#">КАТАЛОГ</a></div>
+                <div class="mt-3"><a class="link-main underline-one" href="#">НОВОСТИ</a></div>
+                <div class="mt-3"><a class="link-main underline-one" href="#">КОНТАКТЫ</a></div>
             </div>
             <div class="col-3 mb-5">
                 <div>LCDH KUZNECHNY:</div>
                 <div class="mt-2 border-top"></div>
-                <div class="mt-4">г. Санкт-Петербург,Кузнечный переулок, 14А</div>
+                <div class="mt-4"><a class="link-main underline-one" href="https://goo.gl/maps/P822gagi2yzwQdYu6" target="_blank">г. Санкт-Петербург,Кузнечный переулок, 14А</a></div>
                 <div class="mt-3 d-flex justify-content-between">
                     <div class="fw-200">Городской</div>
-                    <div class="h5-num">+7 (812) 572 32 90</div>
+                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (812) 572 32 90<">+7 (812) 572 32 90</a></div>
                 </div>
                 <div class="mt-3 d-flex justify-content-between">
                     <div class="fw-200">Сотовый</div>
-                    <div class="h5-num">+7 (981) 893 90 53</div>
+                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (981) 893 90 53">+7 (981) 893 90 53</a></div>
                 </div>
                 <div class="mt-5">LCDH BOLSHOY P.SIDE:</div>
                 <div class="mt-2 border-top"></div>
-                <div class="mt-4">г. Санкт-Петербург,Большой пр. П.С., 37</div>
+                <div class="mt-4"><a class="link-main underline-one" href="https://goo.gl/maps/mrk9C33Y8a1ExFto6" target="_blank">г. Санкт-Петербург,Большой пр. П.С., 37</a></div>
                 <div class="mt-3 d-flex justify-content-between">
                     <div class="fw-200">Городской</div>
-                    <div class="h5-num">+7 (812) 332 45 97</div>
+                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (812) 332 45 97">+7 (812) 332 45 97</a></div>
                 </div>
                 <div class="mt-3 d-flex justify-content-between">
                     <div class="fw-200">Сотовый</div>
-                    <div class="h5-num">+7 (981) 045 99 45</div>
+                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (981) 045 99 45">+7 (981) 045 99 45</a></div>
                 </div>
             </div>
-            <div class="offset-3 col-3 mt-4"><a class="me-2" href="#">TLG</a>/<a class="ms-2 me-2" href="#">VK</a>/<a class="ms-2 me-2" href="#">INST</a>/<a class="ms-2 me-2" href="#">FB</a></div>
-            <div class="col-3 mt-4"><a class="link-main" href="mailto:LCDH@CIGARPLACE.RU">LCDH@CIGARPLACE.RU</a></div>
+            <div class="offset-3 col-3 mt-4"><a class="me-2 link-main underline-one" href="#">TLG</a>/<a class="ms-2 me-2 link-main underline-one" href="#">VK</a>/<a class="ms-2 me-2 link-main underline-one" href="#">INST</a>/<a class="ms-2 me-2 link-main underline-one" href="#">FB</a></div>
+            <div class="col-3 mt-4"><a class="link-main underline-one" href="mailto:LCDH@CIGARPLACE.RU">LCDH@CIGARPLACE.RU</a></div>
             <div class="col-3 pt-4">
                 <div class="position-relative">
                     <div>
@@ -285,13 +619,15 @@
             </div>
         </div>
         <div class="row mt-168px">
-            <div class="col-2 d-flex justify-content-between">
-                <div class="fw-200">Made by:</div> <a href="www.duo-creative.ru">DUO CREATIVE</a> </div>
+            <div class="col-2 d-flex justify-content-between align-items-end">
+                <div class="fw-200">Made by:</div> <a class="link-main underline-one" href="www.duo-creative.ru">DUO CREATIVE</a> </div>
             <div class="offset-1 col-3 h4 fls-01">© LA CASA DEL HABANO ST-PETERSBURG 2023</div>
-            <div class="col-3 h4 fw-200">Политика конфиденциальности</div>
+            <div class="col-3 h4 fw-200 "><a class="link-main underline-one" href="">Политика конфиденциальности</a></div>
         </div>
     </footer>
+    <script src="js/OverlayScrollbars/OverlayScrollbars.min.js"></script>
     <script src="js/main-page-js.js"></script>
+    <script src="js/global-js.js"></script>
 </body>
 
 </html>

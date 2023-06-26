@@ -16,8 +16,9 @@
     <title>La Casa Del Habano</title>
 </head>
 
-<body class="container bg_white position-relative">
-    <nav class="row h5 position-sticky top-0 bg_white">
+<body class="container bg_white">
+    <section class="position-relative">
+    <nav class="row h5 position-sticky top-0">
         <div class="col-5">
             <div class="border-top-black"></div>
         </div>
@@ -25,14 +26,13 @@
         <div class="col-5">
             <div class="border-top-black"></div>
         </div>
-        <div class="col-1 text-start"><a class="link-main" href="#">EN</a></div>
-        <div class="col-1 text-end"><a class="link-main" href="#">РЕЗЕРВ</a></div>
-        <div class="col-1 text-end"><a class="link-main" href="#">КАТАЛОГ</a></div>
-        <div class="offset-6 col-1 text-start"><a class="link-main" href="#">ПОИСК</a></div>
-        <div class="col-1 text-start"><a class="link-main" href="#">КОРЗИНА</a></div>
-        <div class="col-1 text-end"><a class="link-main" href="#">МЕНЮ</a></div>
+        <div class="col-1 d-flex justify-content-start align-items-start"><a class="link-main underline-one " href="#">EN</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-start"><a class="link-main underline-one" href="#">РЕЗЕРВ</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-start"><a class="link-main underline-one" href="#">КАТАЛОГ</a></div>
+        <div class="offset-6 col-1  d-flex justify-content-start align-items-start"><a class="link-main underline-one" href="#">ПОИСК</a></div>
+        <div class="col-1  d-flex justify-content-start align-items-start"><a class="link-main underline-one" href="#">КОРЗИНА</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-start"><a class="link-main underline-one" href="#">МЕНЮ</a></div>
     </nav>
-    <section class="">
         <div class="row mt-110px">
             <div class="col-11 d-flex justify-content-star align-items-center h4 text-uppercase">ГЛАВНАЯ<img src="img/vector-dash-black.svg" class="ps-3 pe-3" alt="vector-dash">категории<img src="img/vector-dash-black.svg" class="ps-3 pe-3" alt="vector-dash">сигары</div>
             <div class="col-1 d-flex justify-content-end align-items-center"><img src="img/sheet_black.svg" alt="sheet"></div>
@@ -42,12 +42,10 @@
         </div>
         <div class="row mt-2">
             <div class="col-12 h1 text-uppercase">католог</div>
-            <div class="col-12 mt-2">
-                <div class="border-top-black"></div>
-            </div>
         </div>
-    </section>
-    <section>
+        <div class="mt-2 position-sticky top-3">
+                <div class="border-top-black"></div>
+        </div>
         <div class="row gx-0">
             <div class="col-3 pe-3">
                 <div class="border-right-black">
@@ -56,7 +54,7 @@
                     <div class="border-top-black">
                         <button type="button" onclick="openFilter('1')" class="d-flex justify-content-between w-100 pe-4 pt-4">
                             <div class="h4 text-uppercase">СЕРИИ</div> <img id="jackdaw_1" src="img/jackdaw.svg" alt="jackdaw"> </button>
-                        <div id="filters_1" class="row g-0 ps-3">
+                        <div id="filters_1" class="row g-0 ps-3" style="display: none">
                             <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
                                 <input id="series_1" type="checkbox" name="series" class="checkbox-filter me-3" data-series="Винтажные">
                                 <label for="series_1">Винтажные</label>
@@ -148,7 +146,7 @@
                 <div class="row gx-3">
                    <div class="col-12 mt-19px"></div>
                     <div class="col-4 mt-5 catalog__card">
-                        <div class="catalog__card_img_div"> <img class="d-flex justify-content-center align-items-center catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
+                        <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
                         <div class="catalog__card_padding_text">
                             <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
                             <div class="border-top-black"></div>
@@ -159,7 +157,7 @@
                         </div>
                     </div>
                     <div class="col-4 mt-5 catalog__card">
-                        <div class="catalog__card_img_div"> <img class="d-flex justify-content-center align-items-center catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
+                        <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
                         <div class="catalog__card_padding_text">
                             <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
                             <div class="border-top-black"></div>
@@ -170,7 +168,73 @@
                         </div>
                     </div>
                     <div class="col-4 mt-5 catalog__card">
-                        <div class="catalog__card_img_div"> <img class="d-flex justify-content-center align-items-center catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
+                        <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
+                        <div class="catalog__card_padding_text">
+                            <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                            <div class="border-top-black"></div>
+                            <div class="h5 pe-1 text-uppercase d-flex justify-content-between">
+                                <div class="ff-lato">7 900 р.</div>
+                                <div><a href="">в корзину</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 mt-5 catalog__card">
+                        <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
+                        <div class="catalog__card_padding_text">
+                            <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                            <div class="border-top-black"></div>
+                            <div class="h5 pe-1 text-uppercase d-flex justify-content-between">
+                                <div class="ff-lato">7 900 р.</div>
+                                <div><a href="">в корзину</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 mt-5 catalog__card">
+                        <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
+                        <div class="catalog__card_padding_text">
+                            <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                            <div class="border-top-black"></div>
+                            <div class="h5 pe-1 text-uppercase d-flex justify-content-between">
+                                <div class="ff-lato">7 900 р.</div>
+                                <div><a href="">в корзину</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 mt-5 catalog__card">
+                        <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
+                        <div class="catalog__card_padding_text">
+                            <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                            <div class="border-top-black"></div>
+                            <div class="h5 pe-1 text-uppercase d-flex justify-content-between">
+                                <div class="ff-lato">7 900 р.</div>
+                                <div><a href="">в корзину</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 mt-5 catalog__card">
+                        <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
+                        <div class="catalog__card_padding_text">
+                            <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                            <div class="border-top-black"></div>
+                            <div class="h5 pe-1 text-uppercase d-flex justify-content-between">
+                                <div class="ff-lato">7 900 р.</div>
+                                <div><a href="">в корзину</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 mt-5 catalog__card">
+                        <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
+                        <div class="catalog__card_padding_text">
+                            <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                            <div class="border-top-black"></div>
+                            <div class="h5 pe-1 text-uppercase d-flex justify-content-between">
+                                <div class="ff-lato">7 900 р.</div>
+                                <div><a href="">в корзину</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 mt-5 catalog__card">
+                        <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
                         <div class="catalog__card_padding_text">
                             <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
                             <div class="border-top-black"></div>
@@ -187,41 +251,41 @@
     <footer>
         <div class="row h5">
             <div class="col-12 mb-5">
-                <div class="border-top-black"></div>
+                <div class="border-top"></div>
             </div>
             <div class="col-2"> <img src="img/footer__logo.svg" alt="footer__logo" class="w-100"> </div>
             <div class="offset-1 col-3">
-                <div><a href="#">О НАС</a></div>
-                <div class="mt-3"><a href="#">КАТАЛОГ</a></div>
-                <div class="mt-3"><a href="#">НОВОСТИ</a></div>
-                <div class="mt-3"><a href="#">КОНТАКТЫ</a></div>
+                <div><a class="link-main underline-one" href="#">О НАС</a></div>
+                <div class="mt-3"><a class="link-main underline-one" href="#">КАТАЛОГ</a></div>
+                <div class="mt-3"><a class="link-main underline-one" href="#">НОВОСТИ</a></div>
+                <div class="mt-3"><a class="link-main underline-one" href="#">КОНТАКТЫ</a></div>
             </div>
             <div class="col-3 mb-5">
                 <div>LCDH KUZNECHNY:</div>
-                <div class="mt-2 border-top-black"></div>
-                <div class="mt-4"><a href="https://yandex.ru/maps/?um=constructor%3A0661a4f06a7a82ee36bddd0825f929a6d40e65c9b21c6705d8976abf703f9a59&source=constructorLink" target="_blank">г. Санкт-Петербург,Кузнечный переулок, 14А</a></div>
+                <div class="mt-2 border-top"></div>
+                <div class="mt-4"><a class="link-main underline-one" href="https://goo.gl/maps/P822gagi2yzwQdYu6" target="_blank">г. Санкт-Петербург,Кузнечный переулок, 14А</a></div>
                 <div class="mt-3 d-flex justify-content-between">
                     <div class="fw-200">Городской</div>
-                    <div class="h5-num"><a href="tel:+7 (812) 572 32 90<">+7 (812) 572 32 90</a></div>
+                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (812) 572 32 90<">+7 (812) 572 32 90</a></div>
                 </div>
                 <div class="mt-3 d-flex justify-content-between">
                     <div class="fw-200">Сотовый</div>
-                    <div class="h5-num"><a href="tel:+7 (981) 893 90 53">+7 (981) 893 90 53</a></div>
+                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (981) 893 90 53">+7 (981) 893 90 53</a></div>
                 </div>
                 <div class="mt-5">LCDH BOLSHOY P.SIDE:</div>
-                <div class="mt-2 border-top-black"></div>
-                <div class="mt-4"><a href="https://yandex.ru/maps/?um=constructor%3A0661a4f06a7a82ee36bddd0825f929a6d40e65c9b21c6705d8976abf703f9a59&source=constructorLink" target="_blank">г. Санкт-Петербург,Большой пр. П.С., 37</a></div>
+                <div class="mt-2 border-top"></div>
+                <div class="mt-4"><a class="link-main underline-one" href="https://goo.gl/maps/mrk9C33Y8a1ExFto6" target="_blank">г. Санкт-Петербург,Большой пр. П.С., 37</a></div>
                 <div class="mt-3 d-flex justify-content-between">
                     <div class="fw-200">Городской</div>
-                    <div class="h5-num"><a href="tel:+7 (812) 332 45 97">+7 (812) 332 45 97</a></div>
+                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (812) 332 45 97">+7 (812) 332 45 97</a></div>
                 </div>
                 <div class="mt-3 d-flex justify-content-between">
                     <div class="fw-200">Сотовый</div>
-                    <div class="h5-num"><a href="tel:+7 (981) 045 99 45">+7 (981) 045 99 45</a></div>
+                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (981) 045 99 45">+7 (981) 045 99 45</a></div>
                 </div>
             </div>
-            <div class="offset-3 col-3 mt-4"><a class="me-2" href="#">TLG</a>/<a class="ms-2 me-2" href="#">VK</a>/<a class="ms-2 me-2" href="#">INST</a>/<a class="ms-2 me-2" href="#">FB</a></div>
-            <div class="col-3 mt-4"><a class="link-main" href="mailto:LCDH@CIGARPLACE.RU">LCDH@CIGARPLACE.RU</a></div>
+            <div class="offset-3 col-3 mt-4"><a class="me-2 link-main underline-one" href="#">TLG</a>/<a class="ms-2 me-2 link-main underline-one" href="#">VK</a>/<a class="ms-2 me-2 link-main underline-one" href="#">INST</a>/<a class="ms-2 me-2 link-main underline-one" href="#">FB</a></div>
+            <div class="col-3 mt-4"><a class="link-main underline-one" href="mailto:LCDH@CIGARPLACE.RU">LCDH@CIGARPLACE.RU</a></div>
             <div class="col-3 pt-4">
                 <div class="position-relative">
                     <div>
@@ -234,10 +298,10 @@
             </div>
         </div>
         <div class="row mt-168px">
-            <div class="col-2 d-flex justify-content-between">
-                <div class="fw-200">Made by:</div> <a href="www.duo-creative.ru">DUO CREATIVE</a> </div>
+            <div class="col-2 d-flex justify-content-between align-items-end">
+                <div class="fw-200">Made by:</div> <a class="link-main underline-one" href="www.duo-creative.ru">DUO CREATIVE</a> </div>
             <div class="offset-1 col-3 h4 fls-01">© LA CASA DEL HABANO ST-PETERSBURG 2023</div>
-            <div class="col-3 h4 fw-200">Политика конфиденциальности</div>
+            <div class="col-3 h4 fw-200 "><a class="link-main underline-one" href="">Политика конфиденциальности</a></div>
         </div>
     </footer>
     <script src="js/noUiSlider-15.7.1/nouislider.min.js"></script>
