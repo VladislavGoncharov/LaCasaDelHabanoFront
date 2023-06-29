@@ -36,27 +36,41 @@ function startLongLogo() {
     });
     prevScrollTop = $(this).scrollTop();
 }
-
-$('.main__img_div').on("mousemove", function(event) {
-  let img_absolute = $('.main__img_div').find('.main__img_absolute');
+$('.main__img_div').on("mousemove", function (event) {
+    let img_absolute = $('.main__img_div').find('.main__img_absolute');
     let img_mousemove = $('.main__img_div').find('#img_mousemove');
     let x = Math.round(event.pageX - $('.main__img_div').offset().left);
     let y = Math.round(event.pageY - $('.main__img_div').offset().top);
-
     let x_img_mousemove = x * (-1) - 1;
     let y_img_mousemove = y * (-1) + 200;
-
-   gsap.to(img_absolute, {
-    left: x- 200,
-    top: y- 200,
-    duration: 1,
-    ease: "power1.out"
-  });
-   gsap.to(img_mousemove, {
-    left: x_img_mousemove,
-    top: y_img_mousemove,
-    duration: 1,
-    ease: "power1.out"
-  });
+    gsap.to(img_absolute, {
+        left: x - 200
+        , top: y - 200
+        , duration: 1
+        , ease: "power1.out"
+    });
+    gsap.to(img_mousemove, {
+        left: x_img_mousemove
+        , top: y_img_mousemove
+        , duration: 1
+        , ease: "power1.out"
+    });
 });
+// показать/скрыть инфу о других проектах
+$('#button_information_show_o_cuba').click(function (event) {
+    buttonInformationShow('o_cuba', event);
+})
+$('#button_information_show_cuba_day').click(function (event) {
+    buttonInformationShow('cuba_day', event);
+})
 
+function buttonInformationShow(elName, event) {
+    event.preventDefault()
+    $(this).find($('.transform_up')).toggleClass('transform_show');
+    $(this).find($('.transform_down')).toggleClass('transform_show');
+    $(`#text_information_show_${elName} .transform_down`).toggleClass('transform_show');
+    $(`#border_top_information_show_${elName} .transform_right`).toggleClass('transform_show');
+    setTimeout(function () {
+        $(`#border_top_information_show_${elName} .col-6`).toggleClass('ps-3');
+    }, 500)
+}

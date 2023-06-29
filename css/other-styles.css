@@ -8,6 +8,22 @@ body {
   -ms-overflow-style: none; /* Для Internet Explorer и Edge */
 }
 
+.transform_show {
+    transform: translate(0) !important;
+}
+.transform_up {
+    transition: 1s ease-in-out;
+    transform: translateY(-100%);
+}
+.transform_down {
+    transition: 1s ease-in-out;
+    transform: translateY(100%);
+}
+.transform_right {
+    transition: 1s ease-in-out;
+    transform: translateX(110%);
+}
+
 .basket__scroll_div {
     margin-top: 72px;
     height: 570px;

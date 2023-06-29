@@ -312,23 +312,26 @@ footer {
 
 .main__other_project_div {
     background: var(--mc-white-005);
-    height: 707px;
-    padding: 24px;
+    height: 550px;
     position: relative;
     overflow: hidden;
 }
 
-.main__other_project_img_o_cuba {
+.main__other_project_img_name {
     position: absolute;
-    left: 24px;
-    top: 48px;
+    right: 24px;
+    top: 72px;
+}
+.main__other_project_img_name {
+    position: absolute;
+    right: 24px;
+    top: 72px;
 }
 
 .main__other_project_img_text_in_circle {
     position: absolute;
     left: -426px;
     bottom: -426px;
-    /*    transform: rotate(185deg);*/
     transition: 0.5s;
 }
 

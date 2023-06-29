@@ -13,26 +13,31 @@
     <link rel="stylesheet" href="css/margin-padding.css">
     <link rel="stylesheet" href="css/other-styles.css">
     <link rel="stylesheet" href="js/noUiSlider-15.7.1/nouislider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+    <script src="
+https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js
+"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
     <title>La Casa Del Habano</title>
 </head>
 
 <body class="container bg_white">
     <section class="position-relative">
-    <nav class="row h5 position-sticky top-0">
-        <div class="col-5">
-            <div class="border-top-black"></div>
-        </div>
-        <div class="col-2"> <img src="img/navbar__logo_black.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x"> </div>
-        <div class="col-5">
-            <div class="border-top-black"></div>
-        </div>
-        <div class="col-1 d-flex justify-content-start align-items-start"><a class="link-main underline-one " href="#">EN</a></div>
-        <div class="col-1 d-flex justify-content-end align-items-start"><a class="link-main underline-one" href="#">РЕЗЕРВ</a></div>
-        <div class="col-1 d-flex justify-content-end align-items-start"><a class="link-main underline-one" href="#">КАТАЛОГ</a></div>
-        <div class="offset-6 col-1  d-flex justify-content-start align-items-start"><a class="link-main underline-one" href="#">ПОИСК</a></div>
-        <div class="col-1  d-flex justify-content-start align-items-start"><a class="link-main underline-one" href="#">КОРЗИНА</a></div>
-        <div class="col-1 d-flex justify-content-end align-items-start"><a class="link-main underline-one" href="#">МЕНЮ</a></div>
-    </nav>
+        <nav class="row h5 position-sticky top-0">
+            <div class="col-5">
+                <div class="border-top-black"></div>
+            </div>
+            <div class="col-2"> <img src="img/navbar__logo_black.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x"> </div>
+            <div class="col-5">
+                <div class="border-top-black"></div>
+            </div>
+            <div class="col-1 d-flex justify-content-start align-items-start"><a class="link-main underline-one " href="#">EN</a></div>
+            <div class="col-1 d-flex justify-content-end align-items-start"><a class="link-main underline-one" href="#">РЕЗЕРВ</a></div>
+            <div class="col-1 d-flex justify-content-end align-items-start"><a class="link-main underline-one" href="#">КАТАЛОГ</a></div>
+            <div class="offset-6 col-1  d-flex justify-content-start align-items-start"><a class="link-main underline-one" href="#">ПОИСК</a></div>
+            <div class="col-1  d-flex justify-content-start align-items-start"><a class="link-main underline-one" href="#">КОРЗИНА</a></div>
+            <div class="col-1 d-flex justify-content-end align-items-start"><a class="link-main underline-one" href="#">МЕНЮ</a></div>
+        </nav>
         <div class="row mt-110px">
             <div class="col-11 d-flex justify-content-star align-items-center h4 text-uppercase">ГЛАВНАЯ<img src="img/vector-dash-black.svg" class="ps-3 pe-3" alt="vector-dash">категории<img src="img/vector-dash-black.svg" class="ps-3 pe-3" alt="vector-dash">сигары</div>
             <div class="col-1 d-flex justify-content-end align-items-center"><img src="img/sheet_black.svg" alt="sheet"></div>
@@ -44,7 +49,7 @@
             <div class="col-12 h1 text-uppercase">католог</div>
         </div>
         <div class="mt-2 position-sticky top-3">
-                <div class="border-top-black"></div>
+            <div class="border-top-black"></div>
         </div>
         <div class="row gx-0">
             <div class="col-3 pe-3">
@@ -143,8 +148,8 @@
                 </div>
             </div>
             <div class="col-9">
-                <div class="row gx-3">
-                   <div class="col-12 mt-19px"></div>
+                <div id="containerForItems" class="row gx-3">
+                    <div class="col-12 mt-19px"></div>
                     <div class="col-4 mt-5 catalog__card">
                         <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
                         <div class="catalog__card_padding_text">
@@ -245,6 +250,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="pagination"></div>
             </div>
         </div>
     </section>
