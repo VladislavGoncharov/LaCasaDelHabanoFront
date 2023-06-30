@@ -1,11 +1,14 @@
 .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 0;
 }
-.h1 {
+.h1, .h1-64 {
     font-size: var(--fs-48);
     font-weight: 500 !important;
     font-family: 'Cormorant', serif;
     line-height: 58px;
+}
+.h1-64{
+    font-size: var(--fs-64);
 }
 .h2 {
     font-size: var(--fs-40);

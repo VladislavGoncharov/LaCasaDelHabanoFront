@@ -18,6 +18,7 @@
     /*    --mc-dark-grey: #262422;*/
     --mc-dark-grey: #1D1C1C;
     --mc-grey: #807676;
+    --mc-grey-06: rgba(241, 232, 225, 0.6);
     --mc-vinous: #6a3837;
     --mc-vinous-02: #774F4D;
     --mc-peach: #E1694E;
@@ -97,7 +98,11 @@ nav .col-1 {
 
 footer {
     margin-top: 132px;
-    padding-bottom: 76px
+    padding-bottom: 50px
+}
+.footer-black {
+    margin-top: 0;
+    padding-bottom: 50px
 }
 
 .main__bg_vinous_img {

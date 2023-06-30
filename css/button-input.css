@@ -82,6 +82,10 @@ textarea::-webkit-input-placeholder {
     bottom: -20px;
     right: 0;
 }
+.footer-black .round-button {
+    background: var(--mc-grey-06);
+    border: solid 1px var(--mc-black);
+}
 
 .flat-link {
     position: relative;
@@ -117,13 +121,11 @@ textarea::-webkit-input-placeholder {
 
 .input-main {
     height: 34px;
-    border-bottom: solid 1px var(--mc-white);
 }
 
 .textarea-main {
     height: 34px;
     position: relative;
-    border-bottom: solid 1px var(--mc-white);
 }
 
 .link-main {
@@ -134,7 +136,12 @@ textarea::-webkit-input-placeholder {
 .link-main:hover {
 /*    border-bottom: solid 1px var(--mc-white);*/
 }
-
+.btn-item {
+    width: 100%;
+    padding: 2px 0 ;
+    color: var(--mc-white);
+    background: var(--mc-black);
+}
 
 /*
 .button-up {
@@ -198,6 +205,9 @@ textarea::-webkit-input-placeholder {
     height: 1px;
     background-color: var(--mc-white);
     transition: 0.5s;
+}
+.footer-black .underline-one:after {
+    background-color: var(--mc-black);
 }
 
 .underline-one:hover:after {

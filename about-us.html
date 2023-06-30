@@ -20,21 +20,27 @@
 
 <body class="container about_us__foreground_picture">
     <div class="about_us__bg_vinous"></div>
-    <div class="about_us__bg_vinous_2"></div>
+    <div class="about_us__bg_vinous_2 height-auto"></div>
+    <div class="position-absolute top-0 start-0 w-100 height-auto">
+        <div class="bg_nav_vinous"></div>
+    </div>
+    <nav class="row h5 position-sticky top-0">
+        <div class="col-5">
+            <div class="border-top"></div>
+        </div>
+        <div class="col-2"> <img src="img/navbar__logo.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x h-37px"> </div>
+        <div class="col-5">
+            <div class="border-top"></div>
+        </div>
+        <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one underline-one" href="#">EN</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('reserve',event)">РЕЗЕРВ</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('catalog',event)">КАТАЛОГ</a></div>
+        <div class="offset-6 col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('search',event)">ПОИСК</a></div>
+        <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('basket',event)">КОРЗИНА</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('menu',event)">МЕНЮ</a></div>
+    </nav>
     <section id="section-1">
-        <nav class="row fs-18 flh-21">
-            <div class="col-12">
-                <div class="border-top"></div>
-            </div>
-            <div class="col-1 text-start"><a class="link-main underline-one" href="#">EN</a></div>
-            <div class="col-1 text-end"><a class="link-main underline-one" href="#">РЕЗЕРВ</a></div>
-            <div class="col-1 text-end"><a class="link-main underline-one" href="#">КАТАЛОГ</a></div>
-            <div class="offset-2 col-2 text-center"><img src="img/navbar__logo.svg" alt="navbar__logo" class="w-100"></div>
-            <div class="offset-2 col-1 text-start"><a class="link-main underline-one" href="#">ПОИСК</a></div>
-            <div class="col-1 text-start"><a class="link-main underline-one" href="#">КОРЗИНА</a></div>
-            <div class="col-1 text-end"><a class="link-main underline-one" href="#">МЕНЮ</a></div>
-        </nav>
-        <div class="row mt-110px">
+        <div class="row mt-156px">
             <div class="col-11 d-flex justify-content-star align-items-center h4">ГЛАВНАЯ <img src="img/vector-dash.svg" class="ps-3 pe-3" alt="vector-dash"> О НАС</div>
             <div class="col-1 d-flex justify-content-end align-items-center"><img src="img/sheet.svg" alt="sheet"></div>
             <div class="col-12 mt-3">
@@ -80,31 +86,6 @@
                 </a>
             </div>
         </div>
-
-
-
-<!--
-
-
-        <div class="row mt-4">
-            <div class="col-3 position-relative"><img src="img/about_us__mug_on_kuznechny.jpg" alt="about_us__mug_on_kuznechny" class="position-absolute w-100 pe-4"></div>
-            <div class="col-9">
-                <a class="link-on-kuznechny">
-                    <div class="h2 text-uppercase">на кузнечном</div>
-                    <div class="h5 text-uppercase middle-text">кузнечный пер. д. 14а</div>
-                    <div class="col-4 h5-num d-flex justify-content-end">11:00 - 01:00</div>
-                </a>
-            </div>
-            <div class="col-3 position-relative"><img src="img/about_us__mug_on_kuznechny.jpg" alt="about_us__mug_on_kuznechny" class="position-absolute w-100 pe-4"></div>
-            <div class="col-9">
-                <a class="link-on-petrogradskoy">
-                    <div class="h2 text-uppercase">на петроградской</div>
-                    <div class="h5 text-uppercase middle-text">большой пр. п.с. д. 37</div>
-                    <div class="col-4 h5-num d-flex justify-content-end">11:00 - 23:00</div>
-                </a>
-            </div>
-        </div>
--->
     </section>
     <div class="mt-156px bg_transparent"></div>
     <section id="section-1">
@@ -136,7 +117,7 @@
         <div class="row mt-156px">
             <div class="col-2">
                 <div class="position-relative h-100">
-                    <div class="position-sticky top-0 start-0">
+                    <div class="position-sticky top-0 start-0 pt-156px">
                         <a class="round-button round-button-very-big d-flex justify-content-center align-items-center" href="#"> <img src="img/vector-information.svg" alt="information"> </a>
                     </div>
                 </div>
@@ -253,6 +234,7 @@
     </footer>
     </section>
     <script src="js/about-us-js.js"></script>
+    <script src="js/global-js.js"></script>
 </body>
 
 </html>

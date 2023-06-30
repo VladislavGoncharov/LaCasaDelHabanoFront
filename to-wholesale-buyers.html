@@ -27,20 +27,25 @@
 </head>
 
 <body class="container">
-    <section id="section-1">
-        <nav class="row fs-18 flh-21">
-            <div class="col-12">
-                <div class="border-top"></div>
-            </div>
-            <div class="col-1 text-start"><a class="link-main underline-one" href="#">EN</a></div>
-            <div class="col-1 text-end"><a class="link-main underline-one" href="#">РЕЗЕРВ</a></div>
-            <div class="col-1 text-end"><a class="link-main underline-one" href="#">КАТАЛОГ</a></div>
-            <div class="offset-2 col-2 text-center"><img src="img/navbar__logo.svg" alt="navbar__logo"></div>
-            <div class="offset-2 col-1 text-start"><a class="link-main underline-one" href="#">ПОИСК</a></div>
-            <div class="col-1 text-start"><a class="link-main underline-one" href="#">КОРЗИНА</a></div>
-            <div class="col-1 text-end"><a class="link-main underline-one" href="#">МЕНЮ</a></div>
-        </nav>
-        <div class="row mt-110px">
+    <div class="position-absolute top-0 start-0 w-100 height-auto">
+        <div class="bg_nav_vinous"></div>
+    </div>
+    <nav class="row h5 position-sticky top-0">
+        <div class="col-5">
+            <div class="border-top"></div>
+        </div>
+        <div class="col-2"> <img src="img/navbar__logo.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x h-37px"> </div>
+        <div class="col-5">
+            <div class="border-top"></div>
+        </div>
+        <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one underline-one" href="#">EN</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('reserve',event)">РЕЗЕРВ</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('catalog',event)">КАТАЛОГ</a></div>
+        <div class="offset-6 col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('search',event)">ПОИСК</a></div>
+        <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('basket',event)">КОРЗИНА</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('menu',event)">МЕНЮ</a></div>
+    </nav>
+        <div class="row mt-156px">
             <div class="col-11 d-flex justify-content-star align-items-center h4 text-uppercase">ГЛАВНАЯ <img src="img/vector-dash.svg" class="ps-3 pe-3" alt="vector-dash">оптовым покупателям</div>
             <div class="col-1 d-flex justify-content-end align-items-center"><img src="img/sheet.svg" alt="sheet"></div>
             <div class="col-12 mt-3">
@@ -92,13 +97,10 @@
                 </a>
             </div>
         </div>
-        <div class="row mt-96px text-uppercase h5">
-            <div class="offset-4 col-4 p-0 text-center">Подайте заявку на регистрации оптового клиента по форме ниже, Указав в сообщении следующие данные:</div>
-        </div>
-        <div class="row mt-5">
+        <div class="row mt-156px">
            <div class="col-2">
                <div class="position-relative h-100 ">
-                    <div class="position-sticky top-0 start-0">
+                    <div class="position-sticky top-0 start-0 pt-156px">
                         <a class="round-button round-button-very-big d-flex flex-column justify-content-center align-items-center" href="#">
                         <div class="h5 text-uppercase">прайс-лист</div>
                         <div class="h5 text-uppercase mt-1">pdf</div>
@@ -107,7 +109,11 @@
                     </div>
                 </div>
            </div>
-            <form class="offset-1 col-6 row g-1 p-2 position-relative h5" action="#">
+           <div class="offset-1 col-6">
+        <div class="row text-uppercase h5">
+            <div class="offset-2 col-8 p-0 text-center">Подайте заявку на регистрацию оптового клиента по форме ниже, Указав в сообщении следующие данные:</div>
+        </div>
+            <form class="row mt-96px g-1 p-2 position-relative h5" action="#">
                 <div class="col-6 pe-2 fw-200">
                     <input class="input-main" type="text" placeholder="ИМЯ*"> </div>
                 <div class="col-6 ps-2 fw-200">
@@ -126,8 +132,9 @@
                     <button class="flat-button flat-button-bg-light" type="submit">Отправить</button>
                 </div>
             </form>
+
+           </div>
         </div>
-    </section>
     <footer>
         <div class="row h5">
             <div class="col-12 mb-5">
@@ -184,6 +191,7 @@
             <div class="col-3 h4 fw-200 "><a class="link-main underline-one" href="">Политика конфиденциальности</a></div>
         </div>
     </footer>
+    <script src="js/global-js.js"></script>
 </body>
 
 </html>

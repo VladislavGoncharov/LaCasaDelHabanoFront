@@ -66,10 +66,11 @@ $('#button_information_show_cuba_day').click(function (event) {
 
 function buttonInformationShow(elName, event) {
     event.preventDefault()
-    $(this).find($('.transform_up')).toggleClass('transform_show');
-    $(this).find($('.transform_down')).toggleClass('transform_show');
+    $(`#button_information_show_${elName}`).find($('.transform_up')).toggleClass('transform_show');
+    $(`#button_information_show_${elName}`).find($('.transform_down')).toggleClass('transform_show');
     $(`#text_information_show_${elName} .transform_down`).toggleClass('transform_show');
     $(`#border_top_information_show_${elName} .transform_right`).toggleClass('transform_show');
+    $(`#border_top_information_show_${elName} .col-3`).removeClass('overflow-hidden');
     setTimeout(function () {
         $(`#border_top_information_show_${elName} .col-6`).toggleClass('ps-3');
     }, 500)

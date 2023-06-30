@@ -45,13 +45,16 @@
 .bg_white * {
     color: var(--mc-black);
 }
+.bg_white a:hover {
+    color: var(--mc-black);
+}
 
 .bg_transparent {
     height: 100vh;
     background: transparent;
 }
 
-.bg_nav_vinous , .bg_nav_black {
+.bg_nav_vinous, .bg_nav_black, .bg_nav_white {
     height: 80px;
     widows: 100vw;
     z-index: 4;
@@ -62,6 +65,9 @@
 }
 .bg_nav_black {
     background: linear-gradient(to top, transparent 0%, #0F0E0D 30%);
+}
+.bg_nav_white {
+    background: linear-gradient(to top, transparent 0%, #ffffff 30%);
 }
 .about_us__foreground_picture {
     background-image: url('/img/about_us__picture_cigars.jpg');
@@ -82,7 +88,6 @@
 }
 .about_us__bg_vinous_2 {
     top: calc(1969px + 100vh);
-    height: 3500px;
 }
 .payment_and_delivery__bg_vinous, .payment_and_delivery__bg_vinous_2 {
     position: absolute;
@@ -94,8 +99,7 @@
     z-index: -1;
 }
 .payment_and_delivery__bg_vinous_2 {
-    top: calc(1547px + 100vh);
-    height: 3400px;
+    top: calc(1515px + 100vh);
 }
 
 .payment_and_delivery__foreground_picture {

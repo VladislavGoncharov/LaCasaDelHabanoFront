@@ -1,4 +1,7 @@
-// открывается описание этапов работы
+$(document).ready(function () {
+        $('.height-along-central-column').css('height', $('.central-column').height())
+    })
+    // открывается описание этапов работы
 function openFilter(number) {
     $(`#filters_${number}`).slideToggle();
     $(`#jackdaw_${number}`).toggleClass('rotate-180');
@@ -59,36 +62,27 @@ function createSlider(el) {
     });
 }
 //web socket
-$(document).ready(function () {
-    let element = $('#img_text');
-    element.addClass('rotating');
-    $('.basket__scroll_div').overlayScrollbars({
-        className: 'os-theme-dark'
-        , scrollbars: {
-            clickScrolling: true
-        , }
-    })
-});
 var socket = new SockJS("http://127.0.0.1:8080/websocket");
 var stompClient = Stomp.over(socket);
 stompClient.connect({}, function (frame) {
     console.log('Connected: ' + frame);
     sendFilterRequest('привет')
         // Подписка на определенные топики
-    stompClient.subscribe('/topic/data', function (data) {
+    stompClient.subscribe('/get/items', function (data) {
         var responseData = JSON.parse(data.body);
         var container = $('#containerForItems');
-        $('#pagination').pagination({
-            dataSource: responseData,
-            pageSize: 5,
-            callback: function (data, pagination) {
+        $('#pagination-catalog').pagination({
+            dataSource: responseData
+            , pageSize: 9
+            , callback: function (data, pagination) {
                 container.empty();
                 container.prepend('<div class="col-12 mt-19px"></div>');
-
                 // Отображение элементов на текущей странице
                 for (var i = 0; i < data.length; i++) {
                     createItem(container, data[i]);
                 }
+                // настройка высоты, чтобы линия соприкосалась снизом
+                $('.height-along-central-column').css('height', $('.central-column').height())
             }
         });
     });

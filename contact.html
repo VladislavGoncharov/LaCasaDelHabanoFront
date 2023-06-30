@@ -24,23 +24,25 @@
 </head>
 
 <body class="container">
-    <section id="section-1">
-        <nav class="row h5">
-            <div class="col-5">
-                <div class="border-top "></div>
-            </div>
-            <div class="col-2"> <img src="img/navbar__logo.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x"> </div>
-            <div class="col-5">
-                <div class="border-top"></div>
-            </div>
-            <div class="col-1 text-start"><a class="link-main underline-one" href="#">EN</a></div>
-            <div class="col-1 text-end"><a class="link-main underline-one" href="#">РЕЗЕРВ</a></div>
-            <div class="col-1 text-end"><a class="link-main underline-one" href="#">КАТАЛОГ</a></div>
-            <div class="offset-6 col-1 text-start"><a class="link-main underline-one" href="#">ПОИСК</a></div>
-            <div class="col-1 text-start"><a class="link-main underline-one" href="#">КОРЗИНА</a></div>
-            <div class="col-1 text-end"><a class="link-main underline-one" href="#">МЕНЮ</a></div>
-        </nav>
-        <div class="row mt-110px">
+    <div class="position-absolute top-0 start-0 w-100 height-auto">
+        <div class="bg_nav_vinous"></div>
+    </div>
+    <nav class="row h5 position-sticky top-0">
+        <div class="col-5">
+            <div class="border-top"></div>
+        </div>
+        <div class="col-2"> <img src="img/navbar__logo.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x h-37px"> </div>
+        <div class="col-5">
+            <div class="border-top"></div>
+        </div>
+        <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one underline-one" href="#">EN</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('reserve',event)">РЕЗЕРВ</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('catalog',event)">КАТАЛОГ</a></div>
+        <div class="offset-6 col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('search',event)">ПОИСК</a></div>
+        <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('basket',event)">КОРЗИНА</a></div>
+        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('menu',event)">МЕНЮ</a></div>
+    </nav>
+        <div class="row mt-156px">
             <div class="col-11 d-flex justify-content-star align-items-center h4 text-uppercase">ГЛАВНАЯ <img src="img/vector-dash.svg" class="ps-3 pe-3" alt="vector-dash">контакты</div>
             <div class="col-1 d-flex justify-content-end align-items-center"><img src="img/sheet.svg" alt="sheet"></div>
             <div class="col-12 mt-3">
@@ -103,7 +105,6 @@
                 </div>
             </form>
         </div>
-    </section>
     <footer>
         <div class="row h5">
             <div class="col-12 mb-5">
@@ -161,6 +162,7 @@
         </div>
     </footer>
     <script src="js/contact-js.js"></script>
+    <script src="js/global-js.js"></script>
 </body>
 
 </html>

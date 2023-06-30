@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/margin-padding.css">
     <link rel="stylesheet" href="css/other-styles.css">
-    <link rel="stylesheet" href="js/noUiSlider-15.7.1/nouislider.min.css">
     <link rel="stylesheet" href="js/OverlayScrollbars/OverlayScrollbars.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -23,7 +22,7 @@
     <div class="position-absolute top-0 start-0 w-100 h-680px">
         <div class="bg_nav_vinous"></div>
     </div>
-    <div class="position-absolute top-2500px start-0 w-100 h-4000px">
+    <div class="position-absolute top-2500px start-0 w-100 height-auto">
         <div class="bg_nav_vinous"></div>
     </div>
     <nav class="row h5 position-sticky top-0">
@@ -371,7 +370,7 @@
             <div class="bg_nav_black"></div>
         </div>
         <div class="container position-relative">
-            <div id="container_for_img_brands" class="z-index--1">
+            <div id="container_for_img_brands" class="z-index--1 opacity_hide_text">
                 <div class="position-absolute brand_1" data-depth="0.8"><img src="img/main__brand_1.svg" alt="brand_1"></div>
                 <div class="position-absolute brand_2" data-depth="0.2"><img src="img/main__brand_2.svg" alt="brand_2"></div>
                 <div class="position-absolute brand_3" data-depth="0.2"><img src="img/main__brand_3.svg" alt="brand_3"></div>
@@ -380,122 +379,121 @@
                 <div class="position-absolute brand_6" data-depth="0.2"><img src="img/main__brand_6.svg" alt="brand_6"></div>
                 <div class="position-absolute brand_7" data-depth="0.2"><img src="img/main__brand_7.svg" alt="brand_7"></div>
             </div>
-            <div class="long_logo">
-                <!--            <img src="img/main__long_logo.svg" alt="long_logo">--></div>
+            <div class="long_logo opacity_hide_text"></div>
             <div class="row">
                 <div class="offset-3 col-6 d-flex justify-content-center align-items-center"> <img src="img/main__text_house_of_cuban_cigars_2.svg" alt=""></div>
             </div>
-            <div class="row mt-2 fs-18 flh-26">
+            <div class="row mt-2 h5">
                 <div class="offset-4 col-4 text-center">СИГАРНЫЕ МАГАЗИНЫ И ДЕГУСТАЦИОННЫЕ
                     <br> ЗОНЫ В ЦЕНТРЕ САНКТ-ПЕТЕРБУРГА</div>
             </div>
-            <div class="row mt-235px fs-48 flh-58 fw-500 ff-cormorant">
-                <div class="offset-3 col-6 text-center">ДОМ КУБИНСКИХ СИГАР</div>
+            <div class="row mt-235px h1 overflow-hidden">
+                <div class="offset-3 col-6 text-center transform_up_text">ДОМ КУБИНСКИХ СИГАР</div>
             </div>
             <div class="row">
                 <div class="offset-3 col-6 mt-4">
-                    <div class="border-top"></div>
+                    <div class="border-top border_hide_center"></div>
                 </div>
             </div>
-            <div class="row fs-24 flh-34">
-                <div class="offset-3 col-6 mt-4 text-center"> Эксклюзивность </div>
+            <div class="row h3 overflow-hidden">
+                <div class="offset-3 col-6 mt-4 text-center transform_up_text"> Эксклюзивность </div>
             </div>
-            <div class="row fs-18 flh-26">
-                <div class="offset-3 col-6 mt-3 text-center"> Самый большой в России ассортимент кубинских сигар: лимитированные
+            <div class="row h5">
+                <div class="offset-3 col-6 mt-3 text-center opacity_hide_text"> Самый большой в России ассортимент кубинских сигар: лимитированные
                     <br> и специальные выпуски, винтажные серии, эксклюзивные витолы. </div>
             </div>
             <div class="row">
                 <div class="offset-3 col-6 mt-4">
-                    <div class="border-top"></div>
+                    <div class="border-top border_hide_center"></div>
                 </div>
             </div>
-            <div class="row fs-24 flh-34">
-                <div class="offset-3 col-6 mt-4 text-center"> Качество </div>
+            <div class="row h3 overflow-hidden">
+                <div class="offset-3 col-6 mt-4 text-center transform_up_text"> Качество </div>
             </div>
-            <div class="row fs-18 flh-26">
-                <div class="offset-3 col-6 mt-3 text-center"> Высочайшее качество хранения и квалифицированная
+            <div class="row h5">
+                <div class="offset-3 col-6 mt-3 text-center opacity_hide_text"> Высочайшее качество хранения и квалифицированная
                     <br> помощь в выборе всегда к вашим услугам. </div>
             </div>
             <div class="row">
                 <div class="offset-3 col-6 mt-4">
-                    <div class="border-top"></div>
+                    <div class="border-top border_hide_center"></div>
                 </div>
             </div>
             <div class="row">
-                <div class="offset-3 col-6 mt-5 fs-18 flh-21 ff-lato">
-                    <button class="flat-button text-center">О нас</button>
+                <div class="offset-3 col-6 mt-5 opacity_hide_text">
+                    <button class="flat-button text-center h5">О нас</button>
                 </div>
             </div>
-            <div class="row fs-48 fw-500 flh-58 ff-cormorant">
-                <div class="offset-4 col-4 text-center mt-400px">АССОРТИМЕНТ</div>
+            <div class="row h1 overflow-hidden">
+                <div class="offset-4 col-4 text-center mt-400px transform_up_text">АССОРТИМЕНТ</div>
             </div>
-            <div class="row mt-5 fs-18 flh-21">
-                <div class="col-3">
+            <div class="row mt-5 h5">
+                <div class="col-3 overflow-hidden">
                     <a>
-                        <div class="fc-white main__bg_black_card_div">
-                            <div class="mt-5 position-absolute top-0 start-50 translate-middle-x z-index-1">СИГАРЫ</div>
+                        <div class="fc-white main__bg_black_card_div transform_up_text" >
+                            <div class="mt-5 position-absolute top-0 start-50 translate-middle-x z-index-1 opacity_hide_text">СИГАРЫ</div>
                             <div class="mt-168px main__bg_black_card_img_div position-relative z-index-1"> <img src="img/main__img_card_1.jpg" alt="card-1"> </div>
-                            <div class="mb-5 position-absolute bottom-0 start-50 translate-middle-x z-index-1 ff-lato">(211)</div>
+                            <div class="mb-5 position-absolute bottom-0 start-50 translate-middle-x z-index-1 h5-num opacity_hide_text">(211)</div>
                         </div>
                     </a>
                 </div>
-                <div class="col-3">
+                <div class="col-3 overflow-hidden">
                     <a>
-                        <div class="fc-white main__bg_black_card_div">
-                            <div class="mt-5 position-absolute top-0 start-50 translate-middle-x z-index-1">СИГАРИЛЛЫ</div>
+                        <div class="fc-white main__bg_black_card_div transform_up_text"  >
+                            <div class="mt-5 position-absolute top-0 start-50 translate-middle-x z-index-1 opacity_hide_text opacity_hide_text">СИГАРИЛЛЫ</div>
                             <div class="mt-168px main__bg_black_card_img_div position-relative z-index-1"> <img src="img/main__img_card_2.jpg" alt="card-2"> </div>
-                            <div class="mb-5 position-absolute bottom-0 start-50 translate-middle-x z-index-1 ff-lato">(31)</div>
+                            <div class="mb-5 position-absolute bottom-0 start-50 translate-middle-x z-index-1 h5-num opacity_hide_text opacity_hide_text">(31)</div>
                         </div>
                     </a>
                 </div>
-                <div class="col-3">
+                <div class="col-3 overflow-hidden">
                     <a>
-                        <div class="fc-white main__bg_black_card_div">
-                            <div class="mt-5 position-absolute top-0 start-50 translate-middle-x z-index-1">КОФЕ</div>
+                        <div class="fc-white main__bg_black_card_div transform_up_text"  >
+                            <div class="mt-5 position-absolute top-0 start-50 translate-middle-x z-index-1 opacity_hide_text">КОФЕ</div>
                             <div class="mt-168px main__bg_black_card_img_div position-relative z-index-1"> <img src="img/main__img_card_3.jpg" alt="card-3"> </div>
-                            <div class="mb-5 position-absolute bottom-0 start-50 translate-middle-x z-index-1 ff-lato">(12)</div>
+                            <div class="mb-5 position-absolute bottom-0 start-50 translate-middle-x z-index-1 h5-num opacity_hide_text">(12)</div>
                         </div>
                     </a>
                 </div>
-                <div class="col-3">
+                <div class="col-3 overflow-hidden">
                     <a>
-                        <div class="fc-white main__bg_black_card_div">
-                            <div class="mt-5 position-absolute top-0 start-50 translate-middle-x z-index-1">АКСЕССУАРЫ</div>
+                        <div class="fc-white main__bg_black_card_div transform_up_text"  >
+                            <div class="mt-5 position-absolute top-0 start-50 translate-middle-x z-index-1 opacity_hide_text">АКСЕССУАРЫ</div>
                             <div class="mt-168px main__bg_black_card_img_div position-relative z-index-1"> <img src="img/main__img_card_4.jpg" alt="card-4"> </div>
-                            <div class="mb-5 position-absolute bottom-0 start-50 translate-middle-x z-index-1 ff-lato">(86)</div>
+                            <div class="mb-5 position-absolute bottom-0 start-50 translate-middle-x z-index-1 h5-num opacity_hide_text">(86)</div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row mt-2202px fs-48 fw-500 flh-58 ff-cormorant">
-        <div class="offset-4 col-4 text-center"> НАШИ МАГАЗИНЫ </div>
+    <div class="row mt-2202px h1">
+        <div class="offset-4 col-4 text-center overflow-hidden"><div class="transform_up_text">НАШИ МАГАЗИНЫ</div>  </div>
         <div class="col-12 mt-4">
-            <div class="border-top"></div>
+            <div class="border-top border_hide_center"></div>
         </div>
     </div>
     <div class="main__our_mug_div"> <img src="img/main__our_mug.jpg" alt="our_mug">
         <div class="container">
-            <div class="row fs-18 flh-26">
+            <div class="row h5">
                 <div class="col-3">
                     <div class="main__our_mug_card_left_div">
-                        <div>LA CASA DEL HABANO НА КУЗНЕЧНОМ</div>
-                        <div class="mt-2 border-top"></div>
-                        <div class="mt-5">Санкт - Петербург</div>
-                        <div class="mt-1">Кузнечный пер., д.14А</div>
+                        <div class="overflow-hidden"><div class="transform_up_text">LA CASA DEL HABANO НА КУЗНЕЧНОМ</div></div>
+                        <div class="overflow-hidden"><div class="mt-2 border-top border_hide_left"></div></div>
+                        <div class="mt-5 opacity_hide_text"><a class="link-main underline-one" href="https://yandex.ru/maps/org/la_casa_del_habano/106333396780/?from=tabbar&ll=30.353964%2C59.927151&mode=search&sctx=ZAAAAAgBEAAaKAoSCdwNorWiVT5AEYjxmld1%2BE1AEhIJU%2BdR8X9Hyj8RrVEP0egOsj8iBgABAgMEBSgKOABAAkgBagJydZ0BzcxMPaABAKgBAL0Ba87T7MIBBqy%2B24%2BMA%2BoBAPIBAPgBAIICKmxhIGNhc2EgZGVsIGhhYmFubyDQvdCwINC60YPQt9C90LXRh9C90L7QvIoCAJICBTEwODczmgIMZGVza3RvcC1tYXBz&sll=30.353964%2C59.927151&source=serp_navig&sspn=0.025663%2C0.008821&text=la%20casa%20del%20habano%20%D0%BD%D0%B0%20%D0%BA%D1%83%D0%B7%D0%BD%D0%B5%D1%87%D0%BD%D0%BE%D0%BC&z=16" target="_blank">Санкт - Петербург</a></div>
+                        <div class="mt-1 opacity_hide_text"><a class="link-main underline-one" href="https://yandex.ru/maps/org/la_casa_del_habano/106333396780/?from=tabbar&ll=30.353964%2C59.927151&mode=search&sctx=ZAAAAAgBEAAaKAoSCdwNorWiVT5AEYjxmld1%2BE1AEhIJU%2BdR8X9Hyj8RrVEP0egOsj8iBgABAgMEBSgKOABAAkgBagJydZ0BzcxMPaABAKgBAL0Ba87T7MIBBqy%2B24%2BMA%2BoBAPIBAPgBAIICKmxhIGNhc2EgZGVsIGhhYmFubyDQvdCwINC60YPQt9C90LXRh9C90L7QvIoCAJICBTEwODczmgIMZGVza3RvcC1tYXBz&sll=30.353964%2C59.927151&source=serp_navig&sspn=0.025663%2C0.008821&text=la%20casa%20del%20habano%20%D0%BD%D0%B0%20%D0%BA%D1%83%D0%B7%D0%BD%D0%B5%D1%87%D0%BD%D0%BE%D0%BC&z=16" target="_blank">Кузнечный пер., д.14А</a></div>
                         <div class="mt-4 d-flex justify-content-between">
-                            <div class="fw-200">Городской</div>
-                            <div class="ff-lato">+7 (812) 572 32 90</div>
+                            <div class="fw-200 opacity_hide_text">Городской</div>
+                            <div class="h5-num opacity_hide_text">+7 (812) 572 32 90</div>
                         </div>
                         <div class="mt-3 d-flex justify-content-between">
-                            <div class="fw-200">Сотовый</div>
-                            <div class="ff-lato">+7 (981) 893 90 53</div>
+                            <div class="fw-200 opacity_hide_text">Сотовый</div>
+                            <div class="h5-num opacity_hide_text">+7 (981) 893 90 53</div>
                         </div>
-                        <div class="mt-5 d-flex justify-content-between align-items-center ff-lato">
+                        <div class="mt-5 d-flex justify-content-between align-items-center h5-num opacity_hide_text">
                             <div>c 11:00 до 01:00</div>
                             <div>
-                                <button class="round-button"> <span>РЕЗЕРВ</span></button>
+                                <button class="round-button opacity_hide_text"> <span>РЕЗЕРВ</span></button>
                             </div>
                         </div>
                     </div>
@@ -503,9 +501,9 @@
                 <div class="offset-6 col-3">
                     <div class="main__our_mug_card_right_div">
                         <div class="d-flex justify-content-between align-items-center">
-                            <div class="fs-18 flh-26 fw-700">НА ПЕТРОГРАДСКОЙ</div>
+                            <div class="h5 fw-700 opacity_hide_text">НА ПЕТРОГРАДСКОЙ</div>
                             <div>
-                                <button class="round-button">
+                                <button class="round-button opacity_hide_text">
                                     <svg width="23" height="34" viewBox="0 0 23 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1.9043 2L19.9995 17L1.9043 32" stroke="white" stroke-width="3" /> </svg>
                                 </button>
@@ -516,12 +514,12 @@
             </div>
         </div>
     </div>
-    <div class="row mt-950px fs-48 fw-500 flh-58 ff-cormorant">
-        <div class="offset-4 col-4 text-center"> ДРУГИЕ ПРОЕКТЫ </div>
+    <div class="row mt-950px h1 overflow-hidden">
+        <div class="offset-4 col-4 text-center transform_up_text"> ДРУГИЕ ПРОЕКТЫ </div>
     </div>
     <div class="row mt-96px">
-        <div class="offset-6 col-1 h3-num">01</div>
-        <div class="offset-3 col-3 mt-3 g-0 position-relative">
+        <div class="offset-6 col-1 h3-num opacity_hide_text">01</div>
+        <div class="offset-3 col-3 mt-3 g-0 position-relative opacity_hide_text">
             <a id="button_information_show_o_cuba" class="round-button round-button-middle d-flex justify-content-center align-items-center" href="#">
                 <div class="overflow-hidden position-absolute"><img class="transform_up transform_show" src="img/vector-information.svg" alt="information"></div>
                 <div class="overflow-hidden position-absolute"><img class="transform_down" src="img/cross.svg" alt="cross"></div>
@@ -535,23 +533,23 @@
         </div>
         <div class="col-6 mt-3">
             <div class="main__other_project_div">
-                <div class="main__other_project_img_name"> <img src="img/main__o_cuba.svg" alt="o_cuba"> </div>
-                <div class="main__other_project_img_text_in_circle"> <img id="img_text" src="img/main__text_in_circle.png" alt="o_cuba"> </div>
-                <div class="main__other_project_img_head"> <img src="img/main__head_o_cuba.svg" alt="head_o_cuba"> </div>
+                <div class="main__other_project_img_name opacity_hide_text"> <img src="img/main__o_cuba.svg" alt="o_cuba"> </div>
+                <div class="main__other_project_img_text_in_circle opacity_hide_text"> <img id="img_text" src="img/main__text_in_circle.png" alt="o_cuba"> </div>
+                <div class="main__other_project_img_head opacity_hide_text"> <img src="img/main__head_o_cuba.svg" alt="head_o_cuba"> </div>
 
             </div>
         </div>
     </div>
     <div id="border_top_information_show_o_cuba" class="row g-0">
-        <div id="text" class="offset-3 col-3 mt-5"><div class="border-top transform_right"></div></div>
-        <div class="col-6 mt-5 ps-3"><div class="border-top"></div></div>
+        <div class="offset-3 col-3 mt-5 overflow-hidden"><div class="border-top transform_right"></div></div>
+        <div class="col-6 mt-5 ps-3 overflow-hidden"><div class="border-top border_hide_right"></div></div>
     </div>
     <div class="row mt-5">
-        <div class="offset-6 col-1 h3-num">02</div>
-        <div class="offset-3 col-3 mt-3 g-0 position-relative">
+        <div class="offset-6 col-1 h3-num opacity_hide_text">02</div>
+        <div class="offset-3 col-3 mt-3 g-0 position-relative opacity_hide_text">
            <a id="button_information_show_cuba_day" class="round-button round-button-middle d-flex justify-content-center align-items-center" href="#">
                 <div class="overflow-hidden position-absolute"><img class="transform_up transform_show" src="img/vector-information.svg" alt="information"></div>
-                <div class="overflow-hidden position-absolute"><img class="transform_down" src="img/cross.svg" alt="cross"></div>
+               <div class="overflow-hidden position-absolute"><img class="transform_down" src="img/cross.svg" alt="cross"></div>
 
             </a>
             <div id="text_information_show_cuba_day" class="position-absolute bottom-0 pe-3">
@@ -562,7 +560,7 @@
         </div>
         <div class="col-6 mt-3">
             <div class="main__other_project_div">
-                <div class="main__other_project_img_name">
+                <div class="main__other_project_img_name opacity_hide_text">
                     <svg width="646" height="176" viewBox="0 0 646 176" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M319.584 35.7903V54.8927H273.098V35.7903C273.098 22.9536 283.504 12.5473 296.341 12.5473C309.178 12.5473 319.584 22.9536 319.584 35.7903ZM261.477 35.7903C261.477 16.5352 277.086 0.925781 296.341 0.925781C315.596 0.925781 331.206 16.5352 331.206 35.7903V54.8927V64.2539H331.215V175.076H319.594V66.5142H319.584H273.098L273.098 175.076H261.477V66.5142V64.2539V54.8927V35.7903Z" fill="white" fill-opacity="0.3" />
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M185.926 12.5473H197.548C210.384 12.5473 220.791 22.9536 220.791 35.7904V54.8927H185.926V12.5473ZM174.305 0.925781H185.926H197.548C216.803 0.925781 232.412 16.5352 232.412 35.7904V54.8927V61.0137C239.469 66.3143 244.034 74.7535 244.034 84.2589V116.966C244.034 149.058 218.018 175.074 185.926 175.074H174.305V163.452V66.8266V66.5143V55.2051V54.8927V12.5473V0.925781ZM185.926 66.8266H214.98C224.608 66.8266 232.412 74.6313 232.412 84.2589V116.966C232.412 142.64 211.6 163.452 185.926 163.452V66.8266Z" fill="white" fill-opacity="0.3" />
@@ -574,73 +572,52 @@
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M546.201 35.7903V54.8927H499.715V35.7903C499.715 22.9536 510.122 12.5473 522.958 12.5473C535.795 12.5473 546.201 22.9536 546.201 35.7903ZM488.094 35.7903C488.094 16.5352 503.703 0.925781 522.958 0.925781C542.213 0.925781 557.823 16.5352 557.823 35.7903V54.8927V64.2539H557.832V175.076H546.211V66.5142H546.201H499.715L499.715 175.076H488.094V66.5142V64.2539V54.8927V35.7903Z" fill="white" fill-opacity="0.3" />
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M633.381 0.925781H645.003V66.5137V66.5141V116.966C645.003 149.058 618.987 175.074 586.895 175.074H575.273V163.452H586.895C612.568 163.452 633.381 142.64 633.381 116.966V66.5141H632.8C601.029 66.5141 575.273 40.7585 575.273 8.98749V8.98748V0.925781H586.895V8.98749C586.895 34.3401 607.447 54.8925 632.8 54.8925H633.381V0.925781Z" fill="white" fill-opacity="0.3" /> </svg>
                 </div>
-                <div class="position-absolute bottom-0 start-0"> <img src="img/main__plate_cuba_day.png" alt="plate_cuba_day"> </div>
+                <div class="position-absolute bottom-0 start-0 opacity_hide_text"> <img src="img/main__plate_cuba_day.png" alt="plate_cuba_day"> </div>
             </div>
         </div>
     </div>
     <div id="border_top_information_show_cuba_day" class="row g-0">
-        <div id="text" class="offset-3 col-3 mt-5"><div class="border-top transform_right"></div></div>
-        <div class="col-6 mt-5 ps-3"><div class="border-top"></div></div>
+        <div class="offset-3 col-3 mt-5 overflow-hidden"><div class="border-top transform_right"></div></div>
+        <div class="col-6 mt-5 ps-3 overflow-hidden"><div class="border-top border_hide_right"></div></div>
     </div>
-    <div class="row mt-5">
-        <div class="col-9">
-            <div class="main__other_project_div">
-                <div class="main__other_project_img_name"> <img src="img/main__o_cuba.svg" alt="o_cuba"> </div>
-                <div class="main__other_project_img_text_in_circle"> <img id="img_tex" src="img/main__text_in_circle.png" alt="o_cuba"> </div>
-                <div class="main__other_project_img_head"> <img src="img/main__head_o_cuba.svg" alt="head_o_cuba"> </div>
-                <div class="main__other_project_text">
-                    <div class="fs-28 flh-34 ff-cormorant fls-3">РЕСТОРАН КУБИНСКОЙ ЖИЗНИ</div>
-                    <div class="mt-5 fs-18 flh-26">Наш ресторан на улице Рубинштейна порадует Вас разнообразием кубинской кухни, теплотой и душевностью улиц Тринидада и самобытной музыкой уроженцев Острова Свободы.</div>
-                </div>
-                <div class="main__other_project_button">
-                    <button class="flat-button flat-button-bg-light text-center fs-18 flh-21">ПЕРЕЙТИ НА САЙТ</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="main__other_project_div d-flex justify-content-between align-items-center"> <img src="img/main__cuba_day.svg" alt="cuba_day">
-                <button class="round-button round-button-big">
-                    <svg width="23" height="34" viewBox="0 0 23 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.9043 2L19.9995 17L1.9043 32" stroke="white" stroke-width="3" /> </svg>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="row mt-235px fs-48 fw-500 flh-58 ff-cormorant">
-        <div class="offset-3 col-6"> <a href="#" class="d-flex justify-content-center align-items-center flat-link">О НАС
+
+    <div class="row mt-235px h1">
+        <div class="offset-3 col-6 opacity_hide_text"> <a href="#" class="d-flex justify-content-center align-items-center flat-link">О НАС
             </a> </div>
-        <div class="offset-3 col-6"> <a href="#" class="d-flex justify-content-center align-items-center flat-link">КАТАЛОГ
+        <div class="offset-3 col-6 opacity_hide_text"> <a href="#" class="d-flex justify-content-center align-items-center flat-link">КАТАЛОГ
             </a> </div>
-        <div class="offset-3 col-6"> <a href="#" class="d-flex justify-content-center align-items-center flat-link">НОВОСТИ
+        <div class="offset-3 col-6 opacity_hide_text"> <a href="#" class="d-flex justify-content-center align-items-center flat-link">НОВОСТИ
             </a> </div>
-        <div class="offset-3 col-6"> <a href="#" class="d-flex justify-content-center align-items-center flat-link">КОНТАКТЫ
+        <div class="offset-3 col-6 opacity_hide_text"> <a href="#" class="d-flex justify-content-center align-items-center flat-link">КОНТАКТЫ
             </a> </div>
     </div>
     <div class="row mt-235px">
-        <div class="offset-3 col-6 d-flex justify-content-center align-items-center"><img src="img/main__logo_footer.svg" alt="logo_footer"></div>
-        <div class="offset-3 col-6 mt-5 d-flex justify-content-center align-items-center"><img src="img/main__text_house_of_cuban_cigars.svg" alt="text_house_of_cuban_cigars"></div>
+        <div class="offset-3 col-6 d-flex justify-content-center align-items-center opacity_hide_text"><img src="img/main__logo_footer.svg" alt="logo_footer"></div>
+        <div class="offset-3 col-6 mt-5 d-flex justify-content-center align-items-center opacity_hide_text"><img src="img/main__text_house_of_cuban_cigars.svg" alt="text_house_of_cuban_cigars"></div>
     </div>
-    <div class="row mt-96px fs-48 fw-500 flh-58 ff-cormorant">
-        <div class="offset-4 col-4 d-flex justify-content-center align-items-center">ОБРАТНАЯ СВЯЗЬ</div>
+    <div class="row mt-96px h1 overflow-hidden">
+        <div class="offset-4 col-4 d-flex justify-content-center align-items-center transform_up_text">ОБРАТНАЯ СВЯЗЬ</div>
     </div>
-    <div class="mt-5">
+    <div class="mt-5 h5 fw-200">
         <form class="row position-relative" action="#">
-            <div class="offset-3 col-3 fs-18 flh-26 fw-200">
-                <input class="input-main" type="text" placeholder="ИМЯ*"> </div>
-            <div class="col-3 fs-18 flh-26 fw-200">
-                <input class="input-main" type="text" placeholder="ТЕЛЕФОН ИЛИ E-MAIL*"> </div>
-            <div class="offset-3 col-6 mt-196px-for-form position-relative fs-18 flh-26 fw-200">
-                <textarea class="textarea-main" placeholder="СООБЩЕНИЕ"></textarea>
-            </div>
-            <div class="offset-3 col-6 mt-5 position-relative">
+            <div class="offset-3 col-3">
+                <input class="input-main opacity_hide_text" type="text" placeholder="ИМЯ*">
+                <div class="overflow-hidden"><div class="border-top border_hide_left"></div></div> </div>
+            <div class="col-3">
+                <input class="input-main opacity_hide_text" type="text" placeholder="ТЕЛЕФОН ИЛИ E-MAIL*">
+                <div class="overflow-hidden"><div class="border-top border_hide_left"></div></div> </div>
+            <div class="offset-3 col-6 mt-196px-for-form position-relative ">
+                <textarea class="textarea-main opacity_hide_text" placeholder="СООБЩЕНИЕ"></textarea>
+                <div class="overflow-hidden"><div class="border-top border_hide_left"></div></div> </div>
+            <div class="offset-3 col-6 mt-5 position-relative opacity_hide_text">
                 <button class="flat-button flat-button-bg-light" type="submit">Отправить</button>
             </div>
         </form>
     </div>
-    <footer>
+    <footer class="opacity_hide_text">
         <div class="row h5">
             <div class="col-12 mb-5">
-                <div class="border-top"></div>
+                <div class="border-top border_hide_center"></div>
             </div>
             <div class="col-2"> <img src="img/footer__logo.svg" alt="footer__logo" class="w-100"> </div>
             <div class="offset-1 col-3">
@@ -651,8 +628,8 @@
             </div>
             <div class="col-3 mb-5">
                 <div>LCDH KUZNECHNY:</div>
-                <div class="mt-2 border-top"></div>
-                <div class="mt-4"><a class="link-main underline-one" href="https://goo.gl/maps/P822gagi2yzwQdYu6" target="_blank">г. Санкт-Петербург,Кузнечный переулок, 14А</a></div>
+                <div class="overflow-hidden"><div class="mt-2 border-top border_hide_left"></div></div>
+                <div class="mt-4"><a class="link-main underline-one" href="https://yandex.ru/maps/org/la_casa_del_habano/106333396780/?from=tabbar&ll=30.353964%2C59.927151&mode=search&sctx=ZAAAAAgBEAAaKAoSCdwNorWiVT5AEYjxmld1%2BE1AEhIJU%2BdR8X9Hyj8RrVEP0egOsj8iBgABAgMEBSgKOABAAkgBagJydZ0BzcxMPaABAKgBAL0Ba87T7MIBBqy%2B24%2BMA%2BoBAPIBAPgBAIICKmxhIGNhc2EgZGVsIGhhYmFubyDQvdCwINC60YPQt9C90LXRh9C90L7QvIoCAJICBTEwODczmgIMZGVza3RvcC1tYXBz&sll=30.353964%2C59.927151&source=serp_navig&sspn=0.025663%2C0.008821&text=la%20casa%20del%20habano%20%D0%BD%D0%B0%20%D0%BA%D1%83%D0%B7%D0%BD%D0%B5%D1%87%D0%BD%D0%BE%D0%BC&z=16" target="_blank">г. Санкт-Петербург,Кузнечный переулок, 14А</a></div>
                 <div class="mt-3 d-flex justify-content-between">
                     <div class="fw-200">Городской</div>
                     <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (812) 572 32 90<">+7 (812) 572 32 90</a></div>
@@ -662,8 +639,8 @@
                     <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (981) 893 90 53">+7 (981) 893 90 53</a></div>
                 </div>
                 <div class="mt-5">LCDH BOLSHOY P.SIDE:</div>
-                <div class="mt-2 border-top"></div>
-                <div class="mt-4"><a class="link-main underline-one" href="https://goo.gl/maps/mrk9C33Y8a1ExFto6" target="_blank">г. Санкт-Петербург,Большой пр. П.С., 37</a></div>
+                <div class="overflow-hidden"><div class="mt-2 border-top border_hide_left"></div></div>
+                <div class="mt-4"><a class="link-main underline-one" href="https://yandex.ru/maps/org/la_casa_del_habano/198481625494/?from=tabbar&ll=30.302790%2C59.959905&mode=search&sctx=ZAAAAAgBEAAaKAoSCZombD8ZUz5AEVg4SfPH%2BE1AEhIJU%2BdR8X9Hyj8RaY1BJ4QOsj8iBgABAgMEBSgKOABAAkgBagJydZ0BzcxMPaABAKgBAL0BXtfSaMIBBpaDtbPjBeoBAPIBAPgBAIICLmxhIGNhc2EgZGVsIGhhYmFubyDQvdCwINCx0L7Qu9GM0YjQvtC5INC%2F0YAgMzeKAgCSAgEymgIMZGVza3RvcC1tYXBz&sll=30.302790%2C59.959905&source=serp_navig&sspn=0.025663%2C0.008812&text=la%20casa%20del%20habano%20%D0%BD%D0%B0%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9%20%D0%BF%D1%80%2037&z=16" target="_blank">г. Санкт-Петербург,Большой пр. П.С., 37</a></div>
                 <div class="mt-3 d-flex justify-content-between">
                     <div class="fw-200">Городской</div>
                     <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (812) 332 45 97">+7 (812) 332 45 97</a></div>
@@ -678,7 +655,7 @@
             <div class="col-3 pt-4">
                 <div class="position-relative">
                     <div>
-                        <a class="round-button round-button-big round-button-footer d-flex justify-content-center align-items-center" href="#">
+                        <a class="scroll-to-top round-button round-button-big round-button-footer d-flex justify-content-center align-items-center" href="#">
                             <svg width="16" height="65" viewBox="0 0 16 65" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.29289 0.292892C7.68342 -0.0976334 8.31658 -0.0976334 8.70711 0.292892L15.0711 6.65685C15.4616 7.04738 15.4616 7.68054 15.0711 8.07107C14.6805 8.46159 14.0474 8.46159 13.6569 8.07107L8 2.41422L2.34315 8.07107C1.95262 8.46159 1.31946 8.46159 0.928932 8.07107C0.538408 7.68054 0.538408 7.04738 0.928932 6.65685L7.29289 0.292892ZM9 1V64.5H7V1H9Z" fill="white" /> </svg>
                         </a>
