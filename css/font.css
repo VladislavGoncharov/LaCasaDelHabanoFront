@@ -1,45 +1,60 @@
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
     margin-bottom: 0;
 }
-.h1, .h1-64 {
+
+.h1,
+.h1-64 {
     font-size: var(--fs-48);
     font-weight: 500 !important;
     font-family: 'Cormorant', serif;
     line-height: 58px;
 }
-.h1-64{
+
+.h1-64 {
     font-size: var(--fs-64);
 }
+
 .h2 {
     font-size: var(--fs-40);
     font-weight: 500 !important;
     font-family: 'Cormorant', serif;
     line-height: 48px;
 }
+
 .h2-32 {
     font-size: var(--fs-32);
     line-height: 46px;
 }
+
 .h3 {
     font-size: var(--fs-24);
     line-height: 35px;
 }
+
 .h3-num {
     font-size: var(--fs-24);
     font-family: 'Lato', sans-serif;
     line-height: 29px;
 }
+
 .h4 {
     font-size: var(--fs-20);
     font-weight: 400;
     line-height: 29px;
 }
+
 .h5 {
     font-size: var(--fs-18);
     font-weight: 400;
     line-height: 26px;
 }
-.h5-num{
+
+.h5-num {
     font-size: var(--fs-18);
     font-family: 'Lato', sans-serif;
     line-height: 26px;
@@ -93,6 +108,10 @@
     font-size: var(--fs-15);
 }
 
+.fs-12 {
+    font-size: var(--fs-12);
+}
+
 .fw-200 {
     font-weight: 200 !important;
 }
@@ -107,6 +126,10 @@
 
 .fw-700 {
     font-weight: 700 !important;
+}
+
+.fc-transparent {
+    color: transparent;
 }
 
 .fc-black {
@@ -124,9 +147,11 @@
 .fc-vinous {
     color: var(--mc-vinous);
 }
+
 .fc-peach {
     color: var(--mc-peach);
 }
+
 .fc-grey {
     color: var(--mc-grey);
 }
@@ -162,6 +187,7 @@
 .fls-3 {
     letter-spacing: 0.8px;
 }
+
 .fls-01 {
     letter-spacing: -0.1px;
 }
@@ -195,6 +221,29 @@
 
 /*на экраны планшетов-----------------*/
 
+@media screen and (max-width: 1707px) {
+    .h3 {
+        font-size: var(--fs-22);
+        line-height: 26px;
+    }
+    .h3-num {
+        font-size: var(--fs-22);
+        line-height: 26px;
+    }
+    .h4 {
+        font-size: var(--fs-18);
+        line-height: 26px;
+    }
+    .h5 {
+        font-size: var(--fs-16);
+        line-height: 21px;
+    }
+    .h5-num {
+        font-size: var(--fs-16);
+        line-height: 21px;
+    }
+}
+
 @media screen and (max-width: 991px) {
     .fs-md-40 {
         font-size: var(--fs-40);
@@ -221,6 +270,66 @@
 
 
 /*на экраны телефонов*/
+
+@media screen and (max-width: 767px) {
+    .fs-sm-24 {
+        font-size: var(--fs-24);
+    }
+    .fs-sm-20 {
+        font-size: var(--fs-20);
+    }
+    .fs-sm-18 {
+        font-size: var(--fs-18);
+    }
+    .fs-sm-16 {
+        font-size: var(--fs-16);
+    }
+    .fs-sm-14 {
+        font-size: var(--fs-14);
+    }
+    .fs-sm-13 {
+        font-size: var(--fs-13);
+    }
+    .fs-sm-10 {
+        font-size: var(--fs-10);
+    }
+    .flh-sm-24 {
+        line-height: 24px;
+    }
+    .flh-sm-17 {
+        line-height: 17px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .fs-sm-24 {
+        font-size: var(--fs-24);
+    }
+    .fs-sm-20 {
+        font-size: var(--fs-20);
+    }
+    .fs-sm-18 {
+        font-size: var(--fs-18);
+    }
+    .fs-sm-16 {
+        font-size: var(--fs-16);
+    }
+    .fs-sm-14 {
+        font-size: var(--fs-14);
+    }
+    .fs-sm-13 {
+        font-size: var(--fs-13);
+    }
+    .fs-sm-10 {
+        font-size: var(--fs-10);
+    }
+    .flh-sm-24 {
+        line-height: 24px;
+    }
+    .flh-sm-17 {
+        line-height: 17px;
+    }
+}
 
 @media screen and (max-width: 767px) {
     .fs-sm-24 {

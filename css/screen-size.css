@@ -1,0 +1,151 @@
+@media screen and (max-width: 1707px) {
+    body {
+        padding: 10px 6px 0 6px;
+    }
+    nav .col-1 {
+        height: 36px;
+    }
+    .h-37px {
+        height: 32px;
+    }
+    .main__img_div {
+        height: 530px;
+        border: solid 4px var(--mc-white);
+    }
+    #img_mousemove {
+        left: -140px;
+        top: -11px
+    }
+    .main__bg_black_div {
+        top: 610px;
+        height: 1780px;
+        padding-top: 40px;
+    }
+    [class*=brand_] img {
+        transform: scale(0.9)
+    }
+    .brand_1 {
+        top: 320px !important;
+        left: 700px !important;
+    }
+    .brand_2 {
+        top: 287px !important;
+        left: -139px !important;
+    }
+    .brand_3 {
+        top: 287px !important;
+        left: 1528px !important;
+    }
+    .brand_4 {
+        top: 556px !important;
+        left: 1290px !important;
+    }
+    .brand_5 {
+        top: 556px !important;
+        left: 160px !important;
+    }
+    .brand_6 {
+        top: 753px !important;
+        left: -85px !important;
+    }
+    .brand_7 {
+        top: 753px !important;
+        left: 1570px !important;
+    }
+    .long_logo {
+        height: 145px;
+        top: 890px;
+    }
+    @keyframes move-right {
+        0% {
+            left: 0;
+        }
+        100% {
+            left: 95.5%;
+        }
+    }
+    .mt-400px {
+        margin-top: 313px
+    }
+    .main__bg_black_card_div:hover .main__bg_black_card_img_div {
+        height: 180px;
+    }
+    .mt-2120px {
+        margin-top: 1900px
+    }
+    .top-2720px {
+        top: 2390px;
+    }
+    .h-2036px {
+        height: 1800px;
+    }
+    .main__our_mug_div {
+        top: 2620px;
+    }
+    #our_mug_img_1,
+    #our_mug_img_2 {
+        height: 660px
+    }
+    .main__our_mug_card_left_div {
+        margin-top: 100px;
+        height: 520px;
+    }
+    .main__our_mug_card_left_div .mt-4 {
+        margin-top: 80px !important;
+    }
+    .main__our_mug_card_right_div {
+        margin-top: 426px;
+        height: 194px;
+        width: 399px;
+    }
+    .main__our_mug_card_right_inner_div {
+        padding: 30px 24px;
+    }
+    .mt-950px {
+        margin-top: 850px
+    }
+    .main__other_project_div {
+        height: 485px;
+    }
+    .main__other_project_img_name img {
+        height: 150px
+    }
+    .main__other_project_img_text_in_circle {
+        transform: scale(0.8);
+    }
+    .main__other_project_img_head {
+        transform: translate(-40px, 40px)scale(0.8)
+    }
+    .main__other_project_img_name svg {
+        height: 150px;
+        width: 569px;
+    }
+    .main__other_project_img_plate img {
+
+        height: 430px;
+    }
+    #catalog .mt-96px {
+        margin-top: 72px;
+    }
+    .basket__scroll_div{
+        height: 480px;
+
+    }
+    .grid-col-2{
+        height: 250px;
+
+    }
+    .grid-col-2 > img{
+        height: 250px;
+        width: 250px;
+    }
+    #menu .me-2 {
+        margin-right: 7px !important
+    }
+    .main__others_project .h3-num {
+        font-size: var(--fs-22)
+    }
+
+
+
+}

@@ -1,10 +1,12 @@
 a {
     text-decoration: none;
     color: var(--mc-white);
+    cursor: none !important;
 }
 
 a:hover {
     color: var(--mc-white);
+    cursor: none !important;
 }
 
 button {
@@ -12,6 +14,11 @@ button {
     color: var(--mc-white);
     border: none;
     font-size: 16px;
+    cursor: none !important;
+}
+
+button:hover {
+    cursor: none !important;
 }
 
 input,
@@ -44,11 +51,45 @@ textarea::-webkit-input-placeholder {
     height: 50px;
 }
 
+.flat-button {
+    position: relative;
+    overflow: hidden;
+    background: var(--mc-dark-grey);
+    color: var(--mc-white);
+    border: solid 1px var(--mc-white);
+    border-radius: 25px;
+    width: 100%;
+    height: 50px;
+}
+
+.flat-button * {
+    position: relative;
+}
+
+.flat-button:before {
+    content: "";
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--mc-peach);
+    transition: 1s;
+    z-index: 0;
+}
+
+.flat-button:hover:before {
+    height: 100%;
+    top: 0;
+}
+
 .flat-button-bg-light {
     background: var(--mc-white-01);
 }
 
 .round-button {
+    overflow: hidden;
+    position: relative;
     background: var(--mc-white-01);
     color: var(--mc-white);
     border: solid 1px var(--mc-white);
@@ -58,33 +99,124 @@ textarea::-webkit-input-placeholder {
     transition: linear 0.2s;
 }
 
+.round-button:before {
+    content: '';
+    background: var(--mc-peach);
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 1s;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.round-button:hover:before {
+    content: '';
+    background: var(--mc-peach);
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: -1;
+}
+
+
+/*
 .round-button:hover {
     background: var(--mc-white-06);
 }
+*/
 
 .round-button-middle {
     width: 135px;
     height: 135px;
 }
 
+.round-button-middle:before {
+    height: 135px;
+    width: 135px;
+}
+
+.round-button-middle:hover:before {
+    height: 135px;
+    width: 135px;
+}
 .round-button-big {
     width: 200px;
     height: 200px;
+}
+
+.round-button-big:before {
+    height: 200px;
+    width: 200px;
+}
+
+.round-button-big:hover:before {
+    height: 200px;
+    width: 200px;
 }
 
 .round-button-very-big {
     width: 294px;
     height: 294px;
 }
+.round-button-very-big:before {
+    height: 294px;
+    width: 294px;
+}
 
+.round-button-very-big:hover:before {
+    height: 294px;
+    width: 294px;
+}
 .round-button-footer {
     position: absolute;
     bottom: -20px;
     right: 0;
 }
+
 .footer-black .round-button {
-    background: var(--mc-grey-06);
     border: solid 1px var(--mc-black);
+}
+
+.round-button-hover-cuba:before {
+    content: '';
+    background: var(--mc-white);
+    transform: translate(-50%, -50%);
+    transition: 1s;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    opacity: 0
+}
+
+.round-button-hover-cuba:hover:before {
+    content: '';
+    background: var(--mc-white);
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.round-button-hover-cuba:hover .flag_of_cuba {
+    opacity: 1;
+/*    transform: scale(1);*/
+}
+
+.flag_of_cuba {
+    position: absolute;
+    opacity: 0;
+/*    transform: scale(0);*/
+    transition: 1s;
 }
 
 .flat-link {
@@ -129,73 +261,47 @@ textarea::-webkit-input-placeholder {
 }
 
 .link-main {
-/*    border-bottom: solid 1px transparent;*/
+    /*    border-bottom: solid 1px transparent;*/
     transition: linear 0.35s;
 }
 
 .link-main:hover {
-/*    border-bottom: solid 1px var(--mc-white);*/
+    /*    border-bottom: solid 1px var(--mc-white);*/
 }
+
 .btn-item {
     width: 100%;
-    padding: 2px 0 ;
+    padding: 2px 0;
     color: var(--mc-white);
     background: var(--mc-black);
 }
 
-/*
-.button-up {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 70px;
-    transition: 0.5s linear;
-}
-
-.button-up:before {
-    content: "";
-    position: absolute;
-    top: -30px;
-    left: -34px;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background-color: var(--mc-peach);
-    transition: 0.5s ease-out;
-    z-index: -1;
-    transform: scale(0);
-}
-
-.button-up:hover {
-    position: absolute;
-    right: 90px;
-    bottom: 0;
-    width: 70px;
-    transform: translateY(-20px)
-}
-
-.button-up:hover:before {
-    transform: scale(1);
-}
-*/
-
 .link-on-kuznechny,
 .link-on-petrogradskoy {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 208px;
+    height: 220px;
     border-top: solid 1px var(--mc-white);
 }
-
 .link-on-petrogradskoy {
     border-bottom: solid 1px var(--mc-white);
+}
+
+.link-on-kuznechny-img, .link-on-petrogradskoy-img {
+    transition: 1s;
+    opacity: 0
+}
+.link-on-kuznechny-text, .link-on-petrogradskoy-text {
+    transition: 0.8s;
 }
 
 .underline-one {
     position: relative;
 }
+
 .underline-one:after {
     content: "";
     position: absolute;
@@ -206,6 +312,7 @@ textarea::-webkit-input-placeholder {
     background-color: var(--mc-white);
     transition: 0.5s;
 }
+
 .footer-black .underline-one:after {
     background-color: var(--mc-black);
 }
@@ -258,11 +365,13 @@ textarea::-webkit-input-placeholder {
     position: absolute;
     appearance: none;
 }
+
 .radio-main {
     display: flex;
     justify-content: flex-start;
     align-items: center
 }
+
 .radio-main-checkmark {
     width: 26px;
     height: 26px;
@@ -273,13 +382,14 @@ textarea::-webkit-input-placeholder {
     align-items: center;
 }
 
-.radio-main-checkmark div{
+.radio-main-checkmark div {
     width: 16px;
     height: 16px;
     background: var(--mc-black);
     border-radius: 100%;
 }
-.radio-main input[type="radio"]:checked ~ .radio-main-checkmark div{
+
+.radio-main input[type="radio"]:checked ~ .radio-main-checkmark div {
     background: var(--mc-white);
 }
 
@@ -287,14 +397,21 @@ textarea::-webkit-input-placeholder {
     transition: 0.5s;
     opacity: 0;
 }
+
 .menu-link:hover .menu-link-img {
     opacity: 1;
 }
 
+
 /* input range styles*/
 
+.noUi-connects {
+    background: var(--mc-grey-light) !important;
+    height: 1px !important;
+}
+
 .noUi-connect {
-    margin-top: 1px;
+    /*    margin-top: 1px;*/
     background: var(--mc-black) !important;
     height: 1px !important;
 }

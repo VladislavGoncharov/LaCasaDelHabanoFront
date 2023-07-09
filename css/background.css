@@ -50,13 +50,12 @@
 }
 
 .bg_transparent {
-    height: 100vh;
+    height: 950px;
     background: transparent;
 }
 
 .bg_nav_vinous, .bg_nav_black, .bg_nav_white {
     height: 80px;
-    widows: 100vw;
     z-index: 4;
     position: sticky;
     top: 0;
@@ -70,11 +69,19 @@
     background: linear-gradient(to top, transparent 0%, #ffffff 30%);
 }
 .about_us__foreground_picture {
+
     background-image: url('/img/about_us__picture_cigars.jpg');
     background-position:center center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
     background-attachment: fixed;
+        z-index: -2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(1.1);
+    top: 2030px;
+    height: 100vh;
+    width: 100%;
+    max-width: 1920px;
 }
 
 .about_us__bg_vinous, .about_us__bg_vinous_2 {
@@ -104,8 +111,22 @@
 
 .payment_and_delivery__foreground_picture {
     background-image: url('/img/payment_and_delivery__cigars.jpg');
+/*    background-size: 100% 100%;*/
     background-position:center center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
     background-attachment: fixed;
+    z-index: -2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(1.1);
+    top: 1600px;
+    height: inherit;
+    width: 100%;
+    max-width: 1920px;
+}
+@media screen and (max-width: 1707px) {
+
+.bg_nav_vinous, .bg_nav_black, .bg_nav_white {
+    height: 70px;
+}
 }

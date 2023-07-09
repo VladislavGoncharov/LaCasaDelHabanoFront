@@ -12,10 +12,18 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/margin-padding.css">
     <link rel="stylesheet" href="css/other-styles.css">
+    <link rel="stylesheet" href="js/OverlayScrollbars/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="js/air-datepicker-3/air-datepicker.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
     <title>La Casa Del Habano</title>
 </head>
 
-<body class="container payment_and_delivery__foreground_picture">
+<body class="container">
     <div class="payment_and_delivery__bg_vinous"></div>
     <div class="payment_and_delivery__bg_vinous_2 height-auto"></div>
     <div class="position-absolute top-0 start-0 w-100 height-auto">
@@ -80,7 +88,9 @@
             </div>
         </div>
     </section>
-    <div class="mt-156px bg_transparent"></div>
+    <div class="mt-156px bg_transparent">
+        <div class="payment_and_delivery__foreground_picture"></div>
+    </div>
     <section>
         <div class="row mt-156px h1">
             <div class="col-12 d-flex justify-content-center align-items-center">ВНИМАНИЕ!</div>
@@ -103,7 +113,7 @@
                     <input class="input-main" type="text" placeholder="ИМЯ*"> </div>
                 <div class="col-3 fs-18 flh-26 fw-200">
                     <input class="input-main" type="text" placeholder="ТЕЛЕФОН ИЛИ E-MAIL*"> </div>
-                <div class="offset-3 col-6 mt-196px-for-form position-relative fs-18 flh-26 fw-200">
+                <div class="offset-3 col-6 mt-160px-for-form position-relative fs-18 flh-26 fw-200">
                     <textarea class="textarea-main" placeholder="СООБЩЕНИЕ"></textarea>
                 </div>
                 <div class="offset-3 col-6 mt-5 position-relative">
@@ -168,6 +178,8 @@
         </div>
     </footer>
     </section>
+    <script src="js/OverlayScrollbars/OverlayScrollbars.min.js"></script>
+    <script src="js/air-datepicker-3/air-datepicker.js"></script>
     <script src="js/payment-and-delivery-js.js"></script>
     <script src="js/global-js.js"></script>
 </body>

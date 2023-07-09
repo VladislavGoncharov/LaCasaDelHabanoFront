@@ -31,12 +31,22 @@ body {
     transition: 1.5s;
     transform: translateX(-100%);
 }
+/*
+.transform_scale {
+    transition: 2s;
+    transform: scale(1.2);
+}
+*/
 .transform_show {
     transform: scaleX(1) !important;
 }
 .transform_up_text {
     transition: 1.5s ease-in-out;
     transform: translateY(100%);
+}
+.transform_right_text {
+    transition: 1.5s ease-in-out;
+    transform: translateX(100%);
 }
 .transform_up {
     transition: 1s ease-in-out;
@@ -46,9 +56,17 @@ body {
     transition: 1s ease-in-out;
     transform: translateY(100%);
 }
-.transform_right {
+.transform_right_line {
     transition: 1s ease-in-out;
     transform: translateX(110%);
+}
+.transform_right {
+    transition: 1s ease-in-out;
+    transform: translateX(100%);
+}
+.transform_left {
+    transition: 1s ease-in-out;
+    transform: translateX(-100%);
 }
 
 .basket__scroll_div {
@@ -72,7 +90,7 @@ body {
 .top--25px {
     top: -25px;
 }
-.top-2500px {
+.top-2720px {
     top: 2720px;
 }
 .h-4000px{
@@ -208,3 +226,5 @@ body {
 .paginationjs-prev, .paginationjs-next {
     display: none;
 }
+
+
