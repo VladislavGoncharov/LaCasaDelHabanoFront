@@ -1,4 +1,4 @@
-.bg_black_pop_up_windows {
+.bg_black_pop_up_windows,.bg_black_pop_up_windows_enter {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,9 +8,13 @@
     z-index: 20;
     background: var(--mc-black);
     transition: 1s ease-in-out;
-    transform:translateY(100%)
+    transform:translateY(-100%)
 }
-.bg_black_pop_up_windows_on_the_right_darkening {
+.bg_black_pop_up_windows_enter {
+    left: 50%;
+    transform:translateX(-50%)
+}
+.bg_black_pop_up_windows_on_the_right_darkening, .bg_black_pop_up_windows_on_the_right_darkening_enter {
     position: fixed;
     top: 0;
     left: 0;
@@ -19,6 +23,9 @@
     z-index: 19;
     background: var(--mc-darkening);
     pointer-events: all;
+}
+.bg_black_pop_up_windows_on_the_right_darkening_enter {
+    background: var(--mc-black);
 }
 .bg_black_pop_up_windows_on_the_right_dark {
     position: fixed;

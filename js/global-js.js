@@ -32,6 +32,78 @@ $('#basket').click(function () {
 $('.bg_black_pop_up_windows_on_the_right_dark').click(function (event) {
     event.stopPropagation();
 });
+$('#yes').click(function () {
+    let container = $('#enter')
+    let svg_loading = $('#svg_loading')
+    let svg_container = $('#main__img_div')
+    svg_container.addClass('main__img_div_enter')
+    svg_container.removeClass('main__img_div')
+    gsap.to(container.find('.top-775px'), {
+        opacity: 1
+        , duration: 3
+    })
+    var timeline = gsap.timeline();
+    // Добавление анимации к таймлайну
+    timeline.to(container.find('.top-510px, .top-265px'), {
+        opacity: 0
+        , duration: 2
+    }).to(container.find('.top-775px'), {
+        opacity: 1
+        , duration: 3
+        , ease: Power2.easeInOut
+    }, 0).fromTo($('#svg_loading rect'), {
+        yPercent: 100
+    }, {
+        yPercent: 70
+        , duration: 2
+        , ease: Power2.easeInOut
+    }, 1.5).fromTo($('#svg_loading rect'), {
+        yPercent: 70
+    }, {
+        yPercent: 40
+        , duration: 2
+        , ease: Power2.easeInOut
+    }, 3.5).to($('#svg_loading rect'), {
+        yPercent: 18
+        , duration: 1.5
+        , ease: Power2.easeInOut
+    }, 5.5).to($('#svg_loading rect'), {
+        height: 0
+        , duration: 5
+        , ease: Power2.easeInOut
+    }, 6).to($('.bg_black_pop_up_windows_on_the_right_darkening_enter'), {
+        yPercent: 100
+        , duration: 3
+        , ease: Power2.easeInOut
+    }, 7.7).to(container.find('.top-775px, nav'), {
+        opacity: 0
+        , duration: .5
+        , ease: Power2.easeInOut
+    }, 7.7).from($('.enter-show'), {
+        yPercent: 100
+        , duration: 2
+        , ease: Power2.easeInOut
+    }, 9);
+    // Запуск таймлайна
+    timeline.play();
+    $('body').css('overflow', 'hidden');
+    setTimeout(function () {
+        //        svg_container.css('display', 'block')
+        svg_container.find('.imageHolderMain').css('opacity', 0)
+        svg_container.find('.layer').css('opacity', 0)
+        svg_container.css('z-index', '19')
+    }, 1500)
+    setTimeout(function () {
+        svg_container.addClass('main__img_div')
+        svg_container.removeClass('main__img_div_enter')
+        $('#main__img_div .imageHolderMain').css('opacity', 1)
+        $('#main__img_div .layer').css('opacity', 1)
+        setTimeout(function () {
+            $('body').css('overflow', 'auto');
+        svg_container.css('z-index', '3')
+        }, 2000)
+    }, 8000)
+});
 //функция автоматического расчета высоты элемента
 function distanceToBottom() {
     $('.height-auto').each(function () {

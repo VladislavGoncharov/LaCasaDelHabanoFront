@@ -126,7 +126,7 @@ footer {
     z-index: -1
 }
 
-.main__img_div {
+.main__img_div, .main__img_div_enter {
     position: relative;
     display: flex;
     justify-content: center;
@@ -140,6 +140,9 @@ footer {
 /*    background-size: cover;*/
 
     overflow: hidden;
+}
+.main__img_div_enter {
+    border: none;
 }
 
 .main__img_absolute {
