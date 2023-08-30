@@ -21,32 +21,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>La Casa Del Habano</title>
 </head>
 
 <body class="container bg_white">
     <section class="position-relative">
-    <div class="position-absolute top-0 w-100 height-auto">
-        <div class="bg_nav_white"></div>
-    </div>
-    <nav class="row h5 position-sticky top-0">
-        <div class="col-5">
-            <div class="border-top-black"></div>
+        <div class="position-absolute top-0 w-100 height-auto">
+            <div class="bg_nav_white"></div>
         </div>
-        <div class="col-2"> <img src="img/navbar__logo_black.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x h-37px"> </div>
-        <div class="col-5">
-            <div class="border-top-black"></div>
-        </div>
-        <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one underline-one" href="#">EN</a></div>
-        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('reserve',event)">РЕЗЕРВ</a></div>
-        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('catalog',event)">КАТАЛОГ</a></div>
-        <div class="offset-6 col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('search',event)">ПОИСК</a></div>
-        <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('basket',event)">КОРЗИНА</a></div>
-        <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('menu',event)">МЕНЮ</a></div>
-    </nav>
+        <nav class="row h5 position-sticky top-0">
+            <div class="col-5">
+                <div class="border-top-black"></div>
+            </div>
+            <div class="col-2"> <img src="img/navbar__logo_black.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x h-37px"> </div>
+            <div class="col-5">
+                <div class="border-top-black"></div>
+            </div>
+            <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one underline-one" href="#">EN</a></div>
+            <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('reserve',event)">РЕЗЕРВ</a></div>
+            <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('catalog',event)">КАТАЛОГ</a></div>
+            <div class="offset-6 col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('search',event)">ПОИСК</a></div>
+            <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('basket',event)">КОРЗИНА</a></div>
+            <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('menu',event)">МЕНЮ</a></div>
+        </nav>
         <div class="row mt-156px">
             <div class="col-11 d-flex justify-content-star align-items-center h4 text-uppercase">ГЛАВНАЯ<img src="img/vector-dash-black.svg" class="ps-3 pe-3" alt="vector-dash">категории<img src="img/vector-dash-black.svg" class="ps-3 pe-3" alt="vector-dash">сигары</div>
             <div class="col-1 d-flex justify-content-end align-items-center"><img src="img/sheet_black.svg" alt="sheet"></div>
@@ -55,110 +54,221 @@
             </div>
         </div>
         <div class="row mt-2">
-            <div class="col-12 h1 text-uppercase">католог</div>
+            <div class="col-12 h1 text-uppercase">каталог</div>
         </div>
         <div class="mt-2 position-sticky top-3">
             <div class="border-top-black"></div>
         </div>
         <div class="row gx-0">
             <div class="col-3 pe-3">
-                <div class="border-right-black height-along-central-column">
-                    <div class="pt-4 h5">Фильтры</div>
-                    <div class="mt-3 h5 text-uppercase"> <a href="" class="filter-link filter-link-focus">сигары</a> <a href="" class="filter-link">сигарилы</a> <a href="" class="filter-link">кофе</a> <a href="" class="filter-link">аксессуары</a> </div>
-                    <div class="border-top-black">
-                        <button type="button" onclick="openFilter('1')" class="d-flex justify-content-between w-100 pe-4 pt-4">
-                            <div class="h4 text-uppercase">СЕРИИ</div> <img id="jackdaw_1" src="img/jackdaw.svg" alt="jackdaw"> </button>
-                        <div id="filters_1" class="row g-0 ps-3" style="display: none">
-                            <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
-                                <input id="series_1" type="checkbox" name="series" class="checkbox-filter me-3" data-series="Винтажные">
-                                <label for="series_1">Винтажные</label>
+                <div class="border-right-black height-along-central-column position-relative">
+                    <div class="filters-main-shadow">
+                        <div class="filters-main-shadow-top"></div>
+                        <div class="filters-main">
+                            <div class="pt-4 h5">Фильтры</div>
+                            <div class="mt-3 h5 text-uppercase border-top-black">
+                            <label class="checkbox-type-filter"> сигары<input type="checkbox" name="type" data-name="Сигары"></label>
+                            <label class="checkbox-type-filter"> сигарилы<input type="checkbox" name="type" data-name="Сигарилы"></label>
+                            <label class="checkbox-type-filter"> кофе<input type="checkbox" name="type" data-name="Кофе"></label>
+                            <label class="checkbox-type-filter"> аксессуары<input type="checkbox" name="type" data-name="Аксессуары"></label> </div>
+                            <div id="filterSeries" class="mb-4 border-top-black">
+                                <button type="button" onclick="openFilter('1')" class="d-flex justify-content-between w-100 pe-4 pt-4">
+                                    <div class="h4 text-uppercase">СЕРИИ</div> <img class="transition-05 rotate-180" id="jackdaw_1" src="img/jackdaw.svg" alt="jackdaw"> </button>
+                                <div id="filters_1" class="row g-0 ps-3" style="display: none">
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="series_1" type="checkbox" name="series" class="checkbox-filter me-3" data-name="Винтажные" data-option="series">
+                                        <label for="series_1">Винтажные</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="series_2" type="checkbox" name="series" class="checkbox-filter me-3" data-name="Лимитированные" data-option="series">
+                                        <label for="series_2">Лимитированные</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="series_3" type="checkbox" name="series" class="checkbox-filter me-3" data-name="Региональные" data-option="series">
+                                        <label for="series_3">Региональные</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="series_4" type="checkbox" name="series" class="checkbox-filter me-3" data-name="Серия Reserva" data-option="series">
+                                        <label for="series_4">Серия Reserva</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="series_5" type="checkbox" name="series" class="checkbox-filter me-3" data-name="Серия La Casa Del Habano" data-option="series">
+                                        <label for="series_5">Серия La Casa Del Habano</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="series_6" type="checkbox" name="series" class="checkbox-filter me-3" data-name="Серия Art Nouveau" data-option="series">
+                                        <label for="series_6">Серия Art Nouveau</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="series_7" type="checkbox" name="series" class="checkbox-filter me-3" data-name="Серия Combinaciones" data-option="series">
+                                        <label for="series_7">Серия Combinaciones</label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
-                                <input id="series_2" type="checkbox" name="series" class="checkbox-filter me-3" data-series="Лимитированные">
-                                <label for="series_2">Лимитированные</label>
+                            <div id="filterBrands" class="mb-4 border-top-black">
+                                <button type="button" onclick="openFilter('2')" class="d-flex justify-content-between w-100 pe-4 pt-4">
+                                    <div class="h4 text-uppercase">Бренд</div> <img class="transition-05 " id="jackdaw_2" src="img/jackdaw.svg" alt="jackdaw"> </button>
+                                <div id="filters_2" class="row g-0 ps-3">
+                                   <div id="brandsSirars">
+
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brand_1" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Bolivar" data-option="brands">
+                                        <label for="brand_1">Bolivar</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brand_2" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Cohiba" data-option="brands">
+                                        <label for="brand_2">Cohiba</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brand_3" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="El Rey Del Mundo" data-option="brands">
+                                        <label for="brand_3">El Rey Del Mundo</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brand_4" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Fonseca" data-option="brands">
+                                        <label for="brand_4">Fonseca</label>
+                                    </div>
+                                   </div>
+                                   <div id="brandsCigarillos">
+
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brandCigarillos_1" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Cohiba" data-option="brands">
+                                        <label for="brandCigarillos_1">Cohiba</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brandCigarillos_2" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Guantanamera" data-option="brands">
+                                        <label for="brandCigarillos_2">Guantanamera</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brandCigarillos_3" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Montecristo" data-option="brands">
+                                        <label for="brandCigarillos_3">Montecristo</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brandCigarillos_4" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Partagas" data-option="brands">
+                                        <label for="brandCigarillos_4">Partagas</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brandCigarillos_5" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Toscano" data-option="brands">
+                                        <label for="brandCigarillos_5">Toscano</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brandCigarillos_6" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Trinidad" data-option="brands">
+                                        <label for="brandCigarillos_6">Trinidad</label>
+                                    </div>
+                                   </div>
+                                   <div id="brandsCoffee">
+
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brandCoffee_1" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Arriero" data-option="brands">
+                                        <label for="brandCoffee_1">Arriero</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brandCoffee_2" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Cohiba" data-option="brands">
+                                        <label for="brandCoffee_2">Cohiba</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brandCoffee_3" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Guantanamera" data-option="brands">
+                                        <label for="brandCoffee_3">Guantanamera</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brandCoffee_4" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Montecristo" data-option="brands">
+                                        <label for="brandCoffee_4">Montecristo</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brandCoffee_5" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Caracolillo" data-option="brands">
+                                        <label for="brandCoffee_5">Caracolillo</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="brandCoffee_6" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Turquino" data-option="brands">
+                                        <label for="brandCoffee_6">Turquino</label>
+                                    </div>
+                                   </div>
+                                </div>
                             </div>
-                            <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
-                                <input id="series_3" type="checkbox" name="series" class="checkbox-filter me-3" data-series="Региональные">
-                                <label for="series_3">Региональные</label>
+                            <div id="filterTypesOfAccessory" class="mb-4 border-top-black">
+                                <button type="button" onclick="openFilter('3')" class="d-flex justify-content-between w-100 pe-4 pt-4">
+                                    <div class="h4 text-uppercase">Тип аксессуаров</div> <img class="transition-05 " id="jackdaw_3" src="img/jackdaw.svg" alt="jackdaw"> </button>
+                                <div id="filters_3" class="row g-0 ps-3">
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="typeOfAccessory_1" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Зажигалки" data-option="typesOfAccessory">
+                                        <label for="typeOfAccessory_1">Зажигалки</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="typeOfAccessory_2" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Гильотины" data-option="typesOfAccessory">
+                                        <label for="typeOfAccessory_2">Гильотины</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="typeOfAccessory_3" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Пробойники" data-option="typesOfAccessory">
+                                        <label for="typeOfAccessory_3">Пробойники</label>
+                                    </div>
+                                    <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
+                                        <input id="typeOfAccessory_4" type="checkbox" name="brands" class="checkbox-filter me-3" data-name="Хьюмидоры" data-option="typesOfAccessory">
+                                        <label for="typeOfAccessory_4">Хьюмидоры</label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
-                                <input id="series_4" type="checkbox" name="series" class="checkbox-filter me-3" data-series="Серия Reserva">
-                                <label for="series_4">Серия Reserva</label>
+                            <div class="border-top-black mb-5"></div>
+                            <div id="filterPrice" class="mb-3 pe-4">
+                                <div class="h4 text-uppercase">цена</div>
+                                <div class="mt-3 h3-num fw-200 d-flex justify-content-between">
+                                    <div id="range-price-from">630</div>
+                                    <div id="range-price-to">287000</div>
+                                </div>
+                                <div id="range-price" class="ps-2 mt-3"></div>
                             </div>
-                            <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
-                                <input id="series_5" type="checkbox" name="series" class="checkbox-filter me-3" data-series="Серия La Casa Del Habano">
-                                <label for="series_5">Серия La Casa Del Habano</label>
+                            <div id="filterRingGuage" class="mb-3 pe-4">
+                                <div class="h4 text-uppercase">Ring gauge</div>
+                                <div class="mt-3 h3-num fw-200 d-flex justify-content-between">
+                                    <div id="range-ring-gauge-from">30</div>
+                                    <div id="range-ring-gauge-to">54</div>
+                                </div>
+                                <div id="range-ring-gauge" class="ps-2 mt-3"></div>
                             </div>
-                            <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
-                                <input id="series_6" type="checkbox" name="series" class="checkbox-filter me-3" data-series="Серия Art Nouveau">
-                                <label for="series_6">Серия Art Nouveau</label>
+                            <div id="filterSize" class="mb-3 pe-4">
+                                <div class="h4 text-uppercase">Размер, мм</div>
+                                <div class="mt-3 h3-num fw-200 d-flex justify-content-between">
+                                    <div id="range-size-from">90</div>
+                                    <div id="range-size-to">194</div>
+                                </div>
+                                <div id="range-size" class="ps-2 mt-3"></div>
                             </div>
-                            <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
-                                <input id="series_7" type="checkbox" name="series" class="checkbox-filter me-3" data-series="Серия Combinaciones">
-                                <label for="series_7">Серия Combinaciones</label>
+                            <div id="filterFortress" class="mb-3 pe-4">
+                                <div class="h4 text-uppercase">Крепость</div>
+                                <div class="mt-3 h3-num fw-200 d-flex justify-content-between">
+                                    <div id="range-fortress-from">1</div>
+                                    <div id="range-fortress-to">5</div>
+                                </div>
+                                <div id="range-fortress" class="ps-2 mt-3"></div>
                             </div>
+                            <div class="pt-5 pb-5 fc-white"></div>
                         </div>
-                    </div>
-                    <div class="mt-4 border-top-black">
-                        <button type="button" onclick="openFilter('2')" class="d-flex justify-content-between w-100 pe-4 pt-4">
-                            <div class="h4 text-uppercase">Бренд</div> <img id="jackdaw_2" src="img/jackdaw.svg" alt="jackdaw"> </button>
-                        <div id="filters_2" class="row g-0 ps-3">
-                            <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
-                                <input id="brand_1" type="checkbox" name="brands" class="checkbox-filter me-3" data-brand="Bolivar">
-                                <label for="brand_1">Bolivar</label>
-                            </div>
-                            <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
-                                <input id="brand_2" type="checkbox" name="brands" class="checkbox-filter me-3" data-brand="Cohiba">
-                                <label for="brand_2">Cohiba</label>
-                            </div>
-                            <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
-                                <input id="brand_3" type="checkbox" name="brands" class="checkbox-filter me-3" data-brand="El Rey Del Mundo">
-                                <label for="brand_3">El Rey Del Mundo</label>
-                            </div>
-                            <div class="offset-4 col-8 mt-3 d-flex justify-content-start align-items-center">
-                                <input id="brand_4" type="checkbox" name="brands" class="checkbox-filter me-3" data-brand="Fonseca">
-                                <label for="brand_4">Fonseca</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-top-black mt-4"></div>
-                    <div class="mt-5 pe-4">
-                        <div class="h4 text-uppercase">цена</div>
-                        <div class="mt-3 h3-num fw-200 d-flex justify-content-between">
-                            <div id="range-price-from">630</div>
-                            <div id="range-price-to">287000</div>
-                        </div>
-                        <div id="range-price" class="ps-2 mt-3"></div>
-                    </div>
-                    <div class="mt-3 pe-4">
-                        <div class="h4 text-uppercase">Ring gauge</div>
-                        <div class="mt-3 h3-num fw-200 d-flex justify-content-between">
-                            <div id="range-ring-gauge-from">30</div>
-                            <div id="range-ring-gauge-to">54</div>
-                        </div>
-                        <div id="range-ring-gauge" class="ps-2 mt-3"></div>
-                    </div>
-                    <div class="mt-3 pe-4">
-                        <div class="h4 text-uppercase">Размер, мм</div>
-                        <div class="mt-3 h3-num fw-200 d-flex justify-content-between">
-                            <div id="range-size-from">90</div>
-                            <div id="range-size-to">194</div>
-                        </div>
-                        <div id="range-size" class="ps-2 mt-3"></div>
-                    </div>
-                    <div class="mt-3 pe-4">
-                        <div class="h4 text-uppercase">Крепость</div>
-                        <div class="mt-3 h3-num fw-200 d-flex justify-content-between">
-                            <div id="range-fortress-from">1</div>
-                            <div id="range-fortress-to">5</div>
-                        </div>
-                        <div id="range-fortress" class="ps-2 mt-3"></div>
+                        <div class="filters-main-shadow-bottom"></div>
                     </div>
                 </div>
             </div>
             <div class="col-9 central-column">
                 <div id="containerForItems" class="row gx-3">
-                    <div class="col-12 mt-19px"></div>
+                    <div id="nav-filter" class="col-12 nav-filter h5">
+                        <div class="position-relative d-flex justify-content-between w-100">
+                            <div class="filters-nav-shadow-left"></div>
+                            <div class="d-flex filters me-4">
+
+                            </div>
+                            <div class="filters-nav-shadow-right"></div>
+                            <div id="resetFilters" class="ms-3">
+                                <div class="d-flex justify-content-between align-items-center underline-one">
+                                    <div>Сбросить фильтр</div>
+                                    <button class="pe-0"><img src="img/cross_black.svg" alt="cross_black"></button>
+                                </div>
+                            </div>
+                            <div class="position-relative w-25">
+                                <select class="select">
+                                    <option value="none" disabled>Не сортировать</option>
+                                    <option value="desc">Цена по убыванию</option>
+                                    <option value="asc">Цена по возрастанию</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-4 mt-5 catalog__card">
                         <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
                         <div class="catalog__card_padding_text">
@@ -266,7 +376,7 @@
     <footer class="footer-black">
         <div class="row h5">
             <div class="col-12 mb-5">
-                <div class="border-top-black"></div>
+                <div class="border-top-black z-index-1 position-relative"></div>
             </div>
             <div class="col-2"> <img src="img/footer__logo_black.svg" alt="footer__logo" class="w-100"> </div>
             <div class="offset-1 col-3">
@@ -322,8 +432,9 @@
     <script src="js/OverlayScrollbars/OverlayScrollbars.min.js"></script>
     <script src="js/air-datepicker-3/air-datepicker.js"></script>
     <script src="js/noUiSlider-15.7.1/nouislider.min.js"></script>
-    <script src="js/catalog-js.js"></script>
     <script src="js/global-js.js"></script>
+    <script src="js/catalog-js.js"></script>
+    <script src="js/catalog-style-js.js"></script>
 </body>
 
 </html>

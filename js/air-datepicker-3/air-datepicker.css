@@ -562,6 +562,7 @@
     --adp-mobile-year-cell-height: 64px
 }
 
+
 .air-datepicker-overlay {
     --adp-overlay-background-color: rgba(0, 0, 0, .3);
     --adp-overlay-transition-duration: .3s;

@@ -32,6 +32,18 @@ $('#basket').click(function () {
 $('.bg_black_pop_up_windows_on_the_right_dark').click(function (event) {
     event.stopPropagation();
 });
+$('#no').click(function () {
+    gsap.to($('.bg_black_pop_up_windows_on_the_right_darkening_enter'), {
+        yPercent: 100
+        , duration: 1
+        , ease: Power2.easeInOut
+    })
+    gsap.to($('#svg_loading rect'), {
+        yPercent: 100
+        , duration: 1
+        , ease: Power2.easeInOut
+    })
+});
 $('#yes').click(function () {
     let container = $('#enter')
     let svg_loading = $('#svg_loading')
@@ -89,18 +101,18 @@ $('#yes').click(function () {
     $('body').css('overflow', 'hidden');
     setTimeout(function () {
         //        svg_container.css('display', 'block')
-        svg_container.find('.imageHolderMain').css('opacity', 0)
-        svg_container.find('.layer').css('opacity', 0)
+        //        svg_container.find('.imageHolderMain').css('opacity', 0)
+        svg_container.find('.main__img').css('opacity', 0)
         svg_container.css('z-index', '19')
     }, 1500)
     setTimeout(function () {
         svg_container.addClass('main__img_div')
         svg_container.removeClass('main__img_div_enter')
-        $('#main__img_div .imageHolderMain').css('opacity', 1)
+        svg_container.find('.main__img').css('opacity', 1)
         $('#main__img_div .layer').css('opacity', 1)
         setTimeout(function () {
             $('body').css('overflow', 'auto');
-        svg_container.css('z-index', '3')
+            svg_container.css('z-index', '3')
         }, 2000)
     }, 8000)
 });
@@ -110,10 +122,11 @@ function distanceToBottom() {
         let $element = $(this);
         let distanceToBottom = Math.round($('body').height() - $element.position().top) + 25;
         let heightClass = 'height-' + distanceToBottom + 'px';
-        // Добавление класса к текущему элементу
-        $element.addClass(heightClass);
-        // Применение стиля высоты к текущему элементу с добавленным классом
-        $element.css('height', distanceToBottom);
+            // Добавление класса к текущему элементу
+            //        $element.addClass(heightClass);
+            // Применение стиля высоты к текущему элементу с добавленным классом
+        $element.css('height', (distanceToBottom - 100));
+        $element.css('pointer-events', 'none');
     });
 }
 // плавный скрол до верха
@@ -131,6 +144,13 @@ $(window).resize(function () {
         distanceToBottom()
     }, 100);
 });
+// Обрабатываем событие нажатия на колесико мыши
+$(window).on('mousedown', function (e) {
+    if (e.which === 2) {
+        // Если нажато колесико мыши, предотвращаем прокрутку страницы
+        e.preventDefault();
+    }
+});
 
 function scrollFunction() {
     let win = $(window)
@@ -140,10 +160,16 @@ function scrollFunction() {
     // Проверяем каждый элемент, к которому нужно добавить класс при появлении в зоне видимости
     $('.transform_up_text').each(function () {
         let elementTop = $(this).offset().top;
-        if (!$(this).closest('#allMenu').length)
-            if (elementTop <= windowBottomOpacity) {
+        if (!$(this).closest('#allMenu').length) {
+            if ($(this).closest('.main__our_mug_div').length > 0) {
+                if (elementTop <= (win.scrollTop() + (win.innerHeight() * 1.1))) {
+                    $(this).addClass('transform_show');
+                }
+            }
+            else if (elementTop <= windowBottomOpacity) {
                 $(this).addClass('transform_show');
             }
+        }
     });
     $('.opacity_hide_text').each(function () {
         let elementTop = $(this).offset().top;
@@ -168,14 +194,16 @@ let customCursor = $('<div>', {
 $('body').append(customCursor);
 $(document).mousemove(function (event) {
     $('#custom-cursor').css({
-        left: event.clientX + 'px'
-        , top: event.clientY + 'px'
+        left: (event.clientX - 12) + 'px'
+        , top: (event.clientY - 12) + 'px'
     });
 });
-// плавный скролл
+let $animationTime = 1000;
+if (window.location.pathname.includes('catalog')) $animationTime = 500
+    // плавный скролл
 SmoothScroll({
         // Время скролла 400 = 0.4 секунды
-        animationTime: 1000, // Размер шага в пикселях
+        animationTime: $animationTime, // Размер шага в пикселях
         stepSize: 100, // Дополнительные настройки:
         // Ускорение
         accelerationDelta: 20, // Максимальное ускорение
@@ -187,10 +215,28 @@ SmoothScroll({
         , pulseScale: 4
         , pulseNormalize: 1, // Поддержка тачпада
         touchpadSupport: true
-    , })
-    //дата в резерве
+    })
+    // Запрещаем только горизонтальный скролл на всей странице
+document.body.addEventListener('wheel', function (e) {
+    if (e.deltaX !== 0) {
+        e.preventDefault();
+    }
+}, {
+    passive: false
+});
+//запрет горизонтального скрола
+//$(document.body).on('mousewheel', function(e) {
+//        e.preventDefault();
+//      e.stopPropagation();
+//      var max = this.scrollWidth - this.offsetWidth; // this might change if you have dynamic content, perhaps some mutation observer will be useful here
+//
+//      if (this.scrollLeft + e.deltaX < 0 || this.scrollLeft + e.deltaX > max) {
+//        this.scrollLeft = Math.max(0, Math.min(max, this.scrollLeft + e.deltaX));
+//      }
+//    },{ passive: false });
+//дата в резерве
 new AirDatepicker('#dateReserve', {
-    position: 'bottom center'
+    position: 'left center'
     , minDate: new Date()
     , buttons: [{
         content: 'Сегодня'

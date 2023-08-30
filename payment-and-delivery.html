@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/margin-padding.css">
     <link rel="stylesheet" href="css/other-styles.css">
+    <link rel="stylesheet" href="css/screen-size.css">
     <link rel="stylesheet" href="js/OverlayScrollbars/OverlayScrollbars.min.css">
     <link rel="stylesheet" href="js/air-datepicker-3/air-datepicker.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
@@ -23,67 +24,95 @@
     <title>La Casa Del Habano</title>
 </head>
 
-<body class="container">
+<body class="container payment_and_delivery">
     <div class="payment_and_delivery__bg_vinous"></div>
     <div class="payment_and_delivery__bg_vinous_2 height-auto"></div>
     <div class="position-absolute top-0 start-0 w-100 height-auto">
         <div class="bg_nav_vinous"></div>
     </div>
-    <nav class="row h5 position-sticky top-0">
+    <nav class="row h5 position-sticky top-0 d-lg-flex d-none">
         <div class="col-5">
             <div class="border-top"></div>
         </div>
-        <div class="col-2"> <img src="img/navbar__logo.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x h-37px"> </div>
+        <div class="col-2"> <img src="img/navbar__logo.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x h-37px" style="z-index: 35"> </div>
         <div class="col-5">
             <div class="border-top"></div>
         </div>
-        <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one underline-one" href="#">EN</a></div>
+        <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" onclick="openPopUp('enter',event)" href="#">EN</a></div>
         <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('reserve',event)">РЕЗЕРВ</a></div>
         <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('catalog',event)">КАТАЛОГ</a></div>
         <div class="offset-6 col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('search',event)">ПОИСК</a></div>
         <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('basket',event)">КОРЗИНА</a></div>
         <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('menu',event)">МЕНЮ</a></div>
     </nav>
+    <nav class="row h5 position-sticky top-0 d-lg-none d-flex">
+        <div class="offset-md-5 col-md-2 offset-4 col-4 d-flex justify-content-center"> <img src="img/navbar__logo.svg" alt="navbar__logo" class="h-37px"> </div>
+        <div class="col-12 mt-2 mb-2">
+            <div class="border-top"></div>
+        </div>
+        <div class="col-1 d-flex justify-content-start align-items-center"><a class="link-main underline-one underline-one" href="#">EN</a></div>
+        <div class="offset-1 offset-md-0 col-1 d-flex justify-content-end align-items-center">
+            <a class="link-main underline-one search-btn" href="#" onclick="openPopUp('search',event)">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0013 9.9974C16.0013 13.3111 13.315 15.9974 10.0013 15.9974C6.68759 15.9974 4.0013 13.3111 4.0013 9.9974C4.0013 6.68369 6.68759 3.9974 10.0013 3.9974C13.315 3.9974 16.0013 6.68369 16.0013 9.9974ZM14.694 15.6329C13.4223 16.693 11.7863 17.3307 10.0013 17.3307C5.95121 17.3307 2.66797 14.0475 2.66797 9.9974C2.66797 5.94731 5.95121 2.66406 10.0013 2.66406C14.0514 2.66406 17.3346 5.94731 17.3346 9.9974C17.3346 11.7824 16.6969 13.4184 15.6368 14.6901L21.806 20.8593L20.8632 21.8021L14.694 15.6329Z" fill="white" /> </svg>
+            </a>
+        </div>
+        <div class="offset-6 offset-md-8 col-1 d-flex justify-content-start align-items-center">
+            <a class="link-main underline-one" href="#" onclick="openPopUp('basket',event)">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8321 7.32943C15.7884 7.15938 15.7363 6.99217 15.6761 6.82865C15.4633 6.25062 15.1547 5.7348 14.7747 5.30724C14.3949 4.87998 13.9526 4.5506 13.4778 4.32934C13.0036 4.10837 12.502 3.9974 12 3.9974C11.498 3.9974 10.9964 4.10837 10.5222 4.32934C10.0474 4.5506 9.6051 4.87998 9.22531 5.30724C8.84526 5.7348 8.53668 6.25062 8.32386 6.82865C8.26365 6.99217 8.21159 7.15938 8.16789 7.32943H15.8321ZM17.1997 7.32943C17.1332 7.00167 17.0423 6.68002 16.9274 6.36796C16.6593 5.64001 16.2665 4.97857 15.7712 4.42142C15.276 3.86427 14.688 3.42231 14.041 3.12078C13.3939 2.81926 12.7004 2.66406 12 2.66406C11.2996 2.66406 10.6061 2.81926 9.95902 3.12079C9.31195 3.42231 8.72401 3.86427 8.22876 4.42142C7.73352 4.97857 7.34067 5.64001 7.07264 6.36796C6.95775 6.68002 6.86675 7.00167 6.80029 7.32943H3.9987H3.33203V7.99609V21.3294V21.9961H3.9987H19.9987H20.6654V21.3294V7.99609V7.32943H19.9987H17.1997ZM6.66667 8.66276C6.66667 8.66319 6.66667 8.66363 6.66667 8.66406H8L12 8.66406H16H17.3333C17.3333 8.66363 17.3333 8.66319 17.3333 8.66276H19.332V20.6628H4.66536V8.66276H6.66667Z" fill="white" /> </svg>
+            </a>
+        </div>
+        <div class="offset-1 offset-md-0 col-1 d-flex justify-content-end align-items-center">
+            <a class="link-main underline-one" href="#" onclick="openPopUp('menu',event)">
+                <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2.66797H28" stroke="white" stroke-width="1.33333" />
+                    <path d="M0 12H28" stroke="white" stroke-width="1.33333" />
+                    <path d="M0 21.332H28" stroke="white" stroke-width="1.33333" /> </svg>
+            </a>
+        </div>
+    </nav>
     <section>
         <div class="row mt-156px">
-            <div class="col-11 d-flex justify-content-star align-items-center h4 text-uppercase">ГЛАВНАЯ <img src="img/vector-dash.svg" class="ps-3 pe-3" alt="vector-dash">ОПЛАТА И ДОСТАВКА</div>
-            <div class="col-1 d-flex justify-content-end align-items-center"><img src="img/sheet.svg" alt="sheet"></div>
-            <div class="col-12 mt-3">
+            <div class="col-11 d-lg-flex d-none justify-content-star align-items-center h4 text-uppercase">ГЛАВНАЯ <img src="img/vector-dash.svg" class="ps-3 pe-3" alt="vector-dash">оплата и доставка</div>
+        <div class="col-11 d-lg-none d-flex justify-content-star align-items-center h1 text-uppercase pe-0">оплата и доставка</div>
+        <div class="col-1 d-flex justify-content-end align-items-center ps-0"><img src="img/sheet.svg" alt="sheet"></div>
+            <div class="col-12 mt-lg-3">
                 <div class="border-top"></div>
             </div>
         </div>
-        <div class="row mt-2">
-            <div class="col-5 h1">ОПЛАТА И ДОСТАВКА</div>
+        <div class="row mt-2 d-none d-lg-flex">
+            <div class="col-12 h1 text-uppercase">оплата и доставка</div>
         </div>
         <div class="row mt-110px">
-            <div class="offset-3 col-9">
-                <div class="border-top">
-                    <button type="button" onclick="openB('1')" class=" pt-4 pb-4
-               d-flex justify-content-between align-items-center w-100">
-                        <div class="h2-32">Условия покупки и оплаты</div></button>
-                    <div id="answer-1" class="h4">
-                        <div class="mt-2"><img class="me-3" src="img/rhomb.svg" alt="rhomb">Оформить заявку покупку товара на нашем сайте</div>
-                        <div class="mt-4 pt-2"><img class="me-3" src="img/rhomb.svg" alt="rhomb">Также Вы можете оформить заявку по телефону <span class="ff-lato">+7 (812) 572 32 90</span> или по email lcdh@cigarsplace.ru </div>
-                        <div class="mt-4 pt-2"><img class="me-3" src="img/rhomb.svg" alt="rhomb">После отправки заявки наш менеджер свяжется с Вами для уточнения заказа</div>
-                        <div class="mt-4 pt-2"><img class="me-3" src="img/rhomb.svg" alt="rhomb">Вы можете оплатить и забрать заказ в нашем магазине по адресу г. Санкт-Петербург, Кузнечный переулок, 14А</div>
-                        <div class="mt-4 pt-2"><img class="me-3" src="img/rhomb.svg" alt="rhomb">График работы нашего магазина: ежедневно с 11:00 до 01:00</div>
-                        <div class="mt-4 mb-5 pt-2"><img class="me-3" src="img/rhomb.svg" alt="rhomb">Оплата осуществляется по наличному и безналичному расчёту</div>
+            <div class="offset-lg-3 offset-md-2 offset-0 col-lg-9 col-md-10 col-12">
+               <div class="overflow-hidden"><div class="border-top border_hide_right"
+               ></div></div>
+                <div>
+                        <div class="pt-4 pb-4 h2-32 w-100 opacity_hide_text">Условия покупки и оплаты</div>
+                    <div id="answer-1" class="h4 text-mobile">
+                        <div class="mt-lg-2 opacity_hide_text"><img class="me-lg-3 me-sm-2 me-1" src="img/rhomb.svg" alt="rhomb">Оформить заявку покупку товара на нашем сайте</div>
+                        <div class="mt-lg-4 mt-2 pt-lg-2 d-none d-lg-block opacity_hide_text"><img class="me-lg-3 me-sm-2 me-1" src="img/rhomb.svg" alt="rhomb">Также Вы можете оформить заявку по телефону <span class="ff-lato">+7 (812) 572 32 90</span> или по email lcdh@cigarsplace.ru </div>
+                        <div class="mt-lg-4 mt-2 pt-lg-2 d-block d-lg-none opacity_hide_text"><img class="me-lg-3 me-sm-2 me-1" src="img/rhomb.svg" alt="rhomb">Также Вы можете оформить заявку по телефону или по e-mail</div>
+                        <div class="mt-lg-4 mt-2 pt-lg-2 opacity_hide_text"><img class="me-lg-3 me-sm-2 me-1 opacity_hide_text" src="img/rhomb.svg" alt="rhomb">После отправки заявки наш менеджер свяжется с Вами для уточнения заказа</div>
+                        <div class="mt-lg-4 mt-2 pt-lg-2 opacity_hide_text"><img class="me-lg-3 me-sm-2 me-1 opacity_hide_text" src="img/rhomb.svg" alt="rhomb">График работы нашего магазина: ежедневно с 11:00 до 01:00</div>
+                        <div class="mt-lg-4 mt-2 pt-lg-2 d-none d-lg-block opacity_hide_text"><img class="me-lg-3 me-sm-2 me-1" src="img/rhomb.svg" alt="rhomb">Вы можете оплатить и забрать заказ в нашем магазине по адресу г. Санкт-Петербург, Кузнечный переулок, 14А</div>
+                        <div class="mt-lg-4 mt-2 pt-lg-2 d-block d-lg-none opacity_hide_text"><img class="me-lg-3 me-sm-2 me-1" src="img/rhomb.svg" alt="rhomb">Вы можете оплатить и забрать заказ в наших магазинах</div>
+                        <div class="mt-lg-4 mt-2 mb-lg-5 mb-3 pt-lg-2 opacity_hide_text"><img class="me-lg-3 me-sm-2 me-1" src="img/rhomb.svg" alt="rhomb">Оплата осуществляется по наличному и безналичному расчёту</div>
                     </div>
-                    <div class="border-top"> </div>
+               <div class="overflow-hidden"><div class="border-top border_hide_right"
+               ></div></div>
                 </div>
                 <div>
-                    <button type="button" onclick="openB('2')" class=" pt-4 pb-4
-               d-flex justify-content-between align-items-center w-100">
-                        <div class="h2-32">Условия доставки</div></button>
-                    <div id="answer-2" class="h4">
-                        <div class="mt-2"><img class="me-3" src="img/rhomb.svg" alt="rhomb">Оформить заявку покупку товара на нашем сайте</div>
-                        <div class="mt-4 pt-2"><img class="me-3" src="img/rhomb.svg" alt="rhomb">Также Вы можете оформить заявку по телефону <span class="ff-lato">+7 (812) 572 32 90</span> или по email lcdh@cigarsplace.ru </div>
-                        <div class="mt-4 pt-2"><img class="me-3" src="img/rhomb.svg" alt="rhomb">После отправки заявки наш менеджер свяжется с Вами для уточнения заказа</div>
-                        <div class="mt-4 pt-2"><img class="me-3" src="img/rhomb.svg" alt="rhomb">Вы можете оплатить и забрать заказ в нашем магазине по адресу г. Санкт-Петербург, Кузнечный переулок, 14А</div>
-                        <div class="mt-4 pt-2"><img class="me-3" src="img/rhomb.svg" alt="rhomb">График работы нашего магазина: ежедневно с 11:00 до 01:00</div>
-                        <div class="mt-4 mb-5 pt-2"><img class="me-3" src="img/rhomb.svg" alt="rhomb">Оплата осуществляется по наличному и безналичному расчёту</div>
+                        <div class="h2-32 w-100 pt-4 pb-4 opacity_hide_text">Условия доставки</div>
+                    <div id="answer-2" class="h4 text-mobile">
+                        <div class="mt-lg-2 opacity_hide_text"><img class="me-lg-3 me-sm-2 me-1" src="img/rhomb.svg" alt="rhomb">Уточните условия и сроки доставки с нашим менеджером по телефону.</div>
+                        <div class="mt-lg-4 mt-2 pt-lg-2 opacity_hide_text"><img class="me-lg-3 me-sm-2 me-1" src="img/rhomb.svg" alt="rhomb">Доставка осуществляется по России.</div>
+                        <div class="mt-lg-4 mt-2 pt-lg-2 opacity_hide_text"><img class="me-lg-3 me-sm-2 me-1" src="img/rhomb.svg" alt="rhomb">Стоимость доставки рассчитывается отдельно для каждого заказа.</div>
+                        <div class="mt-lg-4 mt-2 mb-lg-5 mb-3 pt-lg-2 opacity_hide_text"><img class="me-lg-3 me-sm-2 me-1" src="img/rhomb.svg" alt="rhomb">Оплата за доставку осуществляется по 100% предоплате.</div>
                     </div>
-                    <div class="border-top"> </div>
+               <div class="overflow-hidden"><div class="border-top border_hide_right"
+               ></div></div>
                 </div>
             </div>
         </div>
@@ -91,18 +120,18 @@
     <div class="mt-156px bg_transparent">
         <div class="payment_and_delivery__foreground_picture"></div>
     </div>
-    <section>
-        <div class="row mt-156px h1">
-            <div class="col-12 d-flex justify-content-center align-items-center">ВНИМАНИЕ!</div>
+    <section class="section_text">
+        <div class="row h1 overflow-hidden">
+            <div class="col-12 d-flex justify-content-center align-items-center transform_up_text">ВНИМАНИЕ!</div>
         </div>
-        <div class="row h5 mt-96px">
-            <div class="offset-4 col-4 text-center">Товары на сайте представлены только для ознакомления. Наш магазин не занимается дистанционной продажей табачных изделий. В соответствии с ФЗ от 23.12.2013 № 15-ФЗ продажа табачной продукции через Интернет запрещена.</div>
+        <div class="row h5 mt-96px opacity_hide_text">
+            <div class="offset-xl-2 col-xl-8 offset-lg-1 col-lg-10 offset-0 col-12 text-center text-1 text-mobile">Товары на сайте представлены только для ознакомления. Наш магазин не занимается дистанционной продажей табачных изделий. В соответствии с ФЗ от 23.12.2013 № 15-ФЗ продажа табачной продукции через Интернет запрещена.</div>
         </div>
-        <div class="row h5 mt-96px">
-            <div class="offset-4 col-4 text-center p-0">Согласно Постановлению Правительства от 27.09.2007 № 612, доставка табачной продукции, не относящаяся к дистанционной продаже не запрещена и является дополнительной услугой для товара, приобретённого на территории магазина.</div>
+        <div class="row h5 mt-5 opacity_hide_text">
+            <div class="offset-xl-2 col-xl-8 offset-lg-1 col-lg-10 offset-0 col-12 text-center text-2 text-mobile">Согласно Постановлению Правительства от 27.09.2007 № 612, доставка табачной продукции, не относящаяся к дистанционной продаже не запрещена и является дополнительной услугой для товара, приобретённого на территории магазина.</div>
         </div>
-        <div class="row h5 mt-5">
-            <div class="offset-4 col-4 text-center p-0">Мы не продаём табачные изделия лицам, не достигшим 18-ти лет.</div>
+        <div class="row h5 mt-5 opacity_hide_text">
+            <div class="offset-lg-2 col-lg-8 offset-0 col-12 text-center text-3 text-mobile">Мы не продаём табачные изделия лицам, не достигшим 18-ти лет.</div>
         </div>
         <div class="row mt-156px fs-48 fw-500 flh-58 ff-cormorant">
             <div class="offset-4 col-4 d-flex justify-content-center align-items-center">ОБРАТНАЯ СВЯЗЬ</div>

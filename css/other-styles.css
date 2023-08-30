@@ -1,12 +1,20 @@
-/* Скрытие скроллбара во всех браузерах */
+/* Скрытие скроллбара во всех браузерах*/
 ::-webkit-scrollbar {
-  display: none; /* Для веб-кит браузеров (Chrome, Safari, Opera) */
+  display: none;  /*Для веб-кит браузеров (Chrome, Safari, Opera)*/
 }
-/* Дополнительные стили, чтобы скрытый скроллбар не занимал место */
+/* Дополнительные стили, чтобы скрытый скроллбар не занимал место*/
 body {
-  scrollbar-width: none; /* Для Firefox */
-  -ms-overflow-style: none; /* Для Internet Explorer и Edge */
+  scrollbar-width: none;  /*Для Firefox*/
+  -ms-overflow-style: none; /* Для Internet Explorer и Edge*/
 }
+
+#allType {
+    pointer-events: none;
+}
+
+::selection {
+    background: var(--mc-peach); /* Цвет фона */
+   }
 
 .opacity_hide_text {
     transition: 1.5s ease-in-out;
@@ -42,7 +50,7 @@ body {
 }
 .transform_up_text {
     transition: 1.5s ease-in-out;
-    transform: translateY(100%);
+    transform: translateY(105%);
 }
 .transform_right_text {
     transition: 1.5s ease-in-out;
@@ -71,7 +79,7 @@ body {
 
 .basket__scroll_div {
     margin-top: 72px;
-    height: 570px;
+    height: 60%;
 }
 .plus_minus_basket {
     width: 29px;
@@ -154,6 +162,9 @@ body {
 }
 .border-bottom {
     border-bottom: solid 1px var(--mc-white);
+}
+.border-bottom-black {
+    border-bottom: solid 1px var(--mc-black);
 }
 .rotate-45 {
     -ms-transform: rotate(-45deg);

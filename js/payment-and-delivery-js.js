@@ -14,3 +14,5 @@ gsap.fromTo('.payment_and_delivery__foreground_picture', {
     , }
     , translateY: 100
 })
+
+

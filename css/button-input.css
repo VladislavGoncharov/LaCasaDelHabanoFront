@@ -125,13 +125,6 @@ textarea::-webkit-input-placeholder {
     z-index: -1;
 }
 
-
-/*
-.round-button:hover {
-    background: var(--mc-white-06);
-}
-*/
-
 .round-button-middle {
     width: 135px;
     height: 135px;
@@ -189,8 +182,8 @@ textarea::-webkit-input-placeholder {
     background: var(--mc-white);
     transform: translate(-50%, -50%);
     transition: 1s;
-    height: 300px;
-    width: 300px;
+    height: 0;
+    width: 0;
     border-radius: 50%;
     opacity: 0
 }
@@ -208,14 +201,21 @@ textarea::-webkit-input-placeholder {
 }
 
 .round-button-hover-cuba:hover .flag_of_cuba {
-    opacity: 1;
-/*    transform: scale(1);*/
+/*    opacity: 1;*/
+    transform: scale(1);
+}
+.round-button-hover-cuba:hover .flag_of_information {
+/*    opacity: 1;*/
+    transform: scale(0);
 }
 
 .flag_of_cuba {
     position: absolute;
-    opacity: 0;
-/*    transform: scale(0);*/
+/*    opacity: 0;*/
+    transform: scale(0);
+    transition: 1s;
+}
+.flag_of_information {
     transition: 1s;
 }
 
@@ -291,6 +291,8 @@ textarea::-webkit-input-placeholder {
 }
 
 .link-on-kuznechny-img, .link-on-petrogradskoy-img {
+    position: absolute;
+    width: 445px;
     transition: 1s;
     opacity: 0
 }
@@ -313,7 +315,7 @@ textarea::-webkit-input-placeholder {
     transition: 0.5s;
 }
 
-.footer-black .underline-one:after {
+.footer-black .underline-one:after, .bg_white .underline-one:after {
     background-color: var(--mc-black);
 }
 
@@ -331,20 +333,45 @@ textarea::-webkit-input-placeholder {
 }
 
 .filter-link:hover {
-    color: var(--mc-black);
-    background: #f8f8f8;
+    background: var(--mc-peach);
 }
 
 .filter-link-focus {
     background: var(--mc-black);
-    color: var(--mc-white);
+    color: var(--mc-white) ;
 }
 
 .filter-link-focus:hover {
     background: var(--mc-black);
-    color: var(--mc-white);
+    color: var(--mc-white) !important;
 }
 
+.checkbox-type-filter {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--mc-white);
+    color: var(--mc-black)
+}
+
+.checkbox-type-filter:hover {
+    background: var(--mc-peach);
+}
+
+.checkbox-type-filter-checked , .checkbox-type-filter-checked:hover {
+    background: var(--mc-black);
+    color: var(--mc-white)
+}
+.checkbox-type-filter input {
+    display: none
+}
+
+.checkbox-type-filter input:checked {
+    background: var(--mc-black);
+    color: var(--mc-white) ;
+}
 .checkbox-filter {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -406,6 +433,7 @@ textarea::-webkit-input-placeholder {
 /* input range styles*/
 
 .noUi-connects {
+    border-radius: 0 !important;
     background: var(--mc-grey-light) !important;
     height: 1px !important;
 }
@@ -437,4 +465,69 @@ textarea::-webkit-input-placeholder {
 
 .noUi-horizontal .noUi-handle {
     right: -26px!important;
+}
+/*попап в каталоге*/
+.select {
+    position: absolute;
+    width: 245px;
+    height: 20px;
+    right: 0;
+    padding: 10px 0 ;
+}
+
+.new-select {
+    position: relative;
+    padding: 10px 15px;
+    user-select: none;
+}
+
+.new-select__list {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    border: 1px solid var(--mc-grey);
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    user-select: none;
+}
+
+.new-select__list.on {
+    display: block;
+}
+
+.new-select__item span {
+    display: block;
+    padding: 10px 15px;
+}
+
+.new-select__item span:hover {
+    background: var(--mc-peach)
+}
+
+.new-select:before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    background: url('/img/jackdaw.svg') no-repeat right center / cover;
+
+    -webkit-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+
+.new-select.on:before {
+    -webkit-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+         -o-transform: rotate(-180deg);
+            transform: rotate(-180deg);
 }

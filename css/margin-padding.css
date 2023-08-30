@@ -11,7 +11,7 @@
     margin-top: 1200px
 }
 .mt-950px {
-    margin-top: 950px
+    margin-top: 1150px
 }
 .mt-400px {
     margin-top: 400px
@@ -68,11 +68,11 @@
 
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
 
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
 
 }
 
