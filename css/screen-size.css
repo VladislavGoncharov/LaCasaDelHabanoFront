@@ -18,7 +18,7 @@
     }
     #img_mousemove {
         left: -140px;
-        top: -11px
+        top: -11px;
     }
     .main__bg_black_div {
         top: 610px;
@@ -26,10 +26,10 @@
         padding-top: 40px;
     }
     .main__bg_black_div .mt-96px {
-        margin-top: 72px
+        margin-top: 72px;
     }
-    [class*=brand_] img {
-        transform: scale(0.9)
+    [class*="brand_"] img {
+        transform: scale(0.9);
     }
     .brand_1 {
         top: 320px !important;
@@ -60,9 +60,9 @@
         height: 145px;
     }
 
-.mt-235px {
-    margin-top: 240px
-}
+    .mt-235px {
+        margin-top: 240px;
+    }
     @keyframes move-right {
         0% {
             left: 0;
@@ -72,7 +72,7 @@
         }
     }
     .mt-400px {
-        margin-top: 240px
+        margin-top: 240px;
     }
     .main__bg_black_card_div {
         height: 431px;
@@ -84,10 +84,10 @@
         top: -150px;
     }
     .mt-168px {
-        margin-top: 148px
+        margin-top: 148px;
     }
     .mt-2120px {
-        margin-top: 1820px
+        margin-top: 1820px;
     }
     .top-2720px {
         top: 2340px;
@@ -100,7 +100,7 @@
         top: 2550px;
     }
     .our-mug__img-full-screen {
-        height: 93vh
+        height: 93vh;
     }
     .main__our_mug_card_left_div {
         margin-top: 241px;
@@ -118,19 +118,19 @@
         padding: 30px 24px;
     }
     .mt-950px {
-        margin-top: 1000px
+        margin-top: 1000px;
     }
     .main__other_project_div {
         height: 485px;
     }
     .main__other_project_img_name img {
-        height: 150px
+        height: 150px;
     }
     .main__other_project_img_text_in_circle {
         transform: scale(0.8);
     }
     .main__other_project_img_head {
-        transform: translate(-40px, 40px)scale(0.8)
+        transform: translate(-40px, 40px) scale(0.8);
     }
     .main__other_project_img_name svg {
         height: 150px;
@@ -153,10 +153,10 @@
         width: 250px;
     }
     #menu .me-2 {
-        margin-right: 7px !important
+        margin-right: 7px !important;
     }
     .main__others_project .h3-num {
-        font-size: var(--fs-22)
+        font-size: var(--fs-22);
     }
     /*страница о нас*/
     .about_us .mt-110px {
@@ -167,7 +167,7 @@
     }
     .link-on-kuznechny,
     .link-on-petrogradskoy {
-        height: 200px
+        height: 200px;
     }
     .link-on-kuznechny-img,
     .link-on-petrogradskoy-img {
@@ -178,10 +178,10 @@
         padding-left: 12px !important;
     }
     .about_us__bg_vinous {
-        height: 1780px
+        height: 1780px;
     }
     .about_us__foreground_picture {
-        top: 1780px
+        top: 1780px;
     }
     .about_us__bg_vinous_2 {
         top: calc(1780px + 100vh);
@@ -190,7 +190,7 @@
         height: 100vh;
     }
     .about_us__picture_news {
-        max-height: 485px
+        max-height: 485px;
     }
     .col-9 .mt-96px {
         margin-top: 48px;
@@ -216,16 +216,16 @@
         width: 258px;
     }
     .about_us__on_site_img_o_cuba {
-        max-height: 140px
+        max-height: 140px;
     }
     .about_us__on_site_img_cuba_day {
-        max-height: 123px
+        max-height: 123px;
     }
     .about_us__on_site .pe-5 {
-        padding-right: 10px !important
+        padding-right: 10px !important;
     }
     .about_us__on_site .mt-75px {
-        margin-top: 60px
+        margin-top: 60px;
     }
     .section-1 .pt-4 {
         padding-top: 8px !important;
@@ -239,13 +239,13 @@
         margin-bottom: 110px;
     }
     .payment_and_delivery__bg_vinous {
-        height: 1450px
+        height: 1450px;
     }
     .payment_and_delivery__bg_vinous_2 {
-        top: calc(1400px + 100vh)
+        top: calc(1400px + 100vh);
     }
     .payment_and_delivery__foreground_picture {
-        top: 1450px
+        top: 1450px;
     }
     .text-1 {
         padding-left: 290px;
@@ -257,51 +257,50 @@
     }
     /* страница новостей    */
     img[alt="news"] {
-        max-height: 450px
+        max-height: 450px;
     }
     /* страница оптовым покупателям    */
     .img_number img {
-        height: 150px
+        height: 150px;
     }
     .mt-76px-for-form {
-        margin-top: 48px
+        margin-top: 48px;
     }
     .to-wholesale-buyers .mt-130px {
-        margin-top: 100px
+        margin-top: 100px;
     }
     .to-wholesale-buyers .mt-110px {
-        margin-top: 83px
+        margin-top: 83px;
     }
     /* страница контакты    */
     .contact .mt-130px {
-        margin-top: 105px
+        margin-top: 105px;
     }
     .contact__div_dectop .map {
-        height: 400px
+        height: 400px;
     }
     .contact__div_dectop .ellipse {
-        height: 40px
+        height: 40px;
     }
     .contact__inner_div_left,
     .contact__inner_div_right {
-        height: 533px
+        height: 533px;
     }
     .contact__inner_div_left .ellipse {
         top: 195px !important;
-        left: 195px !important
+        left: 195px !important;
     }
     .contact__inner_div_right .ellipse {
         top: 195px !important;
-        left: 215px !important
+        left: 215px !important;
     }
 }
 
 @media screen and (max-width: 1710px) {
     .main__our_mug_card_left_div .fc-transparent {
-        height: 20px
+        height: 20px;
     }
 }
-
 
 /*/////////////////////////max-width: 1705px//////////////////////////////////////////////*/
 
@@ -321,10 +320,10 @@
         height: 530px;
     }
     .flat-button {
-        height: 40px
+        height: 40px;
     }
-    [class*=brand_] img {
-        transform: scale(0.75)
+    [class*="brand_"] img {
+        transform: scale(0.75);
     }
     .brand_1 {
         top: 300px !important;
@@ -363,10 +362,10 @@
         }
     }
     .mt-400px {
-        margin-top: 190px
+        margin-top: 190px;
     }
     .h-100px {
-        height: 80px
+        height: 80px;
     }
     .main__bg_black_card_div {
         height: 385px;
@@ -375,10 +374,10 @@
         height: 154px;
     }
     .mt-168px {
-        margin-top: 132px
+        margin-top: 132px;
     }
     .mt-2120px {
-        margin-top: 1600px
+        margin-top: 1600px;
     }
     .top-2720px {
         top: 2080px;
@@ -416,13 +415,13 @@
         padding: 24px;
     }
     .mt-950px {
-        margin-top: 890px
+        margin-top: 890px;
     }
     .main__other_project_div {
         height: 485px;
     }
     .main__other_project_img_name img {
-        height: 134px
+        height: 134px;
     }
     .main__other_project_img_name svg {
         height: 137px;
@@ -430,16 +429,16 @@
     }
     .main__other_project_img_name {
         right: 19px;
-        top: 56px
+        top: 56px;
     }
     .flat-link {
-        height: 86px
+        height: 86px;
     }
     .mt-96px {
-        margin-top: 72px
+        margin-top: 72px;
     }
     #reserve .pt-5 {
-        padding-top: 30px !important
+        padding-top: 30px !important;
     }
     #catalog .mt-96px {
         margin-top: 72px;
@@ -448,10 +447,10 @@
         margin-top: 107px;
     }
     #menu .mt-130px {
-        margin-top: 72px !important
+        margin-top: 72px !important;
     }
     #menu .me-2 {
-        margin-right: 6px !important
+        margin-right: 6px !important;
     }
     .grid-col-2 {
         height: 200px;
@@ -461,7 +460,7 @@
         width: 200px;
     }
     .main__others_project .h3-num {
-        font-size: var(--fs-20)
+        font-size: var(--fs-20);
     }
     /*страница о нас*/
     .about_us .mt-110px {
@@ -469,23 +468,23 @@
     }
     .link-on-kuznechny,
     .link-on-petrogradskoy {
-        height: 160px
+        height: 160px;
     }
     .link-on-kuznechny-img,
     .link-on-petrogradskoy-img {
         width: 350px;
     }
     .about_us__bg_vinous {
-        height: 1630px
+        height: 1630px;
     }
     .about_us__foreground_picture {
-        top: 1630px
+        top: 1630px;
     }
     .about_us__bg_vinous_2 {
         top: calc(1630px + 100vh);
     }
     .about_us__picture_news {
-        max-height: 434px
+        max-height: 434px;
     }
     .round-button-big {
         width: 180px;
@@ -508,29 +507,29 @@
         width: 230px;
     }
     .about_us__on_site_img_o_cuba {
-        max-height: 123px
+        max-height: 123px;
     }
     .about_us__on_site_img_cuba_day {
-        max-height: 108px
+        max-height: 108px;
     }
     .about_us__on_site .pe-5 {
-        padding-right: 10px !important
+        padding-right: 10px !important;
     }
     .about_us__on_site .pt-5 {
-        padding-top: 35px !important
+        padding-top: 35px !important;
     }
     .section-1 .pt-4 {
         padding-top: 8px !important;
     }
     /*страница оплата и доставка*/
     .payment_and_delivery__bg_vinous {
-        height: 1310px
+        height: 1310px;
     }
     .payment_and_delivery__bg_vinous_2 {
-        top: calc(1250px + 100vh)
+        top: calc(1250px + 100vh);
     }
     .payment_and_delivery__foreground_picture {
-        top: 1250px
+        top: 1250px;
     }
     .payment_and_delivery .bg_transparent {
         margin-bottom: 70px;
@@ -545,61 +544,57 @@
     }
     /* страница новостей    */
     img[alt="news"] {
-        max-height: 415px
+        max-height: 415px;
     }
     /* страница оптовым покупателям    */
     .img_number img {
-        height: 150px
+        height: 150px;
     }
     .to-wholesale-buyers .mt-130px {
-        margin-top: 78px
+        margin-top: 78px;
     }
     .to-wholesale-buyers .mt-110px {
-        margin-top: 70px
+        margin-top: 70px;
     }
     .img_number .overflow-hidden {
-        width: 120px
+        width: 120px;
     }
     .img_number img {
-        transform: scale(0.95)
+        transform: scale(0.95);
     }
     /* страница контакты    */
     .contact .mt-130px {
-        margin-top: 75px
+        margin-top: 75px;
     }
     .contact__div_dectop .mt-5 {
         margin-top: 32px !important;
     }
     .contact__div_dectop .map {
         max-height: 360px;
-        height: 23.5vw
+        height: 23.5vw;
     }
     .contact__div_dectop .ellipse {
-        height: 36px
+        height: 36px;
     }
     .contact__inner_div_left,
     .contact__inner_div_right {
-        height: 491px
+        height: 491px;
     }
     .contact__inner_div_left .ellipse {
         top: 175px !important;
-        left: 175px !important
+        left: 175px !important;
     }
     .contact__inner_div_right .ellipse {
         top: 180px !important;
-        left: 190px !important
-    }
-    .main__img_div_enter {
-        height: 540px;
+        left: 190px !important;
     }
 }
-
 
 /*/////////////////////////max-width: 1535px//////////////////////////////////////////////*/
 
 @media screen and (max-width: 1537px) {
     .h-37px {
-        height: 28px
+        height: 28px;
     }
     .payment_and_delivery__bg_vinous {
         height: 1310px;
@@ -616,14 +611,14 @@
         padding-right: 170px;
     }
     .top-510px {
-        top: 400px
+        top: 400px;
     }
     .main__img_div,
-    .main__img_div_enter  {
+    .main__img_div_enter {
         height: 480px;
     }
-    [class*=brand_] img {
-        transform: scale(0.8)
+    [class*="brand_"] img {
+        transform: scale(0.8);
     }
     .brand_1 {
         top: 320px !important;
@@ -648,16 +643,16 @@
         right: 9vw !important;
     }
     .long_logo {
-        top: 880px
+        top: 880px;
     }
     .mt-400px {
-        margin-top: 250px
+        margin-top: 250px;
     }
     .main__bg_black_div {
         height: 1605px;
     }
     .mt-2120px {
-        margin-top: 1730px
+        margin-top: 1730px;
     }
     .top-2720px {
         top: 2200px;
@@ -668,21 +663,21 @@
     .bg_nav_vinous,
     .bg_nav_black,
     .bg_nav_white {
-        height: 55px
+        height: 55px;
     }
     .main__our_mug_card_left_div {
         margin-top: 175px;
         height: 490px;
     }
     .main__our_mug_card_left_div .fc-transparent {
-        height: 22px
+        height: 22px;
     }
     .our-mug__images-selectors {
-        max-height: 85px
+        max-height: 85px;
     }
     .our-mug__img-content {
         height: 85px;
-        width: 90px
+        width: 90px;
     }
     .main__our_mug_card_right_div {
         margin-top: 490px;
@@ -690,13 +685,12 @@
         width: 357px;
     }
     footer .mt-168px .me-4 {
-        margin-right: 48px !important
+        margin-right: 48px !important;
     }
     footer .mt-168px .ps-2 {
-        padding: 0 !important
+        padding: 0 !important;
     }
 }
-
 
 /*/////////////////////////max-width: 1199px//////////////////////////////////////////////*/
 
@@ -706,7 +700,7 @@
         width: 100%;
     }
     .ellipse_mobile {
-        height: 10%
+        height: 10%;
     }
     .payment_and_delivery__bg_vinous {
         height: 1200px;
@@ -720,42 +714,38 @@
     .text-1,
     .text-2 {
         padding-left: 200px;
-        padding-right: 200px
-    }
-    .main__img_div_enter {
-        height: 320px;
+        padding-right: 200px;
     }
 }
-
 
 /*/////////////////////////max-width: 977px//////////////////////////////////////////////*/
 
 @media screen and (max-width: 977px) {
     .h-37px {
-        height: 24px
+        height: 24px;
     }
     .bg_nav_vinous,
     .bg_nav_black,
     .bg_nav_white {
-        height: 90px
+        height: 90px;
     }
     .h-680px {
         height: 476px;
     }
-    .main__img_div {
+    .main__img_div, .main__img_div_enter {
         margin-top: 70px;
-        border: 2px solid var(--mc-white)
+        border: 2px solid var(--mc-white);
     }
     .main__img_div,
     .main__img_div_enter {
-        height: 383px
+        height: 383px;
     }
     .main__bg_black_div {
         top: 500px;
         height: 1535px;
         padding-top: 40px;
     }
-    [class*=brand_] img {
+    [class*="brand_"] img {
         transform: scale(0.6);
     }
     .brand_1 {
@@ -786,7 +776,7 @@
         right: 16vw !important;
     }
     .long_logo {
-        top: 900px
+        top: 900px;
     }
     .mt-168px {
         margin-top: 110px;
@@ -815,87 +805,89 @@
     .main__our_mug_div {
         top: 2250px;
     }
-    .main__our_mug_card_left_div{
+    .main__our_mug_card_left_div {
         height: 450px;
         margin: -410px -1px -1px -1px;
     }
     .main__our_mug_div {
-    top: 2600px;
-}
-    .overflow-lg-hidden {
-       overflow: visible;
+        top: 2600px;
     }
-    .our_shop_on_kuznechnoye, .our_shop_on_petrogradskaya {
+    .overflow-lg-hidden {
+        overflow: visible;
+    }
+    .our_shop_on_kuznechnoye,
+    .our_shop_on_petrogradskaya {
         left: 0 !important;
         right: 0 !important;
         margin: auto;
         width: 30vw;
-    }.our_shop_on_petrogradskaya {
+    }
+    .our_shop_on_petrogradskaya {
         width: 33vw;
     }
     .our-mug__images-selectors {
         min-height: 150px;
     }
     .our-mug__img-content {
-    height: 150px;
-    width: 160px;
+        height: 150px;
+        width: 160px;
     }
     .our-mug__img-full-screen {
-        height: 500px
+        height: 500px;
     }
-    .main__our_mug_card_right_div{
+    .main__our_mug_card_right_div {
         margin: 320px auto auto auto;
-        border: none
+        border: none;
     }
     .main__our_mug_card_right_div .round-button {
         margin-top: 15px;
         border: none;
         height: 50px;
         width: 50px;
-        background: var(--mc-white-06)
+        background: var(--mc-white-06);
     }
     .main__our_mug_card_right_div .round-button svg {
         height: 25px;
         width: 25px;
     }
     .main__our_mug_card_right_div .fw-500 {
-        font-weight: 700 !important
+        font-weight: 700 !important;
     }
     .main__our_mug_card_right_inner_div {
         text-align: center;
     }
     .top--25px {
-    top: -55px;
-}
+        top: -55px;
+    }
     .main__our_mug_div .transform_up_text {
-        transform: translate(0)
+        transform: translate(0);
     }
 
     .mt-950px {
-        margin-top: 1100px
+        margin-top: 1100px;
     }
     img[alt="rhomb"] {
         width: 7px;
-        height: 7px
+        height: 7px;
     }
     .to-wholesale-buyers .text-mobile .mt-4,
     .to-wholesale-buyers .text-mobile {
-        margin-top: 8px !important
+        margin-top: 8px !important;
     }
     .to-wholesale-buyers .mt-110px {
-        margin-top: 48px !important
+        margin-top: 48px !important;
     }
     .img_number .overflow-hidden {
-        width: 100px
+        width: 100px;
     }
     .img_number img {
-        transform: scale(0.8)
+        transform: scale(0.8);
     }
     .mt-76px-for-form {
-        margin-top: 24px
+        margin-top: 24px;
     }
     .textarea-main {
-        height: 24px
+        height: 24px;
     }
     .payment_and_delivery .bg_transparent {
         height: 420px;
@@ -917,37 +909,37 @@
     }
     .payment_and_delivery .mt-96px,
     .payment_and_delivery .mt-110px {
-        margin-top: 48px !important
+        margin-top: 48px !important;
     }
     .payment_and_delivery .section_text .mt-5 {
-        margin-top: 24px !important
+        margin-top: 24px !important;
     }
     img[alt="news"] {
         max-width: 100%;
         height: auto;
-        max-height: none
+        max-height: none;
     }
     .flat-button {
         height: 30px;
-        font-size: var(--fs-13)
+        font-size: var(--fs-13);
     }
     #containerForNews .border-top {
-        border: none !important
+        border: none !important;
     }
     #containerForNews {
-        margin-top: 0 !important
+        margin-top: 0 !important;
     }
     .pe-60px {
-        padding-right: 0
+        padding-right: 0;
     }
     .pe-35px {
-        padding-right: 50px
+        padding-right: 50px;
     }
     .about_us .mt-96px {
         margin-top: 48px;
     }
     .text-place {
-        padding-right: 20px
+        padding-right: 20px;
     }
     .about_us .bg_transparent {
         height: 300px;
@@ -962,55 +954,55 @@
         top: 1850px;
     }
     .about_us .mt-156px {
-        margin-top: 130px
+        margin-top: 130px;
     }
     .about_us__picture_news {
-        max-height: 256px
+        max-height: 256px;
     }
     .under-title-news {
         padding-right: 50px;
     }
     .section-2 .mt-110px {
-        margin-top: 48px
+        margin-top: 48px;
     }
     .about_us__on_site_img_o_cuba {
-        max-height: 92px
+        max-height: 92px;
     }
     .about_us__on_site_img_cuba_day {
-        max-height: 81px
+        max-height: 81px;
     }
     .about_us__on_site .mt-75px {
-        margin-top: 0
+        margin-top: 0;
     }
     .top-510px {
-        top: 360px
+        top: 360px;
     }
     footer .mt-168px {
-        margin-top: 60px
+        margin-top: 60px;
     }
 }
-
 
 /*/////////////////////////max-width: 737px//////////////////////////////////////////////*/
 
 @media screen and (max-width: 737px) {
-    .main__img_div, .main__img_div_enter{
+    .main__img_div,
+    .main__img_div_enter {
         height: 432px;
     }
     .main__bg_black_div {
-    top: 550px;
-    height: 1870px;
-}
+        top: 550px;
+        height: 1870px;
+    }
     .main__bg_black_div .mt-235px {
-    margin-top: 150px;
-}
+        margin-top: 150px;
+    }
     .main__bg_black_div .mt-96px {
-    margin-top: 48px;
-}
-    [class*=brand_] img {
-    transform: scale(0.4);
-        opacity: 0.6
-}
+        margin-top: 48px;
+    }
+    [class*="brand_"] img {
+        transform: scale(0.4);
+        opacity: 0.6;
+    }
     .brand_1 {
         top: 350px !important;
     }
@@ -1039,46 +1031,53 @@
         right: 23vw !important;
     }
     .long_logo {
-        top: 750px
+        top: 750px;
     }
     .main__bg_black_card_div {
-    height: 375px;
-}
-    .main__bg_black_card_img_div, .main__bg_black_card_div:hover .main__bg_black_card_img_div {
-    height: 150px;
-}.main__our_mug_div {
-    top: 3100px;
-}
+        height: 375px;
+    }
+    .main__bg_black_card_img_div,
+    .main__bg_black_card_div:hover .main__bg_black_card_img_div {
+        height: 150px;
+    }
+    .main__our_mug_div {
+        top: 3100px;
+    }
     .mt-2120px {
-    margin-top: 2000px;
-}
+        margin-top: 2000px;
+    }
     .top-2720px {
-    top: 2450px;
-}
+        top: 2450px;
+    }
     .our_shop_on_kuznechnoye {
-    width: 35vw;
-}
-   .our_shop_on_petrogradskaya {
-    width: 38vw;
-}
+        width: 35vw;
+    }
+    .our_shop_on_petrogradskaya {
+        width: 38vw;
+    }
     .main__our_mug_card_left_div .fc-transparent {
-    height: 19px;
-}.our-mug__img-content {
-    height: 150px;
-    width: 160px;
-}.main__our_mug_card_left_div {
-    height: 400px;
-}.our-mug__img-full-screen {
-    height: 400px;
-}.h-2036px {
-    height: 1922px;
-}.main__our_mug_card_right_div {
-    margin: 270px auto auto auto;
-    height: 150px
-}
+        height: 19px;
+    }
+    .our-mug__img-content {
+        height: 150px;
+        width: 160px;
+    }
+    .main__our_mug_card_left_div {
+        height: 400px;
+    }
+    .our-mug__img-full-screen {
+        height: 400px;
+    }
+    .h-2036px {
+        height: 1922px;
+    }
+    .main__our_mug_card_right_div {
+        margin: 270px auto auto auto;
+        height: 150px;
+    }
 
     .h-37px {
-        height: 20px
+        height: 20px;
     }
     .payment_and_delivery .bg_transparent {
         height: 320px;
@@ -1099,10 +1098,10 @@
         padding-right: 80px;
     }
     .pe-35px {
-        padding-right: 65px
+        padding-right: 65px;
     }
     .text-place {
-        padding-right: 15px
+        padding-right: 15px;
     }
     .about_us .bg_transparent {
         height: 180px;
@@ -1118,39 +1117,39 @@
         top: 1700px;
     }
     .under-title-about-us {
-        padding-right: 50px
+        padding-right: 50px;
     }
     .under-title-place,
     .under-title-news {
-        padding-right: 20px
+        padding-right: 20px;
     }
     .top-510px {
-        top: 330px
+        top: 330px;
     }
 }
-
 
 /*/////////////////////////max-width: 555px//////////////////////////////////////////////*/
 
 @media screen and (max-width: 555px) {
-
     .main__img_div,
     .main__img_div_enter {
-     height: 380px
+        height: 380px;
     }
     .main__bg_black_card_div {
-    height: 280px;
-}.main__bg_black_card_img_div, .main__bg_black_card_div:hover .main__bg_black_card_img_div {
-    height: 110px;
-}
+        height: 280px;
+    }
+    .main__bg_black_card_img_div,
+    .main__bg_black_card_div:hover .main__bg_black_card_img_div {
+        height: 110px;
+    }
     .main__bg_black_div {
-    top: 400px;
-    height: 1870px;
-}
-    [class*=brand_] img {
-    transform: scale(0.3);
-        opacity: 0.6
-}
+        top: 400px;
+        height: 1870px;
+    }
+    [class*="brand_"] img {
+        transform: scale(0.3);
+        opacity: 0.6;
+    }
     .brand_1 {
         top: 350px !important;
     }
@@ -1179,83 +1178,88 @@
         right: 29vw !important;
     }
     .long_logo {
-        top: 730px
+        top: 730px;
     }
 
-    .main__bg_black_card_div .mt-168px{
-        margin-top: 90px
+    .main__bg_black_card_div .mt-168px {
+        margin-top: 90px;
     }
     .h-2036px {
-    height: 1692px;
-}
-    .main__bg_black_div {
-    top: 550px;
-    height: 1650px;
-}
-    .mt-2120px {
-    margin-top: 1800px;
-}
-    .main__our_mug_card_left_div {
-    height: 380px;
-    margin: -380px -1px -1px -1px;
-}.top-2720px {
-    top: 2250px;
-}
-    .main__our_mug_div{
-        top: 2780px
+        height: 1692px;
     }
-.main__our_mug_card_left_div .fc-transparent {
-    height: 16px;
-}.main__our_mug_card_right_div {
-    margin: 200px auto auto auto;
-    height: 120px;
-}.main__our_mug_card_right_div .round-button {
-    margin-top: 10px;
-    height: 40px;
-    width: 40px;
-}
-.mt-950px {
-    margin-top: 900px;
-}.main__other_project_img_name img {
-    height: 100px;
-}
+    .main__bg_black_div {
+        top: 550px;
+        height: 1650px;
+    }
+    .mt-2120px {
+        margin-top: 1800px;
+    }
+    .main__our_mug_card_left_div {
+        height: 380px;
+        margin: -380px -1px -1px -1px;
+    }
+    .top-2720px {
+        top: 2200px;
+    }
+    .main__our_mug_div {
+        top: 2780px;
+    }
+    .main__our_mug_card_left_div .fc-transparent {
+        height: 16px;
+    }
+    .main__our_mug_card_right_div {
+        margin: 200px auto auto auto;
+        height: 120px;
+    }
+    .main__our_mug_card_right_div .round-button {
+        margin-top: 10px;
+        height: 40px;
+        width: 40px;
+    }
+    .mt-950px {
+        margin-top: 900px;
+    }
+    .main__other_project_img_name img {
+        height: 100px;
+    }
     .main__other_project_img_name svg {
-    height: 100px;
-    width: 360px;
-}.main__other_project_img_head {
-    transform: translate(-115px, 115px)scale(0.4);
-}
+        height: 100px;
+        width: 360px;
+    }
+    .main__other_project_img_head {
+        transform: translate(-115px, 115px) scale(0.4);
+    }
     .main__other_project_img_text_in_circle {
-    transform: scale(0.4);
-}.main__other_project_div {
-    height: 270px;
-}
+        transform: scale(0.4);
+    }
+    .main__other_project_div {
+        height: 270px;
+    }
     .main__other_project_img_plate img {
-    height: 230px;
-    }.flat-link{
-        height: 60px
-    }.our-mug__img-full-screen {
-    height: 300px;
-}
-
-
-
+        height: 230px;
+    }
+    .flat-link {
+        height: 60px;
+    }
+    .our-mug__img-full-screen {
+        height: 300px;
+    }
 
     nav svg {
         height: 18px;
-        width: 20px
+        width: 20px;
     }
     .contact__div_mobile .others_links {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        max-width: 368px
+        max-width: 368px;
     }
     .contact__div_mobile .map_mobile {
-        width: 300px
+        width: 300px;
     }
     img[alt="sheet"] {
-        width: 18px
+        width: 18px;
     }
     .payment_and_delivery .bg_transparent {
         height: 270px;
@@ -1276,15 +1280,15 @@
         padding-right: 40px;
     }
     img[alt="news"] {
-        max-height: 435px
+        max-height: 435px;
     }
     .text-place {
-        padding-right: 65px
+        padding-right: 65px;
     }
     .under-title-about-us,
     .under-title-place,
     .under-title-news {
-        padding-right: 100px
+        padding-right: 100px;
     }
     .about_us .bg_transparent {
         height: 140px;
@@ -1300,33 +1304,33 @@
         top: 1560px;
     }
     .about_us__on_site_img_o_cuba {
-        max-height: 79px
+        max-height: 79px;
     }
     .about_us__on_site_img_cuba_day {
-        max-height: 70px
+        max-height: 70px;
     }
     .input-main {
-        height: 24px
+        height: 24px;
     }
     .textarea-main {
-        height: 18px
+        height: 18px;
     }
 }
-
 
 /*/////////////////////////max-width: 390px//////////////////////////////////////////////*/
 
 @media screen and (max-width: 400px) {
-
     .main__bg_black_div {
-    top: 430px;
-    height: 1870px;
-}
-
-    .main__img_div {
-        margin-top: 40px
+        top: 430px;
+        height: 1870px;
     }
-    .main__img_div, .main__img_div_enter{
+
+    .main__img_div,
+    .main__img_div_enter  {
+        margin-top: 40px;
+    }
+    .main__img_div,
+    .main__img_div_enter {
         height: 350px;
     }
 
@@ -1358,39 +1362,39 @@
         right: 40vw !important;
     }
     nav .search-btn {
-        margin-left: 50px
+        margin-left: 50px;
     }
     .contact__div_mobile .others_links {
-        max-width: 100%
+        max-width: 100%;
     }
     .contact__div_mobile .map_mobile {
-        width: 100%
+        width: 100%;
     }
     .contact__div_mobile .border-under-time {
         border-top: solid 1px;
         margin-top: 16px;
     }
     .img_number .overflow-hidden {
-        width: 90px
+        width: 90px;
     }
     .img_number img {
-        height: 35vw
+        height: 35vw;
     }
     .text-1,
     .text-2 {
-        padding: 0
+        padding: 0;
     }
     img[alt="news"] {
-        max-height: 380px
+        max-height: 380px;
     }
     .pe-35px {
-        padding-right: 30px
+        padding-right: 30px;
     }
     .pe-60px {
-        padding-right: 15px
+        padding-right: 15px;
     }
     .text-place {
-        padding-right: 15px
+        padding-right: 15px;
     }
     .payment_and_delivery .bg_transparent {
         height: 170px;
@@ -1421,6 +1425,52 @@
     .under-title-about-us,
     .under-title-place,
     .under-title-news {
-        padding-right: 20px
+        padding-right: 20px;
+    }
+    .top-2720px {
+        top: 2000px;
+    }
+    .main__bg_black_card_div {
+        height: 230px;
+    }
+    .main__bg_black_card_img_div,
+    .main__bg_black_card_div:hover .main__bg_black_card_img_div {
+        height: 78px;
+    }
+    .main__bg_black_card_div .mt-168px {
+        margin-top: 80px;
+    }
+    .main__bg_black_div {
+        height: 1545px;
+    }
+    .mt-2120px {
+        margin-top: 1630px;
+    }
+    .main__our_mug_div {
+        top: 2460px;
+    }
+    .our-mug__img-content {
+        height: 100px;
+        width: 110px;
+    }
+    .our-mug__images-selectors {
+        min-height: 100px;
+    }
+    .main__our_mug_card_left_div {
+        height: 340px;
+        margin: -340px -1px -1px -1px;
+    }
+    .mt-950px {
+        margin-top: 800px;
+    }
+    .main__other_project_img_name img {
+        height: 80px;
+    }
+    .main__other_project_img_name {
+        top: 30px;
+    }
+    .main__other_project_img_name svg {
+        height: 80px;
+        width: 280px;
     }
 }

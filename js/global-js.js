@@ -9,6 +9,20 @@ $(document).ready(function () {
             }
         })
         scrollFunction()
+
+        let widthScreen = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+        let viewBoxSVGLoading = '0 0 1000 1000';
+        if (widthScreen > 1535) viewBoxSVGLoading = '0 0 1000 1000';
+        else if (widthScreen > 1395) viewBoxSVGLoading = '0 0 920 1000';
+        else if (widthScreen > 1195) viewBoxSVGLoading = '0 0 800 1000';
+        else if (widthScreen > 977) viewBoxSVGLoading = '0 0 640 1000';
+        else if (widthScreen > 555) viewBoxSVGLoading = '0 0 800 1000';
+        else if (widthScreen > 399) viewBoxSVGLoading = '0 0 690 1000';
+        else if (widthScreen > 350) viewBoxSVGLoading = '0 0 600 1000';
+        else viewBoxSVGLoading = '0 0 500 1000';
+        let svgLoading = $('#svg_loading')
+
+        svgLoading.attr('viewBox', viewBoxSVGLoading);
     })
     //открытие меню
 function openPopUp(el, event) {

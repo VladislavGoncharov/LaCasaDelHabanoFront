@@ -348,7 +348,7 @@
         text-align: justify;
     }
 */
-    .h5,.h5-num {
+    .h5,.h5-num, footer .h4 {
         font-size: var(--fs-10);
         line-height: 15px;
     }

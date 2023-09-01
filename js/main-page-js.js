@@ -169,24 +169,33 @@ function verticalTransitionFrom(el) {
     });
 }
 //плавное увеличение и движение большой картинки под Наши магазины при скроле
+let arrayEl = ['#our_mug_img_1', '#our_mug_img_2'];
+let translateYGSAP = -350
+let endGSAP = '-30% top'
+let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+if (screenWidth < 978) {
+    arrayEl = ['#our_mug_img_1', '#our_mug_img_2', '.main__our_mug_card_right_inner_div'];
+    translateYGSAP = -300
+    endGSAP = '-70% top'
+}
 gsap.registerPlugin(ScrollTrigger);
-gsap.from(['#our_mug_img_1', '#our_mug_img_2'], {
-        scrollTrigger: {
-            trigger: '.main__our_mug_div'
-            , start: (window.innerHeight * (-1.2)) + 'px top'
-            , end: '-30% top'
-            , scrub: true
-            , mark: true
-        , }
-        , scale: 1.15
-        , translateY: -350
-    })
-    //    $('.main__img_div').ripples({
-    //        resolution: 300
-    //        , dropRadius: 15
-    //        , perturbance: 0.02
-    //    });
-    //gsap.registerPlugin(MorphSVGPlugin);
+gsap.from(arrayEl, {
+    scrollTrigger: {
+        trigger: '.main__our_mug_div'
+        , start: (window.innerHeight * (-1.2)) + 'px top'
+        , end: endGSAP
+        , scrub: true
+        // , markers: true
+    }
+    , scale: 1.15
+    , translateY: translateYGSAP
+})
+//    $('.main__img_div').ripples({
+//        resolution: 300
+//        , dropRadius: 15
+//        , perturbance: 0.02
+//    });
+//gsap.registerPlugin(MorphSVGPlugin);
 var length = document.querySelectorAll(".layer").length;
 var layers = document.querySelectorAll(".layer");
 var mouseTween;

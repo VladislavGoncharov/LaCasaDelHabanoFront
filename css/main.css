@@ -126,9 +126,13 @@ footer {
 }
 
 .main__img {
+    -o-object-fit: cover;
+    object-fit: cover;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 105%;
+    height: 105%;
+    top: -3%;
+    left: -3%;
 }
 
 .main__img_div,
