@@ -265,10 +265,6 @@ textarea::-webkit-input-placeholder {
     transition: linear 0.35s;
 }
 
-.link-main:hover {
-    /*    border-bottom: solid 1px var(--mc-white);*/
-}
-
 .btn-item {
     width: 100%;
     padding: 2px 0;
@@ -461,6 +457,7 @@ textarea::-webkit-input-placeholder {
     content: none !important;
     background: none !important;
     z-index: 0 !important;
+    cursor: none !important;
 }
 
 .noUi-horizontal .noUi-handle {

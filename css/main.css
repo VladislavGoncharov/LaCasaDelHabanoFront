@@ -216,9 +216,6 @@ footer {
     margin: auto;
     width: 290px
 }
-.brand_1 img{
-}
-
 .brand_2 {
     top: 347px !important;
     left: -5vw !important;
@@ -508,6 +505,10 @@ footer {
     height: 455px;
 }
 
+.filters-checkbox {
+    margin-left: 150px;
+}
+
 .filters-main {
     position: sticky;
     top: 50px;
@@ -562,6 +563,7 @@ footer {
     position: sticky;
     top: 50px;
     width: 100%;
+    z-index: 5;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -593,11 +595,12 @@ footer {
     align-items: center;
     overflow: hidden;
     border: solid 1px var(--mc-grey-light);
-    height: 455px;
-    width: 455px;
+    /* height: 455px; */
+    /* width: 455px; */
 }
-
-.catalog__card_img {}
+.catalog__card_img {
+    height: inherit;
+}
 
 .catalog__card_padding_text {
     padding-left: 1px;

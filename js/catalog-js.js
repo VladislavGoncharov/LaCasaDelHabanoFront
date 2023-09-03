@@ -1,6 +1,6 @@
 let lineFilters = $('.filters')
 let resetFilters = $('#resetFilters')
-    //
+//
 let currentSeriesArray = [];
 let currentBrandsArray = [];
 let currentRangePriceMinMax = []
@@ -13,7 +13,7 @@ let originalRangePriceMinMax = []
 let originalRangeRingGaugeMinMax = []
 let originalRangeSizeMinMax = []
 let originalRangeFortressMinMax = []
-    //
+//
 addingOriginalDataInOriginalArray();
 //
 function handleCheckboxChange(event, dataArray) {
@@ -40,7 +40,7 @@ function handleCheckboxChange(event, dataArray) {
     else {
         console.log('Чекбокс снят: ' + selectedValue);
         $(`#${selectedId}`).remove()
-            // Удаляем значение из массива, если оно присутствует
+        // Удаляем значение из массива, если оно присутствует
         let index = dataArray.indexOf(selectedValue);
         if (index > -1) {
             dataArray.splice(index, 1);
@@ -56,10 +56,20 @@ $('[name="series"]').change(function (event) {
 $('[name="brands"]').change(function (event) {
     handleCheckboxChange(event, currentBrandsArray);
 });
+$('[name="typesOfAccessorys"]').change(function (event) {
+    handleCheckboxChange(event, currentBrandsArray);
+});
 $(document).ready(function () {
-        $('.height-along-central-column').css('height', $('.central-column').height())
-    })
-    // открывается описание этапов работы
+    autoHeightCenterColumn()
+})
+$(window).resize(function () {
+    autoHeightCenterColumn()
+});
+// настройка высоты центральной колонки 
+function autoHeightCenterColumn() {
+    $('.height-along-central-column').css('height', $('.central-column').height())
+}
+// открывается описание этапов работы
 function openFilter(number) {
     $(`#filters_${number}`).slideToggle();
     $(`#jackdaw_${number}`).toggleClass('rotate-180');
@@ -75,7 +85,7 @@ let sliders = [
         , originalRangeMinMax: originalRangePriceMinMax
         , textMin: 'Цена от: '
         , textMax: 'Цена до: '
-  }
+    }
     , {
         id: 'range-ring-gauge'
         , textFrom: '#range-ring-gauge-from'
@@ -85,7 +95,7 @@ let sliders = [
         , originalRangeMinMax: originalRangeRingGaugeMinMax
         , textMin: 'Ring gauge от: '
         , textMax: 'Ring gauge до: '
-  }
+    }
     , {
         id: 'range-size'
         , textFrom: '#range-size-from'
@@ -95,7 +105,7 @@ let sliders = [
         , originalRangeMinMax: originalRangeSizeMinMax
         , textMin: 'Размер от: '
         , textMax: 'Размер до: '
-  }
+    }
     , {
         id: 'range-fortress'
         , textFrom: '#range-fortress-from'
@@ -105,7 +115,7 @@ let sliders = [
         , originalRangeMinMax: originalRangeFortressMinMax
         , textMin: 'Крепкость от: '
         , textMax: 'Крепкость до: '
-  }
+    }
 ];
 // Создание ползунковых регуляторов и установка обработчиков событий для каждого
 sliders.forEach(function (slider) {
@@ -190,9 +200,9 @@ function updateNavFilter(el, values) {
 
 function createSlider(el) {
     let [from, to] = [
-    parseInt($(`#range-${el}-from`).text())
-    , parseInt($(`#range-${el}-to`).text())
-  ];
+        parseInt($(`#range-${el}-from`).text())
+        , parseInt($(`#range-${el}-to`).text())
+    ];
     let rangeEl = $(`#range-${el}`);
     noUiSlider.create(rangeEl[0], {
         start: [from, to]
@@ -207,24 +217,27 @@ function createSlider(el) {
 let socket = new SockJS("http://127.0.0.1:8080/websocket");
 let stompClient = Stomp.over(socket);
 stompClient.connect({}, function (frame) {
+    let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    let pageSizeItem = screenWidth < 978 ? 10 : 9;
+
     console.log('Connected: ' + frame);
     sendFilterRequest('привет')
-        // Подписка на определенные топики
+    // Подписка на определенные топики
     stompClient.subscribe('/get/items', function (data) {
         let responseData = JSON.parse(data.body);
         let container = $('#containerForItems');
         $('#pagination-catalog').pagination({
             dataSource: responseData
-            , pageSize: 9
+            , pageSize: pageSizeItem
             , callback: function (data, pagination) {
                 container.empty();
                 container.prepend('<div class="col-12 mt-19px"></div>');
                 // Отображение элементов на текущей странице
                 for (let i = 0; i < data.length; i++) {
-                    createItem(container, data[i]);
+                    createItem(container, data[i], sizeOfColumnsInItem);
                 }
                 // настройка высоты, чтобы линия соприкосалась снизом
-                $('.height-along-central-column').css('height', $('.central-column').height())
+                autoHeightCenterColumn()
             }
         });
     });
@@ -235,9 +248,9 @@ function sendFilterRequest(filters) {
     stompClient.send("/app/filter", {}, JSON.stringify(filters));
 }
 
-function createItem(container, item) {
+function createItem(container, item, sizeOfColumnsInItem) {
     let itemDiv = document.createElement('div');
-    itemDiv.classList.add('col-4', 'mt-5', 'catalog__card');
+    itemDiv.classList.add('col-md-4', 'col-6', 'mt-sm-5','mt-3', 'catalog__card');
     itemDiv.innerHTML = `
             <div class="catalog__card_img_div">
                 <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1">
@@ -281,7 +294,7 @@ $('.filters').on('click', '.filter-remove', function () {
         $(this).remove();
         checkboxType($('.checkbox-type-filter input'))
     }
-    else if (option === 'series' || option === 'brands') {
+    else if (option === 'series' || option === 'brands' || option === 'typesOfAccessorys') {
         let element = $(`input[data-name="${name}"]`)
         element.prop('checked', false);
         let index = currentSeriesArray.indexOf(name);
@@ -335,8 +348,8 @@ $(document).ready(function () {
 
 function checkboxType(el) {
     let allUnchecked = $('.checkbox-type-filter input').filter(':not(:checked)').length === $('.checkbox-type-filter input').length;
+
     if (allUnchecked) {
-        console.log(111)
         let htmlToAppend = `
                 <div id="allType" class="d-flex justify-content-between align-items-center me-5 underline-one filter-remove" data-option="type">
                   <div class="text-nowrap me-1">Все товары</div>
@@ -347,10 +360,11 @@ function checkboxType(el) {
             $(`#type`).remove();
         }
         $('#filterSeries, #filterBrands, #filterRingGuage, #filterSize, #filterFortress, #filterTypesOfAccessory').css('display', 'none')
+
+
         updatePriceByUpdateType(80, 287000)
     }
     else {
-        //        console.log(222)
         $(`#allType`).remove();
         let dataName = $(el).data('name');
         if ($(`#type`).length) {
@@ -367,32 +381,33 @@ function checkboxType(el) {
             $('.filters').prepend(htmlToAppend);
         }
         switch (dataName) {
-        case 'Сигары':
-            $('#filterSeries, #filterBrands, #filterRingGuage, #filterSize, #filterFortress, #brandsSirars').css('display', 'block')
-            $('#brandsCoffee, #brandsCigarillos, #filterTypesOfAccessory').css('display', 'none')
-            updatePriceByUpdateType(630, 287000)
-            break;
-        case 'Сигарилы':
-            $('#filterBrands, #brandsCigarillos').css('display', 'block')
-            $('#filterSeries, #brandsSirars, #brandsCoffee, #filterRingGuage, #filterSize, #filterFortress, #filterTypesOfAccessory').css('display', 'none')
-            updatePriceByUpdateType(585, 13120)
-            break;
-        case 'Кофе':
-            $('#filterBrands, #brandsCoffee').css('display', 'block')
-            $('#filterSeries, #brandsSirars, #brandsCigarillos, #filterRingGuage, #filterSize, #filterFortress, #filterTypesOfAccessory').css('display', 'none')
-            updatePriceByUpdateType(530, 2360)
-            break;
-        case 'Аксессуары':
-            $('#filterTypesOfAccessory').css('display', 'block')
-            $('#filterSeries, #filterBrands, #filterRingGuage, #filterSize, #filterFortress').css('display', 'none')
-            updatePriceByUpdateType(80, 41400)
-            break;
-        default:
-            $('#filterSeries, #filterBrands, #filterRingGuage, #filterSize, #filterFortress, #filterTypesOfAccessory').css('display', 'none')
-            break;
+            case 'Сигары':
+                $('#filterSeries, #filterBrands, #filterRingGuage, #filterSize, #filterFortress, #brandsSirars').css('display', 'block')
+                $('#brandsCoffee, #brandsCigarillos, #filterTypesOfAccessory').css('display', 'none')
+                updatePriceByUpdateType(630, 287000)
+                break;
+            case 'Сигарилы':
+                $('#filterBrands, #brandsCigarillos').css('display', 'block')
+                $('#filterSeries, #brandsSirars, #brandsCoffee, #filterRingGuage, #filterSize, #filterFortress, #filterTypesOfAccessory').css('display', 'none')
+                updatePriceByUpdateType(585, 13120)
+                break;
+            case 'Кофе':
+                $('#filterBrands, #brandsCoffee').css('display', 'block')
+                $('#filterSeries, #brandsSirars, #brandsCigarillos, #filterRingGuage, #filterSize, #filterFortress, #filterTypesOfAccessory').css('display', 'none')
+                updatePriceByUpdateType(530, 2360)
+                break;
+            case 'Аксессуары':
+                $('#filterTypesOfAccessory').css('display', 'block')
+                $('#filterSeries, #filterBrands, #filterRingGuage, #filterSize, #filterFortress').css('display', 'none')
+                updatePriceByUpdateType(80, 41400)
+                break;
+            default:
+                $('#filterSeries, #filterBrands, #filterRingGuage, #filterSize, #filterFortress, #filterTypesOfAccessory').css('display', 'none')
+                break;
         }
-        filterRemoveTrigger('notAllEl')
     }
+
+    filterRemoveTrigger('notAllEl')
 }
 
 function updatePriceByUpdateType(minOriginal, maxOriginal) {
@@ -445,10 +460,14 @@ function hiddenBTNResetFilters() {
     let countChildrenWithIdAllType = $filters.children('#allType');
     if (countChildren == 1 && countChildrenWithIdAllType.length > 0) {
         $resetFilters.css('opacity', 0)
+        $('#countFilters').empty();
     }
     else {
         $resetFilters.css('opacity', 1)
+        $('#countFilters').empty();
+        $('#countFilters').append('(' + countChildren + ')');
     }
+
 }
 $('#resetFilters').click(function () {
     filterRemoveTrigger('allEl')
@@ -460,3 +479,19 @@ function filterRemoveTrigger(switcher) {
         if (!($(this).attr('data-option') === 'type')) $(this).trigger('click');
     })
 }
+
+$('#closeMobileFilters').click(function () {
+    let mobileFilters = $('.border-right-black');
+    mobileFilters.css({
+        'z-index': -10,
+        'opacity': 0
+    })
+})
+$('#openMobileFilters').click(function () {
+    let mobileFilters = $('.border-right-black');
+    mobileFilters.css({
+        'z-index': 10,
+        'opacity': 1
+    })
+})
+
