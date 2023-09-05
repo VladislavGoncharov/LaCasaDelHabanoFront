@@ -517,6 +517,10 @@ footer {
     overflow-x: hidden;
 }
 
+.filters-main button {
+    padding-left: 0px;
+}
+
 .filters-main-shadow {
     position: sticky;
     top: 50px;

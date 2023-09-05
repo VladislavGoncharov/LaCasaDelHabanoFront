@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/margin-padding.css">
     <link rel="stylesheet" href="css/other-styles.css">
+    <link rel="stylesheet" href="css/screen-size.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
     <link rel="stylesheet" href="js/OverlayScrollbars/OverlayScrollbars.min.css">
@@ -21,7 +22,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>c
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+        integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
     <title>La Casa Del Habano</title>
 </head>
 
@@ -30,35 +32,88 @@
         <div class="position-absolute top-0 w-100 height-auto">
             <div class="bg_nav_white"></div>
         </div>
-        <nav class="row h5 position-sticky top-0">
+        <nav class="row h5 position-sticky top-0 d-lg-flex d-none">
             <div class="col-5">
                 <div class="border-top-black"></div>
             </div>
-            <div class="col-2"> <img src="img/navbar__logo_black.svg" alt="navbar__logo" class="position-absolute start-50 translate-middle-x h-37px"> </div>
+            <div class="col-2"> <img src="img/navbar__logo_black.svg" alt="navbar__logo"
+                    class="position-absolute start-50 translate-middle-x h-37px" style="z-index: 35"> </div>
             <div class="col-5">
                 <div class="border-top-black"></div>
             </div>
-            <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one underline-one" href="#">EN</a></div>
-            <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('reserve',event)">РЕЗЕРВ</a></div>
-            <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('catalog',event)">КАТАЛОГ</a></div>
-            <div class="offset-6 col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('search',event)">ПОИСК</a></div>
-            <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('basket',event)">КОРЗИНА</a></div>
-            <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#" onclick="openPopUp('menu',event)">МЕНЮ</a></div>
+            <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one"
+                    onclick="openPopUp('enter',event)" href="#">EN</a></div>
+            <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#"
+                    onclick="openPopUp('reserve',event)">РЕЗЕРВ</a></div>
+            <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#"
+                    onclick="openPopUp('catalog',event)">КАТАЛОГ</a></div>
+            <div class="offset-6 col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one"
+                    href="#" onclick="openPopUp('search',event)">ПОИСК</a></div>
+            <div class="col-1 d-flex justify-content-start align-items-end"><a class="link-main underline-one" href="#"
+                    onclick="openPopUp('basket',event)">КОРЗИНА</a></div>
+            <div class="col-1 d-flex justify-content-end align-items-end"><a class="link-main underline-one" href="#"
+                    onclick="openPopUp('menu',event)">МЕНЮ</a></div>
+        </nav>
+        <nav class="row h5 position-sticky top-0 d-lg-none d-flex">
+            <div class="col-12 d-flex justify-content-center"> <img src="img/navbar__logo_black.svg" alt="navbar__logo"
+                    class="h-37px"> </div>
+            <div class="col-12 mt-2 mb-2">
+                <div class="border-top-black"></div>
+            </div>
+            <div class="col-1 d-flex justify-content-start align-items-center"><a
+                    class="link-main underline-one underline-one" href="#">EN</a></div>
+            <div class="offset-md-0 offset-1 col-1 d-flex justify-content-end align-items-center">
+                <a class="link-main underline-one search-btn" href="#" onclick="openPopUp('search',event)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16.0013 9.9974C16.0013 13.3111 13.315 15.9974 10.0013 15.9974C6.68759 15.9974 4.0013 13.3111 4.0013 9.9974C4.0013 6.68369 6.68759 3.9974 10.0013 3.9974C13.315 3.9974 16.0013 6.68369 16.0013 9.9974ZM14.694 15.6329C13.4223 16.693 11.7863 17.3307 10.0013 17.3307C5.95121 17.3307 2.66797 14.0475 2.66797 9.9974C2.66797 5.94731 5.95121 2.66406 10.0013 2.66406C14.0514 2.66406 17.3346 5.94731 17.3346 9.9974C17.3346 11.7824 16.6969 13.4184 15.6368 14.6901L21.806 20.8593L20.8632 21.8021L14.694 15.6329Z"
+                            fill="black" />
+                    </svg>
+                </a>
+            </div>
+            <div class="offset-6 offset-md-8 col-1 d-flex justify-content-start align-items-center">
+                <a class="link-main underline-one" href="#" onclick="openPopUp('basket',event)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15.8321 7.32943C15.7884 7.15938 15.7363 6.99217 15.6761 6.82865C15.4633 6.25062 15.1547 5.7348 14.7747 5.30724C14.3949 4.87998 13.9526 4.5506 13.4778 4.32934C13.0036 4.10837 12.502 3.9974 12 3.9974C11.498 3.9974 10.9964 4.10837 10.5222 4.32934C10.0474 4.5506 9.6051 4.87998 9.22531 5.30724C8.84526 5.7348 8.53668 6.25062 8.32386 6.82865C8.26365 6.99217 8.21159 7.15938 8.16789 7.32943H15.8321ZM17.1997 7.32943C17.1332 7.00167 17.0423 6.68002 16.9274 6.36796C16.6593 5.64001 16.2665 4.97857 15.7712 4.42142C15.276 3.86427 14.688 3.42231 14.041 3.12078C13.3939 2.81926 12.7004 2.66406 12 2.66406C11.2996 2.66406 10.6061 2.81926 9.95902 3.12079C9.31195 3.42231 8.72401 3.86427 8.22876 4.42142C7.73352 4.97857 7.34067 5.64001 7.07264 6.36796C6.95775 6.68002 6.86675 7.00167 6.80029 7.32943H3.9987H3.33203V7.99609V21.3294V21.9961H3.9987H19.9987H20.6654V21.3294V7.99609V7.32943H19.9987H17.1997ZM6.66667 8.66276C6.66667 8.66319 6.66667 8.66363 6.66667 8.66406H8L12 8.66406H16H17.3333C17.3333 8.66363 17.3333 8.66319 17.3333 8.66276H19.332V20.6628H4.66536V8.66276H6.66667Z"
+                            fill="black" />
+                    </svg>
+                </a>
+            </div>
+            <div class="offset-1 offset-md-0 col-1 d-flex justify-content-end align-items-center">
+                <a class="link-main underline-one" href="#" onclick="openPopUp('menu',event)">
+                    <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 2.66797H28" stroke="black" stroke-width="1.33333" />
+                        <path d="M0 12H28" stroke="black" stroke-width="1.33333" />
+                        <path d="M0 21.332H28" stroke="black" stroke-width="1.33333" />
+                    </svg>
+                </a>
+            </div>
         </nav>
         <div class="row mt-110px">
-            <div class="col-11 d-flex justify-content-star align-items-center h4 text-uppercase">ГЛАВНАЯ<img src="img/vector-dash-black.svg" class="ps-3 pe-3" alt="vector-dash">категории<img src="img/vector-dash-black.svg" class="ps-3 pe-3" alt="vector-dash">сигары<img src="img/vector-dash-black.svg" class="ps-3 pe-3" alt="vector-dash">винтажные<img src="img/vector-dash-black.svg" class="ps-3 pe-3" alt="vector-dash">Hoyo De Monterrey Palmas Extra Vintage</div>
-            <div class="col-1 d-flex justify-content-end align-items-center"><img src="img/sheet_black.svg" alt="sheet"></div>
+            <div class="col-11 d-flex justify-content-star align-items-center h4 text-uppercase">ГЛАВНАЯ<img
+                    src="img/vector-dash-black.svg" class="ps-3 pe-3" alt="vector-dash">категории<img
+                    src="img/vector-dash-black.svg" class="ps-3 pe-3" alt="vector-dash">сигары<img
+                    src="img/vector-dash-black.svg" class="ps-3 pe-3" alt="vector-dash">винтажные<img
+                    src="img/vector-dash-black.svg" class="ps-3 pe-3" alt="vector-dash">Hoyo De Monterrey Palmas Extra
+                Vintage</div>
+            <div class="col-1 d-flex justify-content-end align-items-center"><img src="img/sheet_black.svg" alt="sheet">
+            </div>
             <div class="col-12 mt-3">
                 <div class="border-top-black"></div>
             </div>
         </div>
         <div class="row g-0">
             <div class="col-3 pe-3 item-img z-index-2 position-relative">
-                <div class="border-right-black d-flex justify-content-center align-items-center overflow-hidden height-along-central-column"><img src="img/item-1.png" alt="item-1"></div>
+                <div
+                    class="border-right-black d-flex justify-content-center align-items-center overflow-hidden height-along-central-column">
+                    <img src="img/item-1.png" alt="item-1">
+                </div>
             </div>
             <div class="col-6 pe-3 central-column">
                 <div class="row g-0">
-                    <div class="col-12 mt-75px h2 text-uppercase text-center">Hoyo De Monterrey Palmas Extra Vintage</div>
+                    <div class="col-12 mt-4 pt-2 h3 text-uppercase text-center">Hoyo De Monterrey Palmas Extra Vintage
+                    </div>
                     <div class="offset-2 col-8 mt-96px h5 d-flex justify-content-between">
                         <div class="fw-300 text-uppercase">Артикул</div>
                         <div class="h5-num">383-1</div>
@@ -90,28 +145,63 @@
                         </div>
                     </div>
                     <div class="offset-2 col-8 mt-1 border-top-black"></div>
-                    <div class="offset-2 col-8 mt-5 h5 ">Сигара Hoyo de Monterrey Palmas Extra Vintage, формат Cremas, размер 140/16мм, 40 RG. Витола средней интенсивности, в древесно-пряных тонах. Вкус мощный, преимущественно острый, с небольшой горчинкой. Послевкусие продолжительное, пряно-древесное.</div>
+                    <div class="offset-2 col-8 mt-5 h5 ">Сигара Hoyo de Monterrey Palmas Extra Vintage, формат Cremas,
+                        размер 140/16мм, 40 RG. Витола средней интенсивности, в древесно-пряных тонах. Вкус мощный,
+                        преимущественно острый, с небольшой горчинкой. Послевкусие продолжительное, пряно-древесное.
+                    </div>
                     <div class="mt-75px"></div>
                 </div>
             </div>
             <div class="col-3 ps-3">
                 <div class="border-left-black height-along-central-column position-relative">
-                    <div class="position-absolute bottom-0 ps-4 pe-4 w-100">
-                        <div class="h3-num d-flex justify-content-between align-items-center">
+                    <div class="position-absolute bottom-0 ps-4 pe-4 w-100 h5">
+                        <div class=" fw-300 text-uppercase ">вариант упаковки</div>
+                        <div class="w-100 mt-2">
+                            <div class="border-top-black"></div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="d-flex align-items-center"><input id="byPost" type="radio" name="packagingOption" class="checkbox-filter me-3" checked>
+                                <label for="byPost">Поштучно</label>
+                            </div>
+                            <div class="d-flex align-items-center mt-3"><input id="byPost" type="radio" name="packagingOption" class="checkbox-filter me-3">
+                                <label for="byPost">Коробка 25 шт.</label>
+                            </div>
+
+                        </div>
+                        <div class="fw-300 text-uppercase mt-5">количество</div>
+                        <div class="w-100 mt-2">
+                            <div class="border-top-black"></div>
+                        </div>
+                        <div class="h3-num d-flex justify-content-between align-items-center mt-4">
                             <a id="minus-item" href="">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4.53516 15.1045H24.4629C24.9633 15.1045 25.3691 14.6987 25.3691 14.1982C25.3691 13.6978 24.9633 13.292 24.4629 13.292H4.53516C4.03464 13.292 3.62891 13.6978 3.62891 14.1982C3.62891 14.6987 4.03464 15.1045 4.53516 15.1045Z" fill="grey"/> </svg>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.53516 15.1045H24.4629C24.9633 15.1045 25.3691 14.6987 25.3691 14.1982C25.3691 13.6978 24.9633 13.292 24.4629 13.292H4.53516C4.03464 13.292 3.62891 13.6978 3.62891 14.1982C3.62891 14.6987 4.03464 15.1045 4.53516 15.1045Z"
+                                        fill="grey" />
+                                </svg>
                             </a>
                             <div id="quantity-of-item">1</div>
                             <a id="plus-item" href="#">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <g id="Add / undefined / Glyph: undefined">
-                                        <path id="Vector" d="M24.7734 14.1931C24.7734 14.6519 24.4327 15.0312 23.9903 15.0912L23.8674 15.0996L15.1068 15.101L15.1068 23.8652C15.1068 24.3657 14.701 24.7714 14.2005 24.7714C13.7417 24.7714 13.3625 24.4304 13.3025 23.9882L13.2943 23.8652L13.2943 15.101L4.53494 15.1034C4.03445 15.1035 3.62845 14.6979 3.62845 14.1974C3.62845 13.7386 3.9692 13.3593 4.41157 13.2993L4.53458 13.2909L13.2943 13.2885L13.2943 4.5293C13.2943 4.02878 13.7 3.62305 14.2005 3.62305C14.6593 3.62305 15.0385 3.96398 15.0986 4.40632L15.1068 4.5293L15.1068 13.2885L23.867 13.2871C24.3675 13.2869 24.7734 13.6926 24.7734 14.1931Z" fill="black" /> </g>
+                                        <path id="Vector"
+                                            d="M24.7734 14.1931C24.7734 14.6519 24.4327 15.0312 23.9903 15.0912L23.8674 15.0996L15.1068 15.101L15.1068 23.8652C15.1068 24.3657 14.701 24.7714 14.2005 24.7714C13.7417 24.7714 13.3625 24.4304 13.3025 23.9882L13.2943 23.8652L13.2943 15.101L4.53494 15.1034C4.03445 15.1035 3.62845 14.6979 3.62845 14.1974C3.62845 13.7386 3.9692 13.3593 4.41157 13.2993L4.53458 13.2909L13.2943 13.2885L13.2943 4.5293C13.2943 4.02878 13.7 3.62305 14.2005 3.62305C14.6593 3.62305 15.0385 3.96398 15.0986 4.40632L15.1068 4.5293L15.1068 13.2885L23.867 13.2871C24.3675 13.2869 24.7734 13.6926 24.7734 14.1931Z"
+                                            fill="black" />
+                                    </g>
                                 </svg>
                             </a>
                         </div>
-                        <button class="mt-110px btn-item h5 flat-button">В корзину</button>
-                        <div class="mt-75px"></div>
+                        <div class="w-100 mt-110px">
+                            <div class="border-top-black"></div>
+                        </div>
+                        <div class="h4 fw-300 text-uppercase mt-4 d-flex justify-content-between align-items-center">
+                            <div class="text-uppercase h3">цена</div>
+                            <div class="text-uppercase h3-num "><span id="endPrice" class="me-1">7900</span>р.</div>
+                        </div>
+
+                        <button class="btn-item h5 flat-button mt-4 mb-5"><div class="fc-white">В корзину</div></button>
                     </div>
                 </div>
             </div>
@@ -121,58 +211,66 @@
             </div>
         </div>
         <div class="row mt-5 z-index-2 position-relative">
-                <div class="col-3 catalog__card">
-            <a href="">
-                    <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
+            <div class="col-3 catalog__card">
+                <a href="">
+                    <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg"
+                            alt="catalog__img_card_1"> </div>
                     <div class="catalog__card_padding_text">
-                        <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                        <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del
+                            Habano</div>
                         <div class="border-top-black"></div>
                         <div class="h5 pe-1 text-uppercase d-flex justify-content-between">
                             <div class="ff-lato">7 900 р.</div>
                             <div><a href="">в корзину</a></div>
                         </div>
                     </div>
-            </a>
-                </div>
-                <div class="col-3 catalog__card">
-            <a href="">
-                    <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
+                </a>
+            </div>
+            <div class="col-3 catalog__card">
+                <a href="">
+                    <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg"
+                            alt="catalog__img_card_1"> </div>
                     <div class="catalog__card_padding_text">
-                        <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                        <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del
+                            Habano</div>
                         <div class="border-top-black"></div>
                         <div class="h5 pe-1 text-uppercase d-flex justify-content-between">
                             <div class="ff-lato">7 900 р.</div>
                             <div><a href="">в корзину</a></div>
                         </div>
                     </div>
-            </a>
-                </div>
-                <div class="col-3 catalog__card">
-            <a href="">
-                    <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
+                </a>
+            </div>
+            <div class="col-3 catalog__card">
+                <a href="">
+                    <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg"
+                            alt="catalog__img_card_1"> </div>
                     <div class="catalog__card_padding_text">
-                        <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                        <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del
+                            Habano</div>
                         <div class="border-top-black"></div>
                         <div class="h5 pe-1 text-uppercase d-flex justify-content-between">
                             <div class="ff-lato">7 900 р.</div>
                             <div><a href="">в корзину</a></div>
                         </div>
                     </div>
-            </a>
-                </div>
-                <div class="col-3 catalog__card">
-            <a href="">
-                    <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg" alt="catalog__img_card_1"> </div>
+                </a>
+            </div>
+            <div class="col-3 catalog__card">
+                <a href="">
+                    <div class="catalog__card_img_div"> <img class="catalog__card_img" src="img/catalog__img_card_1.jpg"
+                            alt="catalog__img_card_1"> </div>
                     <div class="catalog__card_padding_text">
-                        <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del Habano</div>
+                        <div class="mt-2 catalog__card_name h5">San Cristobal De La Habana 20 Aniversary La Casa Del
+                            Habano</div>
                         <div class="border-top-black"></div>
                         <div class="h5 pe-1 text-uppercase d-flex justify-content-between">
                             <div class="ff-lato">7 900 р.</div>
                             <div><a href="">в корзину</a></div>
                         </div>
                     </div>
-            </a>
-                </div>
+                </a>
+            </div>
         </div>
     </section>
     <footer class="footer-black mt-96px">
@@ -190,35 +288,50 @@
             <div class="col-3 mb-5">
                 <div>LCDH KUZNECHNY:</div>
                 <div class="mt-2 border-top-black"></div>
-                <div class="mt-4"><a class="link-main underline-one" href="https://goo.gl/maps/P822gagi2yzwQdYu6" target="_blank">г. Санкт-Петербург,Кузнечный переулок, 14А</a></div>
+                <div class="mt-4"><a class="link-main underline-one" href="https://goo.gl/maps/P822gagi2yzwQdYu6"
+                        target="_blank">г. Санкт-Петербург,Кузнечный переулок, 14А</a></div>
                 <div class="mt-3 d-flex justify-content-between">
                     <div class="fw-200">Городской</div>
-                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (812) 572 32 90<">+7 (812) 572 32 90</a></div>
+                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (812) 572 32 90<">+7 (812) 572
+                            32 90</a></div>
                 </div>
                 <div class="mt-3 d-flex justify-content-between">
                     <div class="fw-200">Сотовый</div>
-                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (981) 893 90 53">+7 (981) 893 90 53</a></div>
+                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (981) 893 90 53">+7 (981) 893 90
+                            53</a></div>
                 </div>
                 <div class="mt-5">LCDH BOLSHOY P.SIDE:</div>
                 <div class="mt-2 border-top-black"></div>
-                <div class="mt-4"><a class="link-main underline-one" href="https://goo.gl/maps/mrk9C33Y8a1ExFto6" target="_blank">г. Санкт-Петербург,Большой пр. П.С., 37</a></div>
+                <div class="mt-4"><a class="link-main underline-one" href="https://goo.gl/maps/mrk9C33Y8a1ExFto6"
+                        target="_blank">г. Санкт-Петербург,Большой пр. П.С., 37</a></div>
                 <div class="mt-3 d-flex justify-content-between">
                     <div class="fw-200">Городской</div>
-                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (812) 332 45 97">+7 (812) 332 45 97</a></div>
+                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (812) 332 45 97">+7 (812) 332 45
+                            97</a></div>
                 </div>
                 <div class="mt-3 d-flex justify-content-between">
                     <div class="fw-200">Сотовый</div>
-                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (981) 045 99 45">+7 (981) 045 99 45</a></div>
+                    <div class="h5-num"><a class="link-main underline-one" href="tel:+7 (981) 045 99 45">+7 (981) 045 99
+                            45</a></div>
                 </div>
             </div>
-            <div class="offset-3 col-3 mt-4"><a class="me-2 link-main underline-one" href="#">TLG</a>/<a class="ms-2 me-2 link-main underline-one" href="#">VK</a>/<a class="ms-2 me-2 link-main underline-one" href="#">INST</a>/<a class="ms-2 me-2 link-main underline-one" href="#">FB</a></div>
-            <div class="col-3 mt-4"><a class="link-main underline-one" href="mailto:LCDH@CIGARPLACE.RU">LCDH@CIGARPLACE.RU</a></div>
+            <div class="offset-3 col-3 mt-4"><a class="me-2 link-main underline-one" href="#">TLG</a>/<a
+                    class="ms-2 me-2 link-main underline-one" href="#">VK</a>/<a
+                    class="ms-2 me-2 link-main underline-one" href="#">INST</a>/<a
+                    class="ms-2 me-2 link-main underline-one" href="#">FB</a></div>
+            <div class="col-3 mt-4"><a class="link-main underline-one"
+                    href="mailto:LCDH@CIGARPLACE.RU">LCDH@CIGARPLACE.RU</a></div>
             <div class="col-3 pt-4">
                 <div class="position-relative">
                     <div>
-                        <a class="round-button round-button-big round-button-footer round-button d-flex justify-content-center align-items-center" href="#">
-                            <svg width="16" height="65" viewBox="0 0 16 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.29289 0.292892C7.68342 -0.0976334 8.31658 -0.0976334 8.70711 0.292892L15.0711 6.65685C15.4616 7.04738 15.4616 7.68054 15.0711 8.07107C14.6805 8.46159 14.0474 8.46159 13.6569 8.07107L8 2.41422L2.34315 8.07107C1.95262 8.46159 1.31946 8.46159 0.928932 8.07107C0.538408 7.68054 0.538408 7.04738 0.928932 6.65685L7.29289 0.292892ZM9 1V64.5H7V1H9Z" fill="black" /> </svg>
+                        <a class="round-button round-button-big round-button-footer round-button d-flex justify-content-center align-items-center"
+                            href="#">
+                            <svg width="16" height="65" viewBox="0 0 16 65" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.29289 0.292892C7.68342 -0.0976334 8.31658 -0.0976334 8.70711 0.292892L15.0711 6.65685C15.4616 7.04738 15.4616 7.68054 15.0711 8.07107C14.6805 8.46159 14.0474 8.46159 13.6569 8.07107L8 2.41422L2.34315 8.07107C1.95262 8.46159 1.31946 8.46159 0.928932 8.07107C0.538408 7.68054 0.538408 7.04738 0.928932 6.65685L7.29289 0.292892ZM9 1V64.5H7V1H9Z"
+                                    fill="black" />
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -226,9 +339,12 @@
         </div>
         <div class="row mt-168px">
             <div class="col-2 d-flex justify-content-between align-items-end">
-                <div class="fw-200">Made by:</div> <a class="link-main underline-one" href="www.duo-creative.ru">DUO CREATIVE</a> </div>
+                <div class="fw-200">Made by:</div> <a class="link-main underline-one" href="www.duo-creative.ru">DUO
+                    CREATIVE</a>
+            </div>
             <div class="offset-1 col-3 h4 fls-01">© LA CASA DEL HABANO ST-PETERSBURG 2023</div>
-            <div class="col-3 h4 fw-200 "><a class="link-main underline-one" href="">Политика конфиденциальности</a></div>
+            <div class="col-3 h4 fw-200 "><a class="link-main underline-one" href="">Политика конфиденциальности</a>
+            </div>
         </div>
     </footer>
     <script src="js/OverlayScrollbars/OverlayScrollbars.min.js"></script>

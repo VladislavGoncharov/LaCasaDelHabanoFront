@@ -273,7 +273,7 @@
     }
 }
 
-@media screen and (max-width: 977px) {
+@media screen and (max-width: 978px) {
     .h1 {
         font-size: var(--fs-32);
         line-height: 48px;
@@ -298,6 +298,10 @@
         font-size: var(--fs-20);
         line-height: 12px;
     }
+    .filters-main .h4 {
+        font-size: var(--fs-15);
+        line-height: 21px;
+    }
 }
 
 
@@ -305,7 +309,7 @@
 
 @media screen and (max-width: 737px) {
 
-    .h5,.h5-num {
+    .h5, .h5-num, .filters-main .h4 {
         font-size: var(--fs-13);
         line-height: 18px;
     }
@@ -322,7 +326,7 @@
 
 /*на очень маленькие экраны телефонов*/
 
-@media screen and (max-width: 555px) {
+@media screen and (max-width: 556px) {
     .h1 {
         font-size: var(--fs-26);
         line-height: 48px;
@@ -348,7 +352,7 @@
         text-align: justify;
     }
 */
-    .h5,.h5-num, footer .h4 {
+    .h5,.h5-num, footer .h4, .filters-main .h4 {
         font-size: var(--fs-10);
         line-height: 15px;
     }
