@@ -58,7 +58,7 @@ body {
 }
 .transform_up {
     transition: 1s ease-in-out;
-    transform: translateY(-100%);
+    transform: translateY(-101%);
 }
 .transform_down {
     transition: 1s ease-in-out;

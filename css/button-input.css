@@ -265,7 +265,7 @@ textarea::-webkit-input-placeholder {
     transition: linear 0.35s;
 }
 
-.btn-item {
+.btn-buy {
     width: 100%;
     padding: 2px 0;
     color: var(--mc-white);
@@ -527,4 +527,17 @@ textarea::-webkit-input-placeholder {
         -ms-transform: rotate(-180deg);
          -o-transform: rotate(-180deg);
             transform: rotate(-180deg);
+}
+.btn_back {
+    transform: translate(-10px);
+    width: 200px;
+    padding: 16px 0 !important;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.btn_back__img {
+    transform: rotate(270deg);
+    margin-right: 10px;
+    padding-left: 3px;
 }

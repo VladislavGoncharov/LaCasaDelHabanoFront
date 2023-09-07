@@ -11,7 +11,7 @@
 .h1-64 {
     font-size: var(--fs-48);
     font-weight: 500 !important;
-    font-family: 'Cormorant', serif;
+    font-family: "Cormorant", serif;
     line-height: 58px;
 }
 
@@ -22,7 +22,7 @@
 .h2 {
     font-size: var(--fs-40);
     font-weight: 500 !important;
-    font-family: 'Cormorant', serif;
+    font-family: "Cormorant", serif;
     line-height: 48px;
 }
 
@@ -38,7 +38,7 @@
 
 .h3-num {
     font-size: var(--fs-24);
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 29px;
 }
 
@@ -56,7 +56,7 @@
 
 .h5-num {
     font-size: var(--fs-18);
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     line-height: 26px;
 }
 
@@ -177,7 +177,7 @@
 }
 
 .ff-cormorant {
-    font-family: var(--ff-cormorant)
+    font-family: var(--ff-cormorant);
 }
 
 .ff-lato {
@@ -195,23 +195,21 @@
 .number-place {
     font-family: var(--ff-cormorant);
     line-height: 24px;
-    font-weight: 500 ;
+    font-weight: 500;
     font-size: var(--fs-31);
 }
-@media screen and (min-width: 1200px) {}
-
+@media screen and (min-width: 1200px) {
+}
 
 /*на экраны больших планшетов-----------------------------*/
 
-
 /*на экраны планшетов-----------------*/
 @media screen and (max-width: 1710px) and (min-width: 1540px) {
-
-.main__our_mug_div .h5, .main__our_mug_div .h5-num {
-
-    font-size: var(--fs-16);
-    line-height: 19px;
-}
+    .main__our_mug_div .h5,
+    .main__our_mug_div .h5-num {
+        font-size: var(--fs-16);
+        line-height: 19px;
+    }
 }
 @media screen and (max-width: 1705px) {
     .h2 {
@@ -240,7 +238,6 @@
         line-height: 23px;
     }
 }
-
 
 /*на экраны планшетов-----------------*/
 
@@ -273,6 +270,12 @@
     }
 }
 
+@media screen and (max-width: 1199px) {
+    .item .h1-64 {
+        font-size: var(--fs-40);
+        line-height: 15px;
+    }
+}
 @media screen and (max-width: 978px) {
     .h1 {
         font-size: var(--fs-32);
@@ -282,7 +285,8 @@
         font-size: var(--fs-24);
         line-height: 29px;
     }
-    .h3,.h3-num {
+    .h3,
+    .h3-num {
         font-size: var(--fs-16);
         line-height: 19px;
     }
@@ -304,12 +308,12 @@
     }
 }
 
-
 /*на экраны телефонов*/
 
 @media screen and (max-width: 737px) {
-
-    .h5, .h5-num, .filters-main .h4 {
+    .h5,
+    .h5-num,
+    .filters-main .h4 {
         font-size: var(--fs-13);
         line-height: 18px;
     }
@@ -323,7 +327,6 @@
     }
 }
 
-
 /*на очень маленькие экраны телефонов*/
 
 @media screen and (max-width: 556px) {
@@ -331,7 +334,8 @@
         font-size: var(--fs-26);
         line-height: 48px;
     }
-    .h3,.h3-num {
+    .h3,
+    .h3-num {
         font-size: var(--fs-15);
         line-height: 18px;
     }
@@ -339,24 +343,27 @@
         font-size: var(--fs-24);
         line-height: 38px;
     }
-/*
+    /*
     .text-mobile {
         font-size: var(--fs-10);
         line-height: 15px;
     }
 */
-/*
+    /*
     .fs-sm-7 {
         font-size: var(--fs-7);
         line-height: 10px;
         text-align: justify;
     }
 */
-    .h5,.h5-num, footer .h4, .filters-main .h4 {
+    .h5,
+    .h5-num,
+    footer .h4,
+    .filters-main .h4 {
         font-size: var(--fs-10);
         line-height: 15px;
     }
-/*
+    /*
     #enter .h1-64 {
         font-size: var(--fs-12);
         line-height: 15px;
@@ -366,11 +373,30 @@
         line-height: 12px;
     }
 */
+    .item .h1-64 {
+        font-size: var(--fs-32);
+        line-height: 34px;
+    }
 }
 
 @media screen and (max-width: 400px) {
+    .main__bg_black_div .h1 {
+        font-size: var(--fs-20);
+        line-height: 40px;
+    }
     .to-wholesale-buyers .h1 {
         font-size: var(--fs-22);
         line-height: 30px;
+    }
+
+    .item .h1-64 {
+        font-size: var(--fs-24);
+        line-height: 30px;
+    }
+}
+@media screen and (max-width: 330px) {
+    .main__bg_black_div .h5 {
+        font-size: var(--fs-9);
+        line-height: 12px;
     }
 }

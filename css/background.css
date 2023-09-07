@@ -81,7 +81,7 @@
 .bg_nav_black,
 .bg_nav_white {
     height: 60px;
-    z-index: 4;
+    z-index: 6;
     position: sticky;
     top: 0;
     left: 0;

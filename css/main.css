@@ -96,7 +96,7 @@ body {
 nav {
     padding-top: 10px;
     background: transparent;
-    z-index: 5;
+    z-index: 15;
     height: 40px;
     align-items: center;
 }
@@ -590,7 +590,7 @@ footer {
 }
 
 .catalog__card {
-    height: 560px;
+    min-height: 560px;
 }
 
 .catalog__card_img_div {
@@ -612,7 +612,8 @@ footer {
 }
 
 .catalog__card_name {
-    height: 58px;
+    min-height: 58px;
+    text-align: justify;
 }
 
 .text-1 {

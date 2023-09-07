@@ -295,7 +295,7 @@
         left: 215px !important;
     }
     .catalog__card {
-        height: 500px;
+        min-height: 500px;
     }
 
     .nav-filter .filters {
@@ -605,7 +605,7 @@
         left: 190px !important;
     }
     .catalog__card {
-        height: 450px;
+        min-height: 450px;
     }
     .nav-filter .filters {
         width: 760px;
@@ -628,6 +628,15 @@
     }
     .filters-checkbox {
         margin-left: 80px;
+    }
+    .btn_back {
+        transform: translate(-6px);
+        padding: 7px 0 !important;
+    }
+    .btn_back__img {
+        height: 24px;
+        width: 24px;
+        padding-left: 0;
     }
 }
 
@@ -731,6 +740,18 @@
     footer .mt-168px .ps-2 {
         padding: 0 !important;
     }
+    .item .mt-110px {
+        margin-top: 90px;
+    }
+    .item .mt-96px {
+        margin-top: 48px;
+    }
+    .central-column .mt-75px {
+        margin-top: 48px;
+    }
+    .item-img img {
+        max-height: 500px;
+    }
 }
 
 /*/////////////////////////max-width: 1199px//////////////////////////////////////////////*/
@@ -761,7 +782,7 @@
         margin-top: 80px !important;
     }
     .catalog__card {
-        height: 360px;
+        min-height: 360px;
     }
     .nav-filter .filters {
         width: 570px;
@@ -854,6 +875,7 @@
     }
     .main__bg_black_card_img_div img {
         top: 0;
+        height: 100%;
     }
     .main__bg_black_card_img_div,
     .main__bg_black_card_div:hover .main__bg_black_card_img_div {
@@ -888,10 +910,7 @@
         left: 0 !important;
         right: 0 !important;
         margin: auto;
-        width: 30vw;
-    }
-    .our_shop_on_petrogradskaya {
-        width: 33vw;
+        width: 100%;
     }
     .our-mug__images-selectors {
         min-height: 150px;
@@ -1048,7 +1067,7 @@
     footer .mt-168px {
         margin-top: 60px;
     }
-    .border-right-black {
+    .catalog .border-right-black {
         position: absolute !important;
         left: 0;
         top: 0;
@@ -1125,6 +1144,25 @@
     * {
         cursor: default;
     }
+    
+    .item .border-right-black, .item .border-left-black {
+        border: none;
+    }
+    .fortress_elips {
+        width: 14px;
+        height: 14px;
+    }
+    .item-img img {
+        max-height: 430px;
+    }
+    
+.catalog__card_name {
+    min-height: 30px;
+}
+.item .border-left-black .position-absolute {
+    position: relative !important;
+}
+
 }
 
 /*/////////////////////////max-width: 737px//////////////////////////////////////////////*/
@@ -1194,14 +1232,8 @@
     .top-2720px {
         top: 2450px;
     }
-    .our_shop_on_kuznechnoye {
-        width: 35vw;
-    }
-    .our_shop_on_petrogradskaya {
-        width: 38vw;
-    }
     .main__our_mug_card_left_div .fc-transparent {
-        height: 19px;
+        height: 18px;
     }
     .our-mug__img-content {
         height: 150px;
@@ -1273,7 +1305,7 @@
     }
     
     .catalog__card {
-        height: 420px;
+        min-height: 420px;
     }
     #resetFilters {
         padding-right: 40px;
@@ -1283,6 +1315,10 @@
     }
     .filters-main img[alt="jackdaw"] {
         height: 25px;
+    }
+    
+    .item .catalog__card {
+        min-height: 240px;
     }
 }
 
@@ -1363,7 +1399,7 @@
         top: 2780px;
     }
     .main__our_mug_card_left_div .fc-transparent {
-        height: 16px;
+        height: 15px;
     }
     .main__our_mug_card_right_div {
         margin: 200px auto auto auto;
@@ -1493,7 +1529,7 @@
         width: 17px;
     }
     .catalog__card {
-        height: 330px;
+        min-height: 330px;
     }
     .catalog__card_name {
         height: 35px;
@@ -1508,24 +1544,47 @@
     .filters-checkbox {
         margin-left: 80px;
     }
+    .item-img img {
+        max-height: 280px;
+    }
+    
+    .fortress_elips {
+        width: 10px;
+        height: 10px;
+    }
+    .item .mt-110px {
+        margin-top: 60px;
+    }
+    .item .mt-96px {
+        margin-top: 30px;
+    }
+    
+    .item .catalog__card {
+        min-height: 220px;
+    }
+    .main__our_mug_card_right_div {
+        width: 260px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .catalog__card {
-        height: 280px;
+        min-height: 280px;
         
-    }
-    .catalog__card_name {
-        font-size: var(--fs-8);
     }
 }
 @media screen and (max-width: 440px) {
     .catalog__card {
-        height: 250px;
+        min-height: 250px;
         
     }
-    .catalog__card_name {
-        font-size: var(--fs-8);
+    .item-img img {
+        max-height: 200px;
+    }
+    
+    .fortress_elips {
+        width: 8px;
+        height: 8px;
     }
 }
 /*/////////////////////////max-width: 390px//////////////////////////////////////////////*/
@@ -1685,13 +1744,27 @@
         width: 280px;
     }
     .catalog__card {
-        height: 240px;
+        min-height: 240px;
+    }
+    .our-mug__images-selectors {
+        min-height: 90px;
+    }
+    .our-mug__img-content {
+        height: 90px;
+        width: 130px;
+    }
+    .main__our_mug_card_left_div {
+        height: 320px;
+        margin: -330px -1px -1px -1px;
+    }
+    .main__our_mug_div {
+        top: 2470px;
     }
 }
 
 @media screen and (max-width: 350px) {
     .catalog__card {
-        height: 210px;
+        min-height: 210px;
     }
     .filters-checkbox {
         margin-left: 50px;
