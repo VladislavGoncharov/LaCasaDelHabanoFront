@@ -146,11 +146,11 @@
         margin-top: 107px;
     }
     .grid-col-2 {
-        height: 250px;
+        max-height: 250px;
     }
     .grid-col-2 > img {
-        height: 250px;
-        width: 250px;
+        max-height: 250px;
+        max-width: 250px;
     }
     #menu .me-2 {
         margin-right: 7px !important;
@@ -469,11 +469,11 @@
         margin-right: 6px !important;
     }
     .grid-col-2 {
-        height: 200px;
+        max-height: 200px;
     }
     .grid-col-2 > img {
-        height: 200px;
-        width: 200px;
+        max-height: 200px;
+        max-width: 200px;
     }
     .main__others_project .h3-num {
         font-size: var(--fs-20);
@@ -756,6 +756,23 @@
 
 /*/////////////////////////max-width: 1199px//////////////////////////////////////////////*/
 
+@media screen and (max-width: 1470px) {
+    img[alt="dotted_line"] {
+        display: none;
+    }
+    .bg_black_pop_up_windows_on_the_right_dark {
+        padding: 40px 100px 48px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .grid-col-2{
+        max-height: 170px;
+    }
+    .grid-col-2 > img {
+        max-height: 170px;
+        max-width: 170px;
+    }
+}
 @media screen and (max-width: 1199px) {
     .map_mobile {
         /*        height: 80%;*/
@@ -804,13 +821,30 @@
     .filters-checkbox {
         margin-left: 20px;
     }
+    .radio-main-checkmark {
+        width: 18px;
+        height: 18px;
+    }
+    .radio-main-checkmark div {
+        width: 10px;
+        height: 10px;
+    }
+    .plus_minus_basket {
+        width: 18px;
+        height: 18px;
+    }
 }
 
+@media screen and (max-width: 1100px) {
+    .bg_black_pop_up_windows_on_the_right_dark {
+        padding: 40px 60px 48px;
+    }
+}
 /*/////////////////////////max-width: 977px//////////////////////////////////////////////*/
 
 @media screen and (max-width: 978px) {
     .h-37px {
-        height: 24px;
+        height: 22px;
     }
     .bg_nav_vinous,
     .bg_nav_black,
@@ -1162,9 +1196,35 @@
 .item .border-left-black .position-absolute {
     position: relative !important;
 }
-
+.menu-link-img, .menu__footer {
+    display: none;
+}
+.menu__col-right {
+    margin-top: 48px;
+}
+.menu__col-right .position-absolute {
+    position: relative !important;
+}
+#menu .mt-130px {
+    margin-top: 48px !important;
+}
+.h-100px {
+    height: 70px;
+}
+.bg_black_pop_up_windows_on_the_right_dark {
+    left: 30%;
+    width: 70vw;
+    padding: 40px 100px 48px;
+}
 }
 
+@media screen and (max-width: 810px) {
+    .bg_black_pop_up_windows_on_the_right_dark {
+        left: 25%;
+        width: 75vw;
+        padding: 40px 100px 48px;
+    }
+    }
 /*/////////////////////////max-width: 737px//////////////////////////////////////////////*/
 
 @media screen and (max-width: 737px) {
@@ -1319,6 +1379,14 @@
     
     .item .catalog__card {
         min-height: 240px;
+    }
+    .h-100px {
+        height: 55px;
+    }
+    .bg_black_pop_up_windows_on_the_right_dark {
+        left: 0;
+        width: 100vw;
+        padding: 40px 90px 48px;
     }
 }
 
@@ -1565,6 +1633,21 @@
     .main__our_mug_card_right_div {
         width: 260px;
     }
+    #reserve .mt-96px, #reserve .mt-75px {
+        margin-top: 48px;
+    }
+    .h-100px {
+        height: 45px;
+    }
+    #catalog .mt-96px {
+        margin-top: 48px;
+    }
+    
+    .bg_black_pop_up_windows_on_the_right_dark {
+        left: 0;
+        width: 100vw;
+        padding: 40px 20px 20px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1585,6 +1668,13 @@
     .fortress_elips {
         width: 8px;
         height: 8px;
+    }
+    .grid-col-2 {
+        max-height: 150px;
+    }
+    .grid-col-2 > img {
+        max-height: 150px;
+        max-width: 150px;
     }
 }
 /*/////////////////////////max-width: 390px//////////////////////////////////////////////*/
@@ -1760,8 +1850,19 @@
     .main__our_mug_div {
         top: 2470px;
     }
+    
 }
 
+@media screen and (max-width: 360px) {
+
+    .grid-col-2 {
+        max-height: 135px;
+    }
+    .grid-col-2 > img {
+        max-height: 135px;
+        max-width: 135px;
+    }
+}
 @media screen and (max-width: 350px) {
     .catalog__card {
         min-height: 210px;
@@ -1774,5 +1875,12 @@
     }
     .select {
         width: 130px;
+    }
+    .grid-col-2 {
+        max-height: 120px;
+    }
+    .grid-col-2 > img {
+        max-height: 120px;
+        max-width: 120px;
     }
 }
