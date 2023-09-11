@@ -638,6 +638,11 @@
         width: 24px;
         padding-left: 0;
     }
+    .bg_black_pop_up_windows_on_the_right_dark {
+        padding: 40px 120px 48px;
+    }
+    #search .basket__scroll_div {
+margin-top: 48px;    }
 }
 
 /*/////////////////////////max-width: 1535px//////////////////////////////////////////////*/
@@ -762,6 +767,9 @@
     }
     .bg_black_pop_up_windows_on_the_right_dark {
         padding: 40px 100px 48px;
+    }
+    #search .basket__scroll_div {
+        margin-top: 24px;
     }
 }
 @media screen and (max-width: 1280px) {
