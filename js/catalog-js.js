@@ -182,20 +182,6 @@ function updateNavFilter(el, values) {
             $(`#${idTo}`).remove()
         }
     }
-    //    console.log('----------------------------------------');
-    //    console.log('currentSeriesArray:', currentSeriesArray);
-    //console.log('currentBrandsArray:', currentBrandsArray);
-    //console.log('currentRangePriceMinMax:', currentRangePriceMinMax);
-    //console.log('currentRangeRingGaugeMinMax:', currentRangeRingGaugeMinMax);
-    //console.log('currentRangeSizeMinMax:', currentRangeSizeMinMax);
-    //console.log('currentRangeFortressMinMax:', currentRangeFortressMinMax);
-    //
-    //console.log('originalSeriesArray:', originalSeriesArray);
-    //console.log('originalBrandsArray:', originalBrandsArray);
-    //console.log('originalRangePriceMinMax:', originalRangePriceMinMax);
-    //console.log('originalRangeRingGaugeMinMax:', originalRangeRingGaugeMinMax);
-    //console.log('originalRangeSizeMinMax:', originalRangeSizeMinMax);
-    //console.log('originalRangeFortressMinMax:', originalRangeFortressMinMax);
 }
 
 function createSlider(el) {
@@ -214,27 +200,25 @@ function createSlider(el) {
     });
 }
 //web socket
-let socket = new SockJS("http://127.0.0.1:8080/websocket");
-let stompClient = Stomp.over(socket);
-stompClient.connect({}, function (frame) {
+globalState.stompClient.connect({}, function (frame) {
     let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     let pageSizeItem = screenWidth < 978 ? 10 : 9;
 
     console.log('Connected: ' + frame);
     sendFilterRequest('привет')
     // Подписка на определенные топики
-    stompClient.subscribe('/get/items', function (data) {
+    globalState.stompClient.subscribe('/get/items', function (data) {
         let responseData = JSON.parse(data.body);
         let container = $('#containerForItems');
         $('#pagination-catalog').pagination({
             dataSource: responseData
             , pageSize: pageSizeItem
             , callback: function (data, pagination) {
-                container.empty();
-                container.prepend('<div class="col-12 mt-19px"></div>');
+                container.children(':not(#nav-filter)').remove()
+                // container.prepend('<div class="col-12 mt-19px"></div>');
                 // Отображение элементов на текущей странице
                 for (let i = 0; i < data.length; i++) {
-                    createItem(container, data[i], sizeOfColumnsInItem);
+                    createItem(container, data[i]);
                 }
                 // настройка высоты, чтобы линия соприкосалась снизом
                 autoHeightCenterColumn()
@@ -245,10 +229,10 @@ stompClient.connect({}, function (frame) {
 
 function sendFilterRequest(filters) {
     // Отправка запроса с фильтрами на сервер
-    stompClient.send("/app/filter", {}, JSON.stringify(filters));
+    globalState.stompClient.send("/app/filter", {}, JSON.stringify(filters));
 }
 
-function createItem(container, item, sizeOfColumnsInItem) {
+function createItem(container, item) {
     let itemDiv = document.createElement('div');
     itemDiv.classList.add('col-md-4', 'col-6', 'mt-sm-5','mt-3', 'catalog__card');
     itemDiv.innerHTML = `

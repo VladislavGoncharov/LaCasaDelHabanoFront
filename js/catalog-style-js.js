@@ -28,6 +28,11 @@ function updateHeightFiltersMain() {
   const $navFilter = $('#nav-filter');
   const $footer = $('footer');
 
+  console.log($navFilter);
+  console.log($navFilter.offset().top);
+  
+
+
   const bottomOfViewport = $(window).height() + $(window).scrollTop();
   const visibleHeight = Math.min((bottomOfViewport - 10), $footer.offset().top) - $navFilter.offset().top;
   $filtersMain.height(visibleHeight);

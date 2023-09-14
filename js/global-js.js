@@ -1,30 +1,43 @@
 $(document).ready(function () {
-        setTimeout(function () {
-            distanceToBottom()
-        }, 100);
-        $('.basket__scroll_div').overlayScrollbars({
-            className: 'os-theme-dark'
-            , scrollbars: {
-                clickScrolling: true
-            }
-        })
-        scrollFunction()
-
-        let widthScreen = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-        let viewBoxSVGLoading = '0 0 1000 1000';
-        if (widthScreen > 1535) viewBoxSVGLoading = '0 0 1000 1000';
-        else if (widthScreen > 1395) viewBoxSVGLoading = '0 0 920 1000';
-        else if (widthScreen > 1195) viewBoxSVGLoading = '0 0 800 1000';
-        else if (widthScreen > 977) viewBoxSVGLoading = '0 0 640 1000';
-        else if (widthScreen > 555) viewBoxSVGLoading = '0 0 800 1000';
-        else if (widthScreen > 399) viewBoxSVGLoading = '0 0 690 1000';
-        else if (widthScreen > 350) viewBoxSVGLoading = '0 0 600 1000';
-        else viewBoxSVGLoading = '0 0 500 1000';
-        let svgLoading = $('#svg_loading')
-
-        svgLoading.attr('viewBox', viewBoxSVGLoading);
+    setTimeout(function () {
+        distanceToBottom()
+    }, 100);
+    $('.basket__scroll_div').overlayScrollbars({
+        className: 'os-theme-dark'
+        , scrollbars: {
+            clickScrolling: true
+        }
     })
-    //открытие меню
+    scrollFunction()
+    adaptationOfScreensaver()
+    // document.body.style.overflow = 'hidden';
+    // $('html, body').scrollTop(0);
+})
+// Глобальный объект для хранения переменных
+window.globalState = {};
+
+// Инициализация stompClient и сохранение его в глобальном объекте
+const socket = new SockJS("http://127.0.0.1:8080/websocket");
+globalState.stompClient = Stomp.over(socket);
+
+
+//адаптация заставки
+function adaptationOfScreensaver() {
+    let widthScreen = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+    let viewBoxSVGLoading = '0 0 1000 1000';
+    if (widthScreen > 1535) viewBoxSVGLoading = '0 0 1000 1000';
+    else if (widthScreen > 1395) viewBoxSVGLoading = '0 0 920 1000';
+    else if (widthScreen > 1195) viewBoxSVGLoading = '0 0 800 1000';
+    else if (widthScreen > 977) viewBoxSVGLoading = '0 0 640 1000';
+    else if (widthScreen > 555) viewBoxSVGLoading = '0 0 800 1000';
+    else if (widthScreen > 399) viewBoxSVGLoading = '0 0 690 1000';
+    else if (widthScreen > 350) viewBoxSVGLoading = '0 0 600 1000';
+    else viewBoxSVGLoading = '0 0 500 1000';
+    let svgLoading = $('#svg_loading')
+
+    svgLoading.attr('viewBox', viewBoxSVGLoading);
+}
+//открытие меню
 function openPopUp(el, event) {
     event.preventDefault();
     let element = $(`#${el}`);
@@ -57,6 +70,8 @@ $('#no').click(function () {
         , duration: 1
         , ease: Power2.easeInOut
     })
+    
+document.body.style.overflow = 'auto';
 });
 $('#yes').click(function () {
     let container = $('#enter')
@@ -129,6 +144,9 @@ $('#yes').click(function () {
             svg_container.css('z-index', '3')
         }, 2000)
     }, 8000)
+document.body.style.overflow = 'auto';
+
+
 });
 //функция автоматического расчета высоты элемента
 function distanceToBottom() {
@@ -136,9 +154,9 @@ function distanceToBottom() {
         let $element = $(this);
         let distanceToBottom = Math.round($('body').height() - $element.position().top) + 25;
         let heightClass = 'height-' + distanceToBottom + 'px';
-            // Добавление класса к текущему элементу
-            //        $element.addClass(heightClass);
-            // Применение стиля высоты к текущему элементу с добавленным классом
+        // Добавление класса к текущему элементу
+        //        $element.addClass(heightClass);
+        // Применение стиля высоты к текущему элементу с добавленным классом
         $element.css('height', (distanceToBottom - 100));
         $element.css('pointer-events', 'none');
     });
@@ -214,23 +232,23 @@ $(document).mousemove(function (event) {
 });
 let $animationTime = 1000;
 if (window.location.pathname.includes('catalog')) $animationTime = 500
-    // плавный скролл
+// плавный скролл
 SmoothScroll({
-        // Время скролла 400 = 0.4 секунды
-        animationTime: $animationTime, // Размер шага в пикселях
-        stepSize: 100, // Дополнительные настройки:
-        // Ускорение
-        accelerationDelta: 20, // Максимальное ускорение
-        accelerationMax: 2, // Поддержка клавиатуры
-        keyboardSupport: true, // Шаг скролла стрелками на клавиатуре в пикселях
-        arrowScroll: 50, // Pulse (less tweakable)
-        // ratio of "tail" to "acceleration"
-        pulseAlgorithm: true
-        , pulseScale: 4
-        , pulseNormalize: 1, // Поддержка тачпада
-        touchpadSupport: true
-    })
-    // Запрещаем только горизонтальный скролл на всей странице
+    // Время скролла 400 = 0.4 секунды
+    animationTime: $animationTime, // Размер шага в пикселях
+    stepSize: 100, // Дополнительные настройки:
+    // Ускорение
+    accelerationDelta: 20, // Максимальное ускорение
+    accelerationMax: 2, // Поддержка клавиатуры
+    keyboardSupport: true, // Шаг скролла стрелками на клавиатуре в пикселях
+    arrowScroll: 50, // Pulse (less tweakable)
+    // ratio of "tail" to "acceleration"
+    pulseAlgorithm: true
+    , pulseScale: 4
+    , pulseNormalize: 1, // Поддержка тачпада
+    touchpadSupport: true
+})
+// Запрещаем только горизонтальный скролл на всей странице
 document.body.addEventListener('wheel', function (e) {
     if (e.deltaX !== 0) {
         e.preventDefault();
@@ -262,3 +280,4 @@ new AirDatepicker('#dateReserve', {
         }
     }]
 });
+
