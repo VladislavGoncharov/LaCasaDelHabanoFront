@@ -148,8 +148,8 @@
     color: var(--mc-vinous);
 }
 
-.fc-peach {
-    color: var(--mc-peach);
+.fc-peach{
+    color: var(--mc-peach) !important;
 }
 
 .fc-grey {
@@ -270,6 +270,12 @@
     }
 }
 
+@media screen and (max-width: 1430px) {
+    .nav-filter {
+        font-size: var(--fs-13);
+        line-height: 21px;
+    }
+}
 @media screen and (max-width: 1400px) {
     .menu__footer, .menu__footer .h5-num {
         font-size: var(--fs-12);

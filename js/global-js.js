@@ -1,8 +1,10 @@
+window.globalAllItemsOriginal = null
+window.globalAllItemsOriginalMap = new Map()
 $(document).ready(function () {
     setTimeout(function () {
         distanceToBottom()
     }, 100);
-    $('.basket__scroll_div').overlayScrollbars({
+    $('.backet__scroll_div').overlayScrollbars({
         className: 'os-theme-dark'
         , scrollbars: {
             clickScrolling: true
@@ -12,13 +14,30 @@ $(document).ready(function () {
     adaptationOfScreensaver()
     // document.body.style.overflow = 'hidden';
     // $('html, body').scrollTop(0);
-})
-// Глобальный объект для хранения переменных
-window.globalState = {};
 
-// Инициализация stompClient и сохранение его в глобальном объекте
-const socket = new SockJS("http://127.0.0.1:8080/websocket");
-globalState.stompClient = Stomp.over(socket);
+    
+
+
+    $.ajax({
+        url: 'http://127.0.0.1:8080/getItems',
+        method: 'GET', // Метод запроса
+        dataType: 'json', // Ожидаемый формат данных
+        success: function (responseData) {
+
+            // Обработка данных, полученных с сервера
+            // sortingItems(responseData, "sortByName")
+            window.globalAllItemsOriginal = responseData
+            console.log('111111111111111');
+            console.log(window.globalAllItemsOriginal);
+
+        },
+        error: function (xhr, status, error) {
+            // Обработка ошибок
+            console.error(status, error);
+        }
+    });
+})
+
 
 
 //адаптация заставки
@@ -49,12 +68,14 @@ function openPopUp(el, event) {
         })
         element.find('.opacity_hide_text').toggleClass('opacity_show')
     }, 700)
+
+    if (el === 'backet') showBacketData()
 }
 $('#search').click(function () {
     openPopUp('search', event);
 });
-$('#basket').click(function () {
-    openPopUp('basket', event)
+$('#backet').click(function () {
+    openPopUp('backet', event)
 });
 $('.bg_black_pop_up_windows_on_the_right_dark').click(function (event) {
     event.stopPropagation();
@@ -70,8 +91,8 @@ $('#no').click(function () {
         , duration: 1
         , ease: Power2.easeInOut
     })
-    
-document.body.style.overflow = 'auto';
+
+    document.body.style.overflow = 'auto';
 });
 $('#yes').click(function () {
     let container = $('#enter')
@@ -144,7 +165,7 @@ $('#yes').click(function () {
             svg_container.css('z-index', '3')
         }, 2000)
     }, 8000)
-document.body.style.overflow = 'auto';
+    document.body.style.overflow = 'auto';
 
 
 });
@@ -281,3 +302,6 @@ new AirDatepicker('#dateReserve', {
     }]
 });
 
+function showBacketData() {
+    updateBacket()
+}

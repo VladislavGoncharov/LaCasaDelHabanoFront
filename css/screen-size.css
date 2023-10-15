@@ -1,5 +1,21 @@
 /*/////////////////////////max-width: 1919px//////////////////////////////////////////////*/
 
+@media screen and (min-width: 2020px) {
+    .filters-nav-shadow-right {
+        left: 63%;
+        width: 45px;
+    }
+}
+@media screen and (min-width: 2300px) {
+    .filters-nav-shadow-right {
+        left: 61%;
+    }
+}
+@media screen and (min-width: 3000px) {
+    .filters-nav-shadow-right {
+        left: 51%;
+    }
+}
 @media screen and (max-width: 1919px) {
     body {
         padding: 10px 6px 0 6px;
@@ -148,9 +164,8 @@
     .grid-col-2 {
         max-height: 250px;
     }
-    .grid-col-2 > img {
+    .backet__img {
         max-height: 250px;
-        max-width: 250px;
     }
     #menu .me-2 {
         margin-right: 7px !important;
@@ -471,9 +486,8 @@
     .grid-col-2 {
         max-height: 200px;
     }
-    .grid-col-2 > img {
+    .backet__img {
         max-height: 200px;
-        max-width: 200px;
     }
     .main__others_project .h3-num {
         font-size: var(--fs-20);
@@ -641,8 +655,9 @@
     .bg_black_pop_up_windows_on_the_right_dark {
         padding: 40px 120px 48px;
     }
-    #search .basket__scroll_div {
-margin-top: 48px;    }
+    #search .backet__scroll_div {
+        margin-top: 48px;
+    }
 }
 
 /*/////////////////////////max-width: 1535px//////////////////////////////////////////////*/
@@ -768,17 +783,60 @@ margin-top: 48px;    }
     .bg_black_pop_up_windows_on_the_right_dark {
         padding: 40px 100px 48px;
     }
-    #search .basket__scroll_div {
+    #search .backet__scroll_div {
         margin-top: 24px;
+    }
+    .select {
+        width: 180px;
+    }
+    .new-select:before {
+        width: 20px;
+        height: 20px;
+    }
+    .nav-filter .w-25 {
+        width: 20% !important;
+    }
+    .nav-filter img[alt="cross_black"] {
+        padding-bottom: 2px;
+        width: 10px;
+    }
+    #resetFilters {
+        width: 150px;
+    }
+    .filters-nav-shadow-right {
+        left: 650px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .select {
+        width: 168px;
+    }
+    .new-select:before {
+        width: 20px;
+        height: 20px;
+    }
+    .nav-filter .w-25 {
+        width: 25% !important;
+    }
+    .nav-filter img[alt="cross_black"] {
+        width: 9px;
+    }
+    #resetFilters {
+        width: 175px;
+    }
+    #resetFilters .ms-3 {
+        margin-left: 0rem !important;
+    }
+    .filters-nav-shadow-right {
+        left: 544px;
     }
 }
 @media screen and (max-width: 1280px) {
-    .grid-col-2{
+    .grid-col-2 {
         max-height: 170px;
     }
-    .grid-col-2 > img {
+    .backet__img {
         max-height: 170px;
-        max-width: 170px;
     }
 }
 @media screen and (max-width: 1199px) {
@@ -837,15 +895,36 @@ margin-top: 48px;    }
         width: 10px;
         height: 10px;
     }
-    .plus_minus_basket {
+    .plus_minus_backet {
         width: 18px;
         height: 18px;
+    }
+    #resetFilters {
+        padding: 19px 10px 19px 0;
+        margin-right: 20px;
+        width: 199px;
+    }
+    .filters-nav-shadow-right {
+        left: 36vw;
+    }
+    .nav-filter .filters {
+        width: 47vw;
     }
 }
 
 @media screen and (max-width: 1100px) {
     .bg_black_pop_up_windows_on_the_right_dark {
         padding: 40px 60px 48px;
+    }
+    .filters-nav-shadow-right {
+        left: 33vw;
+    }
+    .nav-filter .filters {
+        width: 36vw;
+    }
+
+    #resetFilters {
+        width: 150px;
     }
 }
 /*/////////////////////////max-width: 977px//////////////////////////////////////////////*/
@@ -1119,10 +1198,10 @@ margin-top: 48px;    }
         overflow: scroll;
         border-right: none;
         box-shadow:
-        20px -20px 20px white,
-        20px 20px 20px white,
-        -20px 20px 20px white,
-        -20px -20px 20px white;
+            20px -20px 20px white,
+            20px 20px 20px white,
+            -20px 20px 20px white,
+            -20px -20px 20px white;
         opacity: 0;
         transition: 0.5s;
     }
@@ -1150,7 +1229,7 @@ margin-top: 48px;    }
         position: absolute;
         top: -1000px;
     }
-    .nav-mobile-filters{
+    .nav-mobile-filters {
         position: sticky;
         top: 0;
         background: white;
@@ -1186,8 +1265,9 @@ margin-top: 48px;    }
     * {
         cursor: default;
     }
-    
-    .item .border-right-black, .item .border-left-black {
+
+    .item .border-right-black,
+    .item .border-left-black {
         border: none;
     }
     .fortress_elips {
@@ -1197,33 +1277,39 @@ margin-top: 48px;    }
     .item-img img {
         max-height: 430px;
     }
-    
-.catalog__card_name {
-    min-height: 30px;
-}
-.item .border-left-black .position-absolute {
-    position: relative !important;
-}
-.menu-link-img, .menu__footer {
-    display: none;
-}
-.menu__col-right {
-    margin-top: 48px;
-}
-.menu__col-right .position-absolute {
-    position: relative !important;
-}
-#menu .mt-130px {
-    margin-top: 48px !important;
-}
-.h-100px {
-    height: 70px;
-}
-.bg_black_pop_up_windows_on_the_right_dark {
-    left: 30%;
-    width: 70vw;
-    padding: 40px 100px 48px;
-}
+
+    .catalog__card_name {
+        min-height: 30px;
+    }
+    .item .border-left-black .position-absolute {
+        position: relative !important;
+    }
+    .menu-link-img,
+    .menu__footer {
+        display: none;
+    }
+    .menu__col-right {
+        margin-top: 48px;
+    }
+    .menu__col-right .position-absolute {
+        position: relative !important;
+    }
+    #menu .mt-130px {
+        margin-top: 48px !important;
+    }
+    .h-100px {
+        height: 70px;
+    }
+    .bg_black_pop_up_windows_on_the_right_dark {
+        left: 30%;
+        width: 70vw;
+        padding: 40px 100px 48px;
+    }
+
+    .box_img_minus,
+    .box_count {
+        margin-right: 15px;
+    }
 }
 
 @media screen and (max-width: 810px) {
@@ -1232,7 +1318,7 @@ margin-top: 48px;    }
         width: 75vw;
         padding: 40px 100px 48px;
     }
-    }
+}
 /*/////////////////////////max-width: 737px//////////////////////////////////////////////*/
 
 @media screen and (max-width: 737px) {
@@ -1371,7 +1457,7 @@ margin-top: 48px;    }
     .top-510px {
         top: 330px;
     }
-    
+
     .catalog__card {
         min-height: 420px;
     }
@@ -1384,7 +1470,7 @@ margin-top: 48px;    }
     .filters-main img[alt="jackdaw"] {
         height: 25px;
     }
-    
+
     .item .catalog__card {
         min-height: 240px;
     }
@@ -1623,7 +1709,7 @@ margin-top: 48px;    }
     .item-img img {
         max-height: 280px;
     }
-    
+
     .fortress_elips {
         width: 10px;
         height: 10px;
@@ -1634,14 +1720,15 @@ margin-top: 48px;    }
     .item .mt-96px {
         margin-top: 30px;
     }
-    
+
     .item .catalog__card {
         min-height: 220px;
     }
     .main__our_mug_card_right_div {
         width: 260px;
     }
-    #reserve .mt-96px, #reserve .mt-75px {
+    #reserve .mt-96px,
+    #reserve .mt-75px {
         margin-top: 48px;
     }
     .h-100px {
@@ -1650,7 +1737,7 @@ margin-top: 48px;    }
     #catalog .mt-96px {
         margin-top: 48px;
     }
-    
+
     .bg_black_pop_up_windows_on_the_right_dark {
         left: 0;
         width: 100vw;
@@ -1661,18 +1748,16 @@ margin-top: 48px;    }
 @media screen and (max-width: 480px) {
     .catalog__card {
         min-height: 280px;
-        
     }
 }
 @media screen and (max-width: 440px) {
     .catalog__card {
         min-height: 250px;
-        
     }
     .item-img img {
         max-height: 200px;
     }
-    
+
     .fortress_elips {
         width: 8px;
         height: 8px;
@@ -1680,9 +1765,8 @@ margin-top: 48px;    }
     .grid-col-2 {
         max-height: 150px;
     }
-    .grid-col-2 > img {
+    .backet__img {
         max-height: 150px;
-        max-width: 150px;
     }
 }
 /*/////////////////////////max-width: 390px//////////////////////////////////////////////*/
@@ -1858,17 +1942,14 @@ margin-top: 48px;    }
     .main__our_mug_div {
         top: 2470px;
     }
-    
 }
 
 @media screen and (max-width: 360px) {
-
     .grid-col-2 {
         max-height: 135px;
     }
-    .grid-col-2 > img {
+    .backet__img {
         max-height: 135px;
-        max-width: 135px;
     }
 }
 @media screen and (max-width: 350px) {
@@ -1887,8 +1968,7 @@ margin-top: 48px;    }
     .grid-col-2 {
         max-height: 120px;
     }
-    .grid-col-2 > img {
+    .backet__img {
         max-height: 120px;
-        max-width: 120px;
     }
 }

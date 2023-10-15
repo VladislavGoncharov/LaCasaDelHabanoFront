@@ -551,6 +551,7 @@ footer {
 
 .filters-checkbox {
     margin-left: 150px;
+    text-transform: capitalize;
 }
 
 .filters-main {
@@ -618,6 +619,7 @@ footer {
     background: var(--mc-white);
     border-bottom: solid 1px var(--mc-black);
     transform: translateX(-8px);
+    text-transform: capitalize;
 }
 
 .nav-filter .filters {
@@ -657,7 +659,8 @@ footer {
 
 .catalog__card_name {
     min-height: 58px;
-    text-align: justify;
+    display: flex;
+    align-items: center;
 }
 
 .text-1 {
@@ -698,6 +701,19 @@ footer {
 .search__footer-top {
     text-align: center;
 }
-#search .basket__scroll_div {
+#search .backet__scroll_div {
     height: 50%;
+}
+#allMenu * {
+    color: var(--mc-white);
+}
+#backet_total {
+    transition: 1s;
+}
+
+.box_img_minus, .box_count {
+    margin-right: 20px;
+}
+.box_img_minus .plus_minus_backet {
+    height: 20px;
 }

@@ -5,7 +5,6 @@ let containerSearchResult = $('#search_result');
 $('#search_input').on('input', function () {
 
    var inputValue = $(this).val();
-   console.log(inputValue);
    //web socket
    sendsearcgRequest(inputValue)
 
@@ -22,8 +21,6 @@ function sendsearcgRequest(inputValue) {
       // Отображение элементов на текущей странице
       if (responseData.length !== 0) {
          for (let i = 0; i < responseData.length; i++) {
-            console.log(responseData[i]);
-
             createItemSearchResult(containerSearchResult, responseData[i]);
          }
       }

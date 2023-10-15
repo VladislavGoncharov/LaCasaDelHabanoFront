@@ -1,3 +1,20 @@
+
+$(document).ready(function () {
+  window.autoHeightCenterColumn()
+})
+$(window).resize(function () {
+  window.autoHeightCenterColumn()
+});
+// настройка высоты центральной колонки 
+window.autoHeightCenterColumn = function () {
+  $('.height-along-central-column').css('height', $('.central-column').height())
+}
+// открывается описание этапов работы
+function openFilter(number) {
+  $(`#filters_${number}`).slideToggle();
+  $(`#jackdaw_${number}`).toggleClass('rotate-180');
+}
+
 $('.checkbox-type-filter input').on('change', function () {
   $('.checkbox-type-filter').removeClass('checkbox-type-filter-checked');
 
@@ -27,11 +44,6 @@ function updateHeightFiltersMain() {
   const $filtersMain = $('.filters-main');
   const $navFilter = $('#nav-filter');
   const $footer = $('footer');
-
-  console.log($navFilter);
-  console.log($navFilter.offset().top);
-  
-
 
   const bottomOfViewport = $(window).height() + $(window).scrollTop();
   const visibleHeight = Math.min((bottomOfViewport - 10), $footer.offset().top) - $navFilter.offset().top;
@@ -104,8 +116,8 @@ $('.select').each(function () {
     }
   });
 });
-//автонастройка высоты и ширины картинок в карточках товаров
-function autoWidhtImgInCardItems() {
+
+window.autoWidhtImgInCardItems = function () {
   let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
   let cardImg = $('.catalog__card_img_div')
@@ -120,9 +132,9 @@ function autoWidhtImgInCardItems() {
 }
 
 $(document).ready(function () {
-  autoWidhtImgInCardItems()
+  window.autoWidhtImgInCardItems()
 })
 $(window).resize(function () {
 
-  autoWidhtImgInCardItems()
+  window.autoWidhtImgInCardItems()
 });

@@ -77,11 +77,11 @@ body {
     transform: translateX(-100%);
 }
 
-.basket__scroll_div {
+.backet__scroll_div {
     margin-top: 72px;
     height: 60%;
 }
-.plus_minus_basket {
+.plus_minus_backet {
     width: 29px;
     height: 29px;
 
@@ -91,8 +91,13 @@ body {
     grid-template-columns:50% 50%;
     height: 294px;
 }
-.grid-col-2 > img{
-    width: 294px;
+.backet__box_img {
+    background: var(--mc-white);
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+.backet__img {
     height: 294px;
 }
 .top--25px {

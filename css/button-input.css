@@ -100,7 +100,7 @@ textarea::-webkit-input-placeholder {
 }
 
 .round-button:before {
-    content: '';
+    content: "";
     background: var(--mc-peach);
     position: absolute;
     height: 200px;
@@ -114,7 +114,7 @@ textarea::-webkit-input-placeholder {
 }
 
 .round-button:hover:before {
-    content: '';
+    content: "";
     background: var(--mc-peach);
     position: absolute;
     height: 200px;
@@ -178,18 +178,18 @@ textarea::-webkit-input-placeholder {
 }
 
 .round-button-hover-cuba:before {
-    content: '';
+    content: "";
     background: var(--mc-white);
     transform: translate(-50%, -50%);
     transition: 1s;
     height: 0;
     width: 0;
     border-radius: 50%;
-    opacity: 0
+    opacity: 0;
 }
 
 .round-button-hover-cuba:hover:before {
-    content: '';
+    content: "";
     background: var(--mc-white);
     position: absolute;
     height: 300px;
@@ -201,17 +201,17 @@ textarea::-webkit-input-placeholder {
 }
 
 .round-button-hover-cuba:hover .flag_of_cuba {
-/*    opacity: 1;*/
+    /*    opacity: 1;*/
     transform: scale(1);
 }
 .round-button-hover-cuba:hover .flag_of_information {
-/*    opacity: 1;*/
+    /*    opacity: 1;*/
     transform: scale(0);
 }
 
 .flag_of_cuba {
     position: absolute;
-/*    opacity: 0;*/
+    /*    opacity: 0;*/
     transform: scale(0);
     transition: 1s;
 }
@@ -286,13 +286,15 @@ textarea::-webkit-input-placeholder {
     border-bottom: solid 1px var(--mc-white);
 }
 
-.link-on-kuznechny-img, .link-on-petrogradskoy-img {
+.link-on-kuznechny-img,
+.link-on-petrogradskoy-img {
     position: absolute;
     width: 445px;
     transition: 1s;
-    opacity: 0
+    opacity: 0;
 }
-.link-on-kuznechny-text, .link-on-petrogradskoy-text {
+.link-on-kuznechny-text,
+.link-on-petrogradskoy-text {
     transition: 0.8s;
 }
 
@@ -311,7 +313,8 @@ textarea::-webkit-input-placeholder {
     transition: 0.5s;
 }
 
-.footer-black .underline-one:after, .bg_white .underline-one:after {
+.footer-black .underline-one:after,
+.bg_white .underline-one:after {
     background-color: var(--mc-black);
 }
 
@@ -334,7 +337,7 @@ textarea::-webkit-input-placeholder {
 
 .filter-link-focus {
     background: var(--mc-black);
-    color: var(--mc-white) ;
+    color: var(--mc-white);
 }
 
 .filter-link-focus:hover {
@@ -349,24 +352,25 @@ textarea::-webkit-input-placeholder {
     justify-content: center;
     align-items: center;
     background: var(--mc-white);
-    color: var(--mc-black)
+    color: var(--mc-black);
 }
 
 .checkbox-type-filter:hover {
     background: var(--mc-peach);
 }
 
-.checkbox-type-filter-checked , .checkbox-type-filter-checked:hover {
+.checkbox-type-filter-checked,
+.checkbox-type-filter-checked:hover {
     background: var(--mc-black);
-    color: var(--mc-white)
+    color: var(--mc-white);
 }
 .checkbox-type-filter input {
-    display: none
+    display: none;
 }
 
 .checkbox-type-filter input:checked {
     background: var(--mc-black);
-    color: var(--mc-white) ;
+    color: var(--mc-white);
 }
 .checkbox-filter {
     -webkit-appearance: none;
@@ -383,7 +387,10 @@ textarea::-webkit-input-placeholder {
 .checkbox-filter:checked {
     content: url(/img/checkbox.svg);
 }
-
+.disable-btn {
+    opacity: 0.5;
+    pointer-events: none;
+}
 .radio-main input[type="radio"] {
     position: absolute;
     appearance: none;
@@ -392,7 +399,7 @@ textarea::-webkit-input-placeholder {
 .radio-main {
     display: flex;
     justify-content: flex-start;
-    align-items: center
+    align-items: center;
 }
 
 .radio-main-checkmark {
@@ -413,7 +420,30 @@ textarea::-webkit-input-placeholder {
 }
 
 .radio-main input[type="radio"]:checked ~ .radio-main-checkmark div {
+    border: solid 1px var(--mc-black);
+}
+
+.modal-select-option-item .radio-main-checkmark {
+    border: solid 1px var(--mc-black);
+}
+.modal-select-option-item .radio-main-checkmark div {
     background: var(--mc-white);
+}
+.modal-select-option-item .radio-main input[type="radio"]:checked ~ .radio-main-checkmark div {
+    background: var(--mc-black);
+}
+
+.disable-link {
+    color: #0000007d;
+    text-decoration: line-through;
+    text-decoration-color: #0000007d;
+    pointer-events: none;
+}
+
+.btn-close:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(128, 128, 128, 0.25);
+    opacity: 1;
 }
 
 .menu-link-img {
@@ -424,7 +454,6 @@ textarea::-webkit-input-placeholder {
 .menu-link:hover .menu-link-img {
     opacity: 1;
 }
-
 
 /* input range styles*/
 
@@ -461,7 +490,7 @@ textarea::-webkit-input-placeholder {
 }
 
 .noUi-horizontal .noUi-handle {
-    right: -26px!important;
+    right: -26px !important;
 }
 /*попап в каталоге*/
 .select {
@@ -469,7 +498,8 @@ textarea::-webkit-input-placeholder {
     width: 245px;
     height: 20px;
     right: 0;
-    padding: 10px 0 ;
+    padding: 10px 0;
+    text-transform: initial;
 }
 
 .new-select {
@@ -499,34 +529,34 @@ textarea::-webkit-input-placeholder {
 }
 
 .new-select__item span:hover {
-    background: var(--mc-peach)
+    background: var(--mc-peach);
 }
 
 .new-select:before {
-    content: '';
+    content: "";
     display: block;
     width: 30px;
     height: 30px;
     position: absolute;
     right: 9px;
     top: 9px;
-    background: url('/img/jackdaw.svg') no-repeat right center / cover;
+    background: url("/img/jackdaw.svg") no-repeat right center / cover;
 
-    -webkit-transition: all .5s ease-in-out;
-        -o-transition: all .5s ease-in-out;
-            transition: all .5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-         -o-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
 }
 
 .new-select.on:before {
     -webkit-transform: rotate(-180deg);
-        -ms-transform: rotate(-180deg);
-         -o-transform: rotate(-180deg);
-            transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
 }
 .btn_back {
     transform: translate(-10px);
